@@ -1,0 +1,6 @@
+com/itbuzzpress/jaxws/handler/SampleSOAPHandler.class
+com/itbuzzpress/jaxws/ws/Account.class
+com/itbuzzpress/jaxws/ws/AccountWS.class
+com/itbuzzpress/jaxws/ws/AccountWSItf.class
+com/itbuzzpress/jaxws/ws/AccountManager.class
+com/itbuzzpress/jaxws/handler/SampleLogicalHandler.class

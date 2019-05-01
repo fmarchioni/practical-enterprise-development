@@ -1,0 +1,3 @@
+com/itbuzzpress/arquillian/ejb/ManagerEJB.class
+com/itbuzzpress/arquillian/entity/Request.class
+com/itbuzzpress/arquillian/entity/Customer.class

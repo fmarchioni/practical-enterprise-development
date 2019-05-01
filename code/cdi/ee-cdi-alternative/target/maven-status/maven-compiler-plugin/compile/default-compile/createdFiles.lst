@@ -1,0 +1,7 @@
+com/itbuzzpress/cdi/model/Word.class
+com/itbuzzpress/cdi/bean/Hard.class
+com/itbuzzpress/cdi/bean/Rules.class
+com/itbuzzpress/cdi/qualifier/Anagram.class
+com/itbuzzpress/cdi/bean/Player.class
+com/itbuzzpress/cdi/bean/Simple.class
+com/itbuzzpress/cdi/bean/GenerateWord.class

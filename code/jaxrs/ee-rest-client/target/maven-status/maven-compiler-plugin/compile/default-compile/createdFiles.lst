@@ -1,0 +1,5 @@
+com/itbuzzpress/jaxrs/activator/JaxRsActivator.class
+com/itbuzzpress/jaxrs/model/SimpleProperty.class
+com/itbuzzpress/jaxrs/service/ParamRESTService.class
+com/itbuzzpress/jaxrs/service/SimpleRESTService.class
+com/itbuzzpress/jaxrs/ejb/DataList.class

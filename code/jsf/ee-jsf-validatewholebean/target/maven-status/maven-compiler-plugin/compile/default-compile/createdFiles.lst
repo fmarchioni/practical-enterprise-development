@@ -1,0 +1,4 @@
+com/itbuzzpress/jsf/validator/CustomerGroup.class
+com/itbuzzpress/jsf/validator/Customer.class
+com/itbuzzpress/jsf/validator/CustomerValidator.class
+com/itbuzzpress/jsf/validator/ValidCustomer.class

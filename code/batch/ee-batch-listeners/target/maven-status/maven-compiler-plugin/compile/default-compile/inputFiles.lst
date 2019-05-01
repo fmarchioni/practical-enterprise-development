@@ -1,0 +1,8 @@
+/home/francesco/git/practical-javaee7-development-wildfly-javaee8/code/batch/ee-batch-listeners/src/main/java/com/itbuzzpress/batch/listener/BatchItemProcessListener.java
+/home/francesco/git/practical-javaee7-development-wildfly-javaee8/code/batch/ee-batch-listeners/src/main/java/com/itbuzzpress/batch/chunk/BatchItemProcessor.java
+/home/francesco/git/practical-javaee7-development-wildfly-javaee8/code/batch/ee-batch-listeners/src/main/java/com/itbuzzpress/batch/chunk/BatchItemReader.java
+/home/francesco/git/practical-javaee7-development-wildfly-javaee8/code/batch/ee-batch-listeners/src/main/java/com/itbuzzpress/batch/servlet/TestListener.java
+/home/francesco/git/practical-javaee7-development-wildfly-javaee8/code/batch/ee-batch-listeners/src/main/java/com/itbuzzpress/batch/listener/BatchItemWriteListener.java
+/home/francesco/git/practical-javaee7-development-wildfly-javaee8/code/batch/ee-batch-listeners/src/main/java/com/itbuzzpress/batch/chunk/BatchItemWriter.java
+/home/francesco/git/practical-javaee7-development-wildfly-javaee8/code/batch/ee-batch-listeners/src/main/java/com/itbuzzpress/batch/exception/IllegalItemException.java
+/home/francesco/git/practical-javaee7-development-wildfly-javaee8/code/batch/ee-batch-listeners/src/main/java/com/itbuzzpress/batch/listener/BatchItemReadListener.java

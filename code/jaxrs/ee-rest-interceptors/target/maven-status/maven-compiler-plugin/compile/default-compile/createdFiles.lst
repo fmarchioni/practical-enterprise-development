@@ -1,0 +1,5 @@
+com/itbuzzpress/jaxrs/model/JaxRsActivator.class
+com/itbuzzpress/jaxrs/model/SimpleProperty.class
+com/itbuzzpress/jaxrs/interceptor/ZipWriterInterceptor.class
+com/itbuzzpress/jaxrs/service/SimpleRESTService.class
+com/itbuzzpress/jaxrs/interceptor/ZipReaderInterceptor.class

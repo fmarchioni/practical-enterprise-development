@@ -1,0 +1,8 @@
+com/itbuzzpress/batch/listener/BatchItemWriteListener.class
+com/itbuzzpress/batch/chunk/BatchItemProcessor.class
+com/itbuzzpress/batch/listener/BatchItemReadListener.class
+com/itbuzzpress/batch/chunk/BatchItemWriter.class
+com/itbuzzpress/batch/listener/BatchItemProcessListener.class
+com/itbuzzpress/batch/servlet/TestListener.class
+com/itbuzzpress/batch/exception/IllegalItemException.class
+com/itbuzzpress/batch/chunk/BatchItemReader.class

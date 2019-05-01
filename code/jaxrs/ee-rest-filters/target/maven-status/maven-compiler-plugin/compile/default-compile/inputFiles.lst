@@ -1,0 +1,5 @@
+/home/francesco/git/practical-javaee7-development-wildfly-javaee8/code/jaxrs/ee-rest-filters/src/main/java/com/itbuzzpress/jaxrs/filter/CachingFilter.java
+/home/francesco/git/practical-javaee7-development-wildfly-javaee8/code/jaxrs/ee-rest-filters/src/main/java/com/itbuzzpress/jaxrs/model/JaxRsActivator.java
+/home/francesco/git/practical-javaee7-development-wildfly-javaee8/code/jaxrs/ee-rest-filters/src/main/java/com/itbuzzpress/jaxrs/model/SimpleProperty.java
+/home/francesco/git/practical-javaee7-development-wildfly-javaee8/code/jaxrs/ee-rest-filters/src/main/java/com/itbuzzpress/jaxrs/filter/LoggingFilter.java
+/home/francesco/git/practical-javaee7-development-wildfly-javaee8/code/jaxrs/ee-rest-filters/src/main/java/com/itbuzzpress/jaxrs/service/SimpleRESTService.java

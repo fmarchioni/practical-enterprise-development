@@ -1,0 +1,6 @@
+com/sample/streaming/ConsumeJSONStream.class
+com/sample/objectmodel/ProduceJSONArray.class
+com/sample/objectmodel/ParseJSON.class
+com/sample/objectmodel/ProduceJSON.class
+com/sample/streaming/ProduceJSONStream.class
+com/sample/streaming/ConsumeJSONStream$1.class

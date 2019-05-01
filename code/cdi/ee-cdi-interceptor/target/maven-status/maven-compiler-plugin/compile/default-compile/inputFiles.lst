@@ -1,0 +1,6 @@
+/home/francesco/git/practical-javaee7-development-wildfly-javaee8/code/cdi/ee-cdi-interceptor/src/main/java/com/itbuzzpress/cdi/qualifier/Anagram.java
+/home/francesco/git/practical-javaee7-development-wildfly-javaee8/code/cdi/ee-cdi-interceptor/src/main/java/com/itbuzzpress/cdi/qualifier/Auditing.java
+/home/francesco/git/practical-javaee7-development-wildfly-javaee8/code/cdi/ee-cdi-interceptor/src/main/java/com/itbuzzpress/cdi/model/Word.java
+/home/francesco/git/practical-javaee7-development-wildfly-javaee8/code/cdi/ee-cdi-interceptor/src/main/java/com/itbuzzpress/cdi/interceptors/AuditInterceptor.java
+/home/francesco/git/practical-javaee7-development-wildfly-javaee8/code/cdi/ee-cdi-interceptor/src/main/java/com/itbuzzpress/cdi/bean/GenerateWord.java
+/home/francesco/git/practical-javaee7-development-wildfly-javaee8/code/cdi/ee-cdi-interceptor/src/main/java/com/itbuzzpress/cdi/bean/Player.java

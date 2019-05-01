@@ -1,0 +1,5 @@
+/home/francesco/git/practical-javaee7-development-wildfly-javaee8/code/batch/ee-batch-chunk/src/main/java/com/itbuzzpress/batch/chunk/BatchItemReader.java
+/home/francesco/git/practical-javaee7-development-wildfly-javaee8/code/batch/ee-batch-chunk/src/main/java/com/itbuzzpress/batch/servlet/TestChunk.java
+/home/francesco/git/practical-javaee7-development-wildfly-javaee8/code/batch/ee-batch-chunk/src/main/java/com/itbuzzpress/batch/exception/IllegalItemException.java
+/home/francesco/git/practical-javaee7-development-wildfly-javaee8/code/batch/ee-batch-chunk/src/main/java/com/itbuzzpress/batch/chunk/BatchItemWriter.java
+/home/francesco/git/practical-javaee7-development-wildfly-javaee8/code/batch/ee-batch-chunk/src/main/java/com/itbuzzpress/batch/chunk/BatchItemProcessor.java

@@ -1,0 +1,7 @@
+/home/francesco/git/practical-javaee7-development-wildfly-javaee8/code/concurrency/ee-managedexecutor/src/main/java/com/itbuzzpress/concurrency/job/CallableTask.java
+/home/francesco/git/practical-javaee7-development-wildfly-javaee8/code/concurrency/ee-managedexecutor/src/main/java/com/itbuzzpress/concurrency/job/TxCallableTask.java
+/home/francesco/git/practical-javaee7-development-wildfly-javaee8/code/concurrency/ee-managedexecutor/src/main/java/com/itbuzzpress/concurrency/ejb/SimpleEJB.java
+/home/francesco/git/practical-javaee7-development-wildfly-javaee8/code/concurrency/ee-managedexecutor/src/main/java/com/itbuzzpress/concurrency/servlet/CallableExecutorServlet.java
+/home/francesco/git/practical-javaee7-development-wildfly-javaee8/code/concurrency/ee-managedexecutor/src/main/java/com/itbuzzpress/concurrency/job/SimpleTask.java
+/home/francesco/git/practical-javaee7-development-wildfly-javaee8/code/concurrency/ee-managedexecutor/src/main/java/com/itbuzzpress/concurrency/servlet/TxCallableExecutorServlet.java
+/home/francesco/git/practical-javaee7-development-wildfly-javaee8/code/concurrency/ee-managedexecutor/src/main/java/com/itbuzzpress/concurrency/servlet/ExecutorServlet.java
