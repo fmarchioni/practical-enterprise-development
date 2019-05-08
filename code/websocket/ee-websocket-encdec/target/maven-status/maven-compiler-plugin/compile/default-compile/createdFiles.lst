@@ -1,6 +1,0 @@
-com/itbuzzpress/websocket/endpoint/WebSocketEncodedEndpoint.class
-com/itbuzzpress/websocket/model/User.class
-com/itbuzzpress/websocket/servlet/ServletClient.class
-com/itbuzzpress/websocket/encoder/MessageEncoder.class
-com/itbuzzpress/websocket/endpoint/HelloWorldEncodedEndpoint.class
-com/itbuzzpress/websocket/decoder/MessageDecoder.class

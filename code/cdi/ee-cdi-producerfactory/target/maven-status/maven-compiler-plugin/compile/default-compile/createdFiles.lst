@@ -1,7 +1,0 @@
-com/itbuzzpress/cdi/model/Word.class
-com/itbuzzpress/cdi/qualifier/Anagram.class
-com/itbuzzpress/cdi/qualifier/AnagramInterceptor.class
-com/itbuzzpress/cdi/bean/Player.class
-com/itbuzzpress/cdi/qualifier/AnagramInterceptor$Literal.class
-com/itbuzzpress/cdi/bean/WordInterceptor.class
-com/itbuzzpress/cdi/bean/GenerateWord.class

@@ -1,5 +1,0 @@
-com/itbuzzpress/jaxrs/model/JaxRsActivator.class
-com/itbuzzpress/jaxrs/model/SimpleProperty.class
-com/itbuzzpress/jaxrs/filter/CachingFilter.class
-com/itbuzzpress/jaxrs/filter/LoggingFilter.class
-com/itbuzzpress/jaxrs/service/SimpleRESTService.class
