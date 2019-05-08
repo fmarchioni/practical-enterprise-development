@@ -1,6 +1,0 @@
-com/itbuzzpress/cdi/interceptors/AuditInterceptor.class
-com/itbuzzpress/cdi/model/Word.class
-com/itbuzzpress/cdi/qualifier/Anagram.class
-com/itbuzzpress/cdi/qualifier/Auditing.class
-com/itbuzzpress/cdi/bean/Player.class
-com/itbuzzpress/cdi/bean/GenerateWord.class

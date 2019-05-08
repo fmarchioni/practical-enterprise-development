@@ -1,6 +1,0 @@
-/home/francesco/git/practical-javaee7-development-wildfly-javaee8/code/websocket/ee-websocket-encdec/src/main/java/com/itbuzzpress/websocket/encoder/MessageEncoder.java
-/home/francesco/git/practical-javaee7-development-wildfly-javaee8/code/websocket/ee-websocket-encdec/src/main/java/com/itbuzzpress/websocket/decoder/MessageDecoder.java
-/home/francesco/git/practical-javaee7-development-wildfly-javaee8/code/websocket/ee-websocket-encdec/src/main/java/com/itbuzzpress/websocket/model/User.java
-/home/francesco/git/practical-javaee7-development-wildfly-javaee8/code/websocket/ee-websocket-encdec/src/main/java/com/itbuzzpress/websocket/servlet/ServletClient.java
-/home/francesco/git/practical-javaee7-development-wildfly-javaee8/code/websocket/ee-websocket-encdec/src/main/java/com/itbuzzpress/websocket/endpoint/HelloWorldEncodedEndpoint.java
-/home/francesco/git/practical-javaee7-development-wildfly-javaee8/code/websocket/ee-websocket-encdec/src/main/java/com/itbuzzpress/websocket/endpoint/WebSocketEncodedEndpoint.java

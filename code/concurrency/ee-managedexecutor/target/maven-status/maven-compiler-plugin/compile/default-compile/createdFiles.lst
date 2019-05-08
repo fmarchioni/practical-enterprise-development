@@ -1,7 +1,0 @@
-com/itbuzzpress/concurrency/job/SimpleTask.class
-com/itbuzzpress/concurrency/ejb/SimpleEJB.class
-com/itbuzzpress/concurrency/servlet/ExecutorServlet.class
-com/itbuzzpress/concurrency/servlet/CallableExecutorServlet.class
-com/itbuzzpress/concurrency/servlet/TxCallableExecutorServlet.class
-com/itbuzzpress/concurrency/job/CallableTask.class
-com/itbuzzpress/concurrency/job/TxCallableTask.class

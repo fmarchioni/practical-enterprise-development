@@ -1,7 +1,0 @@
-com/itbuzzpress/batch/chunk/BatchItemProcessor.class
-com/itbuzzpress/batch/chunk/BatchItemWriter.class
-com/itbuzzpress/batch/chunk/BatchCheckpointAlgorithm.class
-com/itbuzzpress/batch/ejb/EJBSingleton.class
-com/itbuzzpress/batch/exception/IllegalItemException.class
-com/itbuzzpress/batch/chunk/BatchItemReader.class
-com/itbuzzpress/batch/servlet/TestChunk.class
