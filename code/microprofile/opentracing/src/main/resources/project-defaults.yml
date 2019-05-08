@@ -1,0 +1,5 @@
+thorntail:
+  jaeger:
+    service-name: helloservice
+    sampler-type: const
+    sampler-parameter: 1
