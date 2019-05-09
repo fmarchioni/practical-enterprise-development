@@ -11,5 +11,5 @@ mvn clean install wildfly:deploy
 
 ###### Test
 ```shell
-http://localhost:8080/eecdi-alternative
+http://localhost:8080/ee-cdi-alternative
 ```

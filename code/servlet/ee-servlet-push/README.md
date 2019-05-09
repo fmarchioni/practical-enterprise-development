@@ -10,5 +10,5 @@ mvn clean install wildfly:deploy
 ```
 ###### Test
 ```shell
-http://localhost:8080/eeservlet-push
+http://localhost:8080/ee-servlet-push
 ```

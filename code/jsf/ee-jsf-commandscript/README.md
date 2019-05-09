@@ -11,5 +11,5 @@ mvn clean install wildfly:deploy
 
 ###### Test
 ```shell
-http://localhost:8080/eejsf-commandscript
+http://localhost:8080/ee-jsf-commandscript
 ```

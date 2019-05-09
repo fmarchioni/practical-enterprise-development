@@ -16,6 +16,6 @@ mvn clean install wildfly:deploy
 
 ###### Test
 ```shell
-http://localhost:8080/eejsonb/
+http://localhost:8080/ee-jsonb/
 ```
  

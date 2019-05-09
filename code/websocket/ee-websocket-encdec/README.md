@@ -11,6 +11,6 @@ mvn clean install wildfly:deploy
 
 ###### Test
 ```shell
-http://localhost:8080/eewebsocket-encdec
+http://localhost:8080/ee-websocket-encdec
 ```
  

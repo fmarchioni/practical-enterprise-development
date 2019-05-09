@@ -18,6 +18,6 @@ mvn clean install wildfly:deploy
 
 ###### Test
 ```shell
-http://localhost:8080/eebatch-decision/
+http://localhost:8080/ee-batch-decision/
 ```
  

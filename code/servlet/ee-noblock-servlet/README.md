@@ -10,5 +10,5 @@ mvn clean install wildfly:deploy
 ```
 ###### Test
 ```shell
-http://localhost:8080/eenoblock-servlet
+http://localhost:8080/ee-noblock-servlet
 ```

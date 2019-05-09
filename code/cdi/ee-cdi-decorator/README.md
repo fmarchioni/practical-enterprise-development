@@ -13,5 +13,5 @@ mvn clean install wildfly:deploy
 
 ###### Test
 ```shell
-http://localhost:8080/eecdi-decorator
+http://localhost:8080/ee-cdi-decorator
 ```

@@ -18,6 +18,6 @@ mvn clean install wildfly:deploy
 
 ###### Test
 ```shell
-http://localhost:8080/eejms-basic
+http://localhost:8080/ee-jms-basic
 ```
  

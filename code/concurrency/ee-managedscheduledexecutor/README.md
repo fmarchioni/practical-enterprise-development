@@ -10,6 +10,6 @@ mvn clean install wildfly:deploy
 
 ###### Test
 ```shell
-http://localhost:8080/eemanagedscheduledexecutor/
+http://localhost:8080/ee-managedscheduledexecutor/
 ```
   

@@ -10,7 +10,7 @@ mvn clean install wildfly:deploy
 
 ###### Test
 ```shell
-http://localhost:8080/eesecurity-jaas/
+http://localhost:8080/ee-security-jaas/
 ```
 **Note** This application requires configuring a legacy **Security Domain** named "other" 
   
