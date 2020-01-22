@@ -1,5 +1,6 @@
 #Script to create Elytron  File System Realm and SASL Authentication factory
 connect
+
 batch
 
 # Create File System Realm
@@ -21,8 +22,8 @@ batch
 
 
 # Configure elytron to use SASL authentication from our fs authentication factory
-
 /subsystem=remoting/http-connector=https-remoting-connector:add(connector-ref=https, sasl-authentication-factory=fs-application-sasl-authentication)
 run-batch
 
 reload
+

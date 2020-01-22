@@ -1,54 +1,47 @@
-## Example how to invoke EJBs over SSL which are using a Security Domain
+## Example how to invoke EJBs over SSL which are using a Security Domain (Updated)
 
-### Configure Elytron subsystem:
+### Configure Keystores and Elytron subsystem:
 
-1. Configure a FileSystem Realm on Elytron
+1. Configure keystores
 ```shell
-/bin/jboss-cli.sh --file=script.cli
+$ cd ssl
+$ ./generatekeys.sh
 ```
-2. Move into the ssl folder and generate keys
+2. Copy server files into WildFly configuration folder (Replace with your JBOSS_HOME)
 
 ```shell
-cd ssl
-
-./generatekeys.sh
+$ export JBOSS_HOME=/path/to/wildfly-18.0.1.Final
+$ cp server.keystore $JBOSS_HOME/standalone/configuration
+$ cp server.truststore $JBOSS_HOME/standalone/configuration
 ```
 
-3. Configure keystores on Elytron
+3. Copy client files into the client folder
 
 ```shell
+$ cp client.keystore ../client/
+$ cp client.truststore ../client/
+```
 
-./jboss-cli.sh --file=ssl/keys.cli
+4. Configure Elytron and SSL (Replace with path to repository)
+
+```shell
+$JBOSS_HOME/bin/jboss-cli.sh --file=/path/to/repository/practical-enterprise-development/code/security/ee-ejb-elytron-ssl/ssl/keys.cli
+$JBOSS_HOME/bin/jboss-cli.sh --file=/path/to/repository/practical-enterprise-development/code/security/ee-ejb-elytron-ssl/ssl/script.cli
 ```
 
 ### Compile and deploy the server application
 ```
 cd server
-
 mvn clean install wildfly:deploy
 ```
-
 
 ### Move into the client folder
 ```
 cd client
 ```
 
-# Configure in the wildfly-config.xml the path to the certificates
-```xml
-
-            <key-store name="client-keystore" type="JKS">
-                <file name="/home/jboss/wildfly-16.0.0.Final/standalone/configuration/client.keystore"/>
-                <key-store-clear-password password="abcdef"/>
-            </key-store>
-            <key-store name="client-truststore" type="JKS">
-                <file name="/home/jboss/wildfly-16.0.0.Final/standalone/configuration/client.truststore"/>
-            </key-store>
-```
-
 ### Compile and execute the Client application
 ```
-
 mvn clean install exec:exec
 ```
 

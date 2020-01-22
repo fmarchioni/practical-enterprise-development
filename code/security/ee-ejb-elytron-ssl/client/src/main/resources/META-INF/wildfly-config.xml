@@ -16,11 +16,11 @@
      
      <key-stores>
             <key-store name="client-keystore" type="JKS">
-                <file name="/home/jboss/wildfly-12.0.0.Final/standalone/configuration/client.keystore"/>
+                <file name="${user.dir}/../../client.keystore"/>
                 <key-store-clear-password password="abcdef"/>
             </key-store>
             <key-store name="client-truststore" type="JKS">
-                <file name="/home/jboss/wildfly-12.0.0.Final/standalone/configuration/client.truststore"/>
+                <file name="${user.dir}/../../client.truststore"/>
             </key-store>
         </key-stores>
         <ssl-contexts>
