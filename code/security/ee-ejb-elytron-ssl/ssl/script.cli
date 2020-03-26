@@ -21,7 +21,7 @@ batch
 /subsystem=ejb3/application-security-domain=other:add(security-domain=fsSD)
 
 
-# Configure elytron to use SASL authentication from our fs authentication factory
+# Configure remoting to use SASL authentication from our fs authentication factory
 /subsystem=remoting/http-connector=https-remoting-connector:add(connector-ref=https, sasl-authentication-factory=fs-application-sasl-authentication)
 run-batch
 
