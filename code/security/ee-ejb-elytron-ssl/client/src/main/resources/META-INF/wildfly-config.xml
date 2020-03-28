@@ -13,7 +13,6 @@
                 </credentials>
             </configuration>
         </authentication-configurations>
-     
      <key-stores>
             <key-store name="client-keystore" type="JKS">
                 <file name="${user.dir}/../../client.keystore"/>
@@ -37,9 +36,7 @@
     </authentication-client>
     <jboss-ejb-client xmlns="urn:jboss:wildfly-client-ejb:3.0">
         <connections>
-
 		<connection uri="remote+https://127.0.0.1:8443"/>
- 
         </connections>
     </jboss-ejb-client>
 </configuration>

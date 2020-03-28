@@ -15,7 +15,7 @@
     <dependency>
       <groupId>org.wildfly</groupId>
       <artifactId>wildfly-ejb-client-bom</artifactId>
-      <version>16.0.0.Final</version>
+      <version>19.0.0.Final</version>
       <type>pom</type>
       <scope>import</scope>
     </dependency>
@@ -46,13 +46,13 @@
           <arguments>
             <argument>-classpath</argument>
             <classpath/>
-            <!-- uncomment for debugging -->
-            <!--<argument>-agentlib:jdwp=transport=dt_socket,address=8787,server=y,suspend=y</argument>-->
+
+
             <argument>-Dremote.ejb.url=${remote.ejb.url}</argument>
-            <argument>-Dkeystore.path=${project.basedir}/src/main/resources/client.keystore</argument>
-            <argument>-Dtruststore.path=${project.basedir}/src/main/resources/client.truststore</argument>
+            <argument>-Dkeystore.path=${project.basedir}/client.keystore</argument>
+            <argument>-Dtruststore.path=${project.basedir}/client.truststore</argument>
             <argument>com.itbuzzpress.security.client.RemoteEJBClient</argument>
-            <!-- the main class -->
+
           </arguments>
         </configuration>
       </plugin>

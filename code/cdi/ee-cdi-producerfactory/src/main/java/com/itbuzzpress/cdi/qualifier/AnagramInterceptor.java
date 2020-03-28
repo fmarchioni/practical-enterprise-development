@@ -22,5 +22,5 @@ public @interface AnagramInterceptor {
     public static final class Literal extends AnnotationLiteral<AnagramInterceptor> implements AnagramInterceptor {
         public static final Literal INSTANCE = new Literal();
         private static final long serialVersionUID = 1L;
-}
+    }
 }

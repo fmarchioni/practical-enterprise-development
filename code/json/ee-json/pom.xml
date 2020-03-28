@@ -17,8 +17,8 @@
   </properties>
   <dependencies>
     <dependency>
-      <groupId>javax.json</groupId>
-      <artifactId>javax.json-api</artifactId>
+      <groupId>jakarta.json</groupId>
+      <artifactId>jakarta.json-api</artifactId>
       <scope>provided</scope>
     </dependency>
     <!-- Import the Servlet API -->

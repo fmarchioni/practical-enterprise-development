@@ -18,8 +18,8 @@
   </properties>
   <dependencies>
     <dependency>
-      <groupId>javax.json</groupId>
-      <artifactId>javax.json-api</artifactId>
+      <groupId>jakarta.json</groupId>
+      <artifactId>jakarta.json-api</artifactId>
       <scope>provided</scope>
     </dependency>
     <dependency>
@@ -34,8 +34,8 @@
     </dependency>
     <!-- Import the CDI API -->
     <dependency>
-      <groupId>javax.enterprise</groupId>
-      <artifactId>cdi-api</artifactId>
+      <groupId>jakarta.enterprise</groupId>
+      <artifactId>jakarta.enterprise.cdi-api</artifactId>
       <scope>provided</scope>
     </dependency>
     <!-- Import the Common Annotations API (JSR-250) -->

@@ -11,10 +11,20 @@
    <security-domain>httpFsSD</security-domain> 
 </jboss-web>
 ```
-Check this CLI script to create an example FileSystem realm: https://github.com/fmarchioni/wildfly-admin-guide/blob/master/chapter15/fsrealm.cli
+
+### Configure Elytron subsystem:
+
+This is needed to configure elytron subsystem:
+```shell
+/bin/jboss-cli.sh --file=fsrealm.cli
+```
 
 ###### Compile and deploy
 
 ```shell
 mvn clean install wildfly:deploy
 ```
+
+###### Test
+
+Access the application at: http://localhost:8080/ee-security-elytron
