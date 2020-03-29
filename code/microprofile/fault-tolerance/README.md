@@ -1,11 +1,11 @@
-Thorntail MicroProfile FaultTolerance example
+WildFly MicroProfile FaultTolerance example
 =====================================
 
-This example demonstrates the basic usage of MicroProfile FaultTolerance with Thorntail
+This example demonstrates the basic usage of MicroProfile FaultTolerance with WildFly
 
 ###### Deploy
 ```shell
-mvn clean thorntail:run
+mvn clean install wildfly:deploy
 ```
  
-Tutorial for this example: http://www.mastertheboss.com/javaee/eclipse-microservices/getting-started-with-microprofile-faulttolerance-api 
+
