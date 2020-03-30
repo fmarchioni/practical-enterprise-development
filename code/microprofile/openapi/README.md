@@ -5,6 +5,11 @@ Example taken from [Practical Enterprise Application Development](http://www.itb
 
 This example demonstrates the basic usage of MicroProfile OpenAPI on WildFly
 
+###### Start WildFly
+```shell
+./standalone.sh -c standalone-microprofile.xml
+```
+
 ###### Deploy
 ```shell
 mvn clean install wildfly:deploy
