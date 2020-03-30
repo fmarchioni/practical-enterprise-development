@@ -1,4 +1,4 @@
-Java EE 7 examples using JSON API
+JSON API Example
 =====================================
 Example taken from [Practical Enterprise Application Development](http://www.itbuzzpress.com/ebooks/java-ee-7-development-on-wildfly.html)
 
