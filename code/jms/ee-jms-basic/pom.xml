@@ -33,6 +33,11 @@
       <artifactId>jakarta.enterprise.cdi-api</artifactId>
       <scope>provided</scope>
     </dependency>
+    <dependency>
+      <groupId>org.jboss.spec.javax.annotation</groupId>
+      <artifactId>jboss-annotations-api_1.3_spec</artifactId>
+      <scope>provided</scope>
+    </dependency>
     <!-- Import the Common Annotations API (JSR-250) -->
     <dependency>
       <groupId>org.jboss.spec.javax.faces</groupId>
