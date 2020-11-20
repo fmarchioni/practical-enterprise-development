@@ -25,7 +25,7 @@ public class NonBlockingServlet  extends HttpServlet {
 			HttpServletResponse response) throws ServletException, IOException {
 
 		PrintWriter writer = response.getWriter();
-		writer.println("Only GET method available sorry.");
+		writer.println("Please use POST method from the index page");
 		writer.flush();
 	}
 
