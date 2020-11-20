@@ -5,6 +5,7 @@
     <groupId>com.itbuzzpress.root</groupId>
     <artifactId>ee-root</artifactId>
     <version>1.0</version>
+    <relativePath>../..</relativePath>
   </parent>
   <groupId>com.itbuzzpress.websocket</groupId>
   <artifactId>ee-websocket-async</artifactId>

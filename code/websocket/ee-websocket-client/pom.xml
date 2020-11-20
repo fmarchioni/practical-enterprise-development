@@ -5,8 +5,9 @@
     <groupId>com.itbuzzpress.root</groupId>
     <artifactId>ee-root</artifactId>
     <version>1.0</version>
+    <relativePath>../..</relativePath>
   </parent>
-  <groupId>javaee7.websocket-client</groupId>
+  <groupId>ee-websocket-client</groupId>
   <artifactId>ee-websocket-client</artifactId>
   <packaging>war</packaging>
   <version>1.0.0</version>
