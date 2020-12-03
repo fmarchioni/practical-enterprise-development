@@ -35,7 +35,7 @@
           <layers>
             <layer>jaxrs</layer>
             <layer>ejb-lite</layer>
-
+            <layer>bean-validation</layer>
             <layer>management</layer>
           </layers>
           <excluded-layers>
