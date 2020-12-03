@@ -16,7 +16,7 @@ import org.junit.Test;
 import com.itbuzzpress.jaxrs.model.SimpleProperty;
 
 public class TestClient {
-String BASE_URL ="http://localhost:8080/ee-rest-client/rest";
+String BASE_URL ="http://localhost:8080/rest";
 	 @Test
 	public void testSimple() {
 		Client client = ClientBuilder.newClient();

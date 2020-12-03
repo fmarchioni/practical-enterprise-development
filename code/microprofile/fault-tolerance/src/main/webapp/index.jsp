@@ -13,9 +13,9 @@
 </head>
 <body>
 
-	<a href="rest/simple/text">Get Simple Text</a> <br/>
-	<a href="rest/simple/json">Get JSON</a> <br/>
-	<a href="rest/simple/xml">Get XML</a> <br/>
+	<a href="rest/text">Get Simple Text</a> <br/>
+	<a href="rest/json">Get JSON</a> <br/>
+	<a href="rest/xml">Get XML</a> <br/>
 
 </body>
 </html>

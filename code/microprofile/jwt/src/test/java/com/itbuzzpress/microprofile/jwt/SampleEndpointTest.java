@@ -54,8 +54,9 @@ public class SampleEndpointTest {
         jsonReader = Json.createReader(new StringReader(response.getBody().asString()));
         object = jsonReader.readObject();
         String adminToken = object.getString("access_token");
-
-        RestAssured.baseURI = "http://localhost:8080/jwt-demo/rest/jwt";
+        System.out.println(adminToken);
+        System.out.println(userToken);
+        RestAssured.baseURI = "http://localhost:8080/rest/jwt";
 
         given().auth().preemptive()
                 .oauth2(userToken)

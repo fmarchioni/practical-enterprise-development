@@ -50,7 +50,7 @@ import com.itbuzzpress.jaxrs.model.SimpleProperty;
 @Path("/param")
 public class ParamRESTService {
     String RESPONSE_OK="<p>Property has been added ! </p>" +
-		"<p><a href=\"http://localhost:8080/ee-rest-basic\">Back</a></p>";
+		"<p><a href=\"http://localhost:8080\">Back</a></p>";
     
 	@Inject DataList ejb;
 

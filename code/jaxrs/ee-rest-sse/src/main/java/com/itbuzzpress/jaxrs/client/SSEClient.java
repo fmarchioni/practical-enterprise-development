@@ -36,7 +36,7 @@ public class SSEClient {
 	public void init() {
 
 		this.sseClient = ClientBuilder.newClient();
-		this.target = this.sseClient.target("http://localhost:8080/ee-rest-sse/rest/events");
+		this.target = this.sseClient.target("http://localhost:8080/rest/events");
 
 		timerService.createSingleActionTimer(5000, new TimerConfig());
 		System.out.println("SSE client timer created");

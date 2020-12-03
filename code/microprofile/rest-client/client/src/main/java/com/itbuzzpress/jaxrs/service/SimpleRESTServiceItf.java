@@ -29,7 +29,7 @@ import org.eclipse.microprofile.rest.client.inject.RegisterRestClient;
 
 
 
-@RegisterRestClient(baseUri = "http://localhost:8080/ee-microprofile-rest-server/rest")
+@RegisterRestClient(baseUri = "http://localhost:8080")
 @Path("/api")
 public interface SimpleRESTServiceItf {
 	@GET

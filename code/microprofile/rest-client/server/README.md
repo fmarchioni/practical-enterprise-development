@@ -6,11 +6,12 @@ This example demonstrates the basic usage of REST Web services
 
 ###### Build and Deploy
 ```shell
-mvn clean install wildfly:deploy  
+$ java -jar target/ee-microprofile-rest-server-bootable.jar
+$ java -jar target/ee-microprofile-rest-client-bootable.jar  -Djboss.socket.binding.port-offset=100
 ```
 
 ###### Test
 ```shell
-http://localhost:8080/ee-rest-basic/
+curl http://localhost:8180/proxy/text
 ```
  

@@ -16,7 +16,7 @@ import com.itbuzzpress.cdi.microprofile.service.SimpleRESTService;
 public class RESTReadinessCheck implements HealthCheck {
     @Inject
     SimpleRESTService service;
-    String BASE_URL ="http://localhost:8080/ee-microprofile-health/rest";
+    String BASE_URL ="http://localhost:8080/rest";
     public boolean isHealthy() {
 
         try {

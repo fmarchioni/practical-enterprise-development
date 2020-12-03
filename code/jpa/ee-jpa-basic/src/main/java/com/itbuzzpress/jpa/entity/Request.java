@@ -8,7 +8,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
-
+import com.fasterxml.jackson.annotation.JsonIgnore;
 @Entity
 public class Request implements Serializable {
 
@@ -29,6 +29,16 @@ public class Request implements Serializable {
 
 	public void setId(Long id) {
 		this.id = id;
+	}
+
+	public String product;
+
+	public String getProduct() {
+		return product;
+	}
+
+	public void setProduct(String product) {
+		this.product = product;
 	}
 
 	@Override

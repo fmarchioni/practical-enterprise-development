@@ -42,7 +42,7 @@ import com.itbuzzpress.jaxrs.model.SimpleProperty;
 
 
 
-//Example URL: http://localhost:8080/ee-rest-basic/rest/simple/text
+//Example URL: http://localhost:8080/rest/simple/text
 
 @Path("/simple")
 public class SimpleRESTService {

@@ -38,7 +38,7 @@ public class ServletClient extends HttpServlet {
 		PrintWriter out = response.getWriter();
 		WebSocketContainer container = ContainerProvider
 				.getWebSocketContainer();
-		String uri = "ws://localhost:8080/ee-websocket-client/hello";
+		String uri = "ws://localhost:8080/hello";
 		try {
 			Session session = container.connectToServer(
 					WebSocketEndpoint.class, new URI(uri));

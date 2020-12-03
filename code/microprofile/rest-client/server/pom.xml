@@ -5,7 +5,7 @@
     <groupId>com.itbuzzpress.root</groupId>
     <artifactId>ee-root</artifactId>
     <version>1.0</version>
-    <relativePath>../..</relativePath>
+    <relativePath>../../../pom.xml</relativePath>
   </parent>
   <groupId>com.itbuzzpress.jaxrs</groupId>
   <artifactId>ee-microprofile-rest-server</artifactId>
@@ -14,6 +14,7 @@
   <name>Demo REST Service</name>
   <url>http://www.itbuzzpress.com</url>
   <properties>
+    <version.war.plugin>3.0.0</version.war.plugin>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
   <dependencies>
@@ -45,5 +46,47 @@
   </dependencies>
   <build>
     <finalName>${project.artifactId}</finalName>
+    <plugins>
+      <plugin>
+        <groupId>org.wildfly.plugins</groupId>
+        <artifactId>wildfly-jar-maven-plugin</artifactId>
+        <configuration>
+          <feature-pack-location>wildfly@maven(org.jboss.universe:community-universe)#${version.wildfly}</feature-pack-location>
+          <layers>
+            <layer>jaxrs-server</layer>
+            <layer>microprofile-platform</layer>
+          </layers>
+          <excluded-layers>
+            <layer>deployment-scanner</layer>
+          </excluded-layers>
+          <plugin-options>
+            <jboss-fork-embedded>${plugin.fork.embedded}</jboss-fork-embedded>
+          </plugin-options>
+        </configuration>
+        <executions>
+          <execution>
+            <goals>
+              <goal>package</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+    </plugins>
   </build>
+  <profiles>
+    <profile>
+      <id>openshift</id>
+      <build>
+        <finalName>${project.artifactId}</finalName>
+        <plugins>
+          <plugin>
+            <groupId>org.wildfly.plugins</groupId>
+            <artifactId>wildfly-jar-maven-plugin</artifactId>
+            <configuration >
+            </configuration>
+          </plugin>
+        </plugins>
+      </build>
+    </profile>
+  </profiles>
 </project>

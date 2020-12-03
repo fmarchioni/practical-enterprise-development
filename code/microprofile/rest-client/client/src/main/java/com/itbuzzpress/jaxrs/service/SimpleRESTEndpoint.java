@@ -30,7 +30,7 @@ import com.itbuzzpress.jaxrs.model.SimpleProperty;
 import org.eclipse.microprofile.rest.client.inject.RestClient;
 import javax.enterprise.context.ApplicationScoped;
 
-//Example URL: http://localhost:8080/ee-rest-client/rest/simple/text
+//Example URL: http://localhost:8080/rest/simple/text
 
 @Path("/proxy")
 @ApplicationScoped

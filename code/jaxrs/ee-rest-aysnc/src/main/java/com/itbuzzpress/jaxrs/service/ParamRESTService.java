@@ -78,11 +78,7 @@ public class ParamRESTService {
 			
 			 
 		}
-	 
 
-	 
-	 
- 	
 	@POST
 	@Path("/add")
 	@Consumes(MediaType.APPLICATION_XML)

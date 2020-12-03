@@ -10,7 +10,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
-
+import com.fasterxml.jackson.annotation.JsonIgnore;
 @Entity
 public class Customer implements Serializable {
 
@@ -73,6 +73,7 @@ public class Customer implements Serializable {
 
 	// bi-directional many-to-one association to Request
 	@OneToMany(mappedBy = "customer", fetch = FetchType.EAGER)
+	@JsonIgnore
 	private List<Request> requests;
 
 	public List<Request> getRequests() {

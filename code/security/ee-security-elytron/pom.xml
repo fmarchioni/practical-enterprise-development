@@ -21,6 +21,7 @@
     <groupId>com.itbuzzpress.root</groupId>
     <artifactId>ee-root</artifactId>
     <version>1.0</version>
+    <relativePath>../..</relativePath>
   </parent>
   <groupId>com.itbuzzpress.security</groupId>
   <version>1.0.0-FINAL</version>
@@ -35,24 +36,79 @@
       <distribution>repo</distribution>
     </license>
   </licenses>
+
   <dependencies>
     <dependency>
-      <groupId>jakarta.enterprise</groupId>
-      <artifactId>jakarta.enterprise.cdi-api</artifactId>
-      <scope>provided</scope>
-    </dependency>
-    <dependency>
-      <groupId>org.jboss.spec.javax.annotation</groupId>
-      <artifactId>jboss-annotations-api_1.3_spec</artifactId>
-      <scope>provided</scope>
-    </dependency>
-    <dependency>
-      <groupId>org.jboss.spec.javax.servlet</groupId>
-      <artifactId>jboss-servlet-api_4.0_spec</artifactId>
+      <groupId>jakarta.platform</groupId>
+      <artifactId>jakarta.jakartaee-api</artifactId>
       <scope>provided</scope>
     </dependency>
   </dependencies>
+
   <build>
     <finalName>${project.artifactId}</finalName>
+    <plugins>
+      <plugin>
+        <groupId>org.wildfly.plugins</groupId>
+        <artifactId>wildfly-jar-maven-plugin</artifactId>
+        <configuration>
+          <feature-pack-location>wildfly@maven(org.jboss.universe:community-universe)#${version.wildfly}</feature-pack-location>
+          <layers>
+            <layer>elytron</layer>
+            <layer>web-server</layer>
+          </layers>
+          <excluded-layers>
+            <layer>deployment-scanner</layer>
+          </excluded-layers>
+          <cli-sessions>
+            <cli-session>
+              <script-files>
+                <script>fsrealm.cli</script>
+              </script-files>
+            </cli-session>
+          </cli-sessions>
+
+          <plugin-options>
+            <jboss-fork-embedded>${plugin.fork.embedded}</jboss-fork-embedded>
+          </plugin-options>
+        </configuration>
+        <executions>
+          <execution>
+            <goals>
+              <goal>package</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+    </plugins>
   </build>
+
+  <profiles>
+    <profile>
+      <id>openshift</id>
+      <build>
+        <finalName>${project.artifactId}</finalName>
+        <plugins>
+          <plugin>
+            <groupId>org.wildfly.plugins</groupId>
+            <artifactId>wildfly-jar-maven-plugin</artifactId>
+            <configuration>
+              <cli-sessions>
+                <cli-session>
+                  <properties-file>
+                    ../scripts/cli.properties
+                  </properties-file>
+                  <script-files>
+                    <script>../scripts/os-https.cli</script>
+                  </script-files>
+                </cli-session>
+              </cli-sessions>
+              <cloud/>
+              <extra-server-content-dirs combine.self="override"/>
+            </configuration>
+          </plugin>
+        </plugins>
+      </build>
+    </profile>
+  </profiles>
 </project>

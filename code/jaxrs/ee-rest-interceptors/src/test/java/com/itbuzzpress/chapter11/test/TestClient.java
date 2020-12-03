@@ -11,7 +11,7 @@ import org.junit.Test;
  
 
 public class TestClient {
-String BASE_URL ="http://localhost:8080/ee-rest-interceptors/rest";
+String BASE_URL ="http://localhost:8080/rest";
 	@Test
 	public void test() {
 		Client client = ClientBuilder.newClient();

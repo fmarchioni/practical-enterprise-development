@@ -54,7 +54,7 @@ public class ServletClient extends HttpServlet {
 		try {
            
 			WebSocketContainer container = ContainerProvider.getWebSocketContainer();
-			String uri = "ws://localhost:8080/ee-websocket-encdec/helloencoded";
+			String uri = "ws://localhost:8080/helloencoded";
 			container.connectToServer(WebSocketEncodedEndpoint.class, URI.create(uri));
 			out.println("Message sent to Encoded WebSocket!");
 			out.println("Check Server Logs.");

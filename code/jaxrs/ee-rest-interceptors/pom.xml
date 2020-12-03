@@ -16,7 +16,7 @@
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
- <dependencies>
+  <dependencies>
 
     <dependency>
       <groupId>org.jboss.spec.javax.ws.rs</groupId>
@@ -33,12 +33,7 @@
       <artifactId>jboss-annotations-api_1.3_spec</artifactId>
       <scope>provided</scope>
     </dependency>
-    <dependency>
-      <groupId>jakarta.xml.bind</groupId>
-      <artifactId>jakarta.xml.bind-api</artifactId>
-      <version>2.3.3</version>
-      <scope>provided</scope>
-    </dependency>
+
     <!-- Test dependencies -->
 
     <dependency>
@@ -61,8 +56,13 @@
       <artifactId>commons-logging-jboss-logging</artifactId>
       <scope>test</scope>
     </dependency>
-
-   <dependency>
+    <dependency>
+      <groupId>jakarta.xml.bind</groupId>
+      <artifactId>jakarta.xml.bind-api</artifactId>
+      <version>2.3.3</version>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
       <groupId>org.glassfish.jaxb</groupId>
       <artifactId>jaxb-runtime</artifactId>
       <version>2.3.3</version>
@@ -70,7 +70,36 @@
     </dependency>
 
   </dependencies>
+
   <build>
     <finalName>${project.artifactId}</finalName>
+    <plugins>
+      <plugin>
+        <groupId>org.wildfly.plugins</groupId>
+        <artifactId>wildfly-jar-maven-plugin</artifactId>
+        <configuration>
+          <feature-pack-location>wildfly@maven(org.jboss.universe:community-universe)#${version.wildfly}</feature-pack-location>
+          <layers>
+            <layer>jaxrs</layer>
+            <layer>ejb-lite</layer>
+            <layer>bean-validation</layer>
+            <layer>management</layer>
+          </layers>
+          <excluded-layers>
+            <layer>deployment-scanner</layer>
+          </excluded-layers>
+          <plugin-options>
+            <jboss-fork-embedded>${plugin.fork.embedded}</jboss-fork-embedded>
+          </plugin-options>
+        </configuration>
+        <executions>
+          <execution>
+            <goals>
+              <goal>package</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+    </plugins>
   </build>
 </project>

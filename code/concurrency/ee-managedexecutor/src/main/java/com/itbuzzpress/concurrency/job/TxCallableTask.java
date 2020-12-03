@@ -54,7 +54,7 @@ public class TxCallableTask implements Callable<Long> {
 		SimpleEJB ejb = null;
 		try {
 			ejb = (SimpleEJB) new InitialContext()
-			.lookup("java:app/ee-managedexecutor/SimpleEJB!com.itbuzzpress.concurrency.ejb.SimpleEJB");
+			.lookup("java:app/ROOT/SimpleEJB!com.itbuzzpress.concurrency.ejb.SimpleEJB");
 
 		} catch (NamingException e) {
 			// TODO Auto-generated catch block

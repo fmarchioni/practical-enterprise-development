@@ -16,7 +16,7 @@ import org.junit.Test;
 import com.itbuzzpress.jaxrs.model.SimpleProperty;
 
 public class TestSyncClient {
-String BASE_URL ="http://localhost:8080/ee-rest-async/rest";
+String BASE_URL ="http://localhost:8080/rest";
 
 	 
 @Test	

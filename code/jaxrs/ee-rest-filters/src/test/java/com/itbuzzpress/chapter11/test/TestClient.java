@@ -15,7 +15,7 @@ import com.itbuzzpress.jaxrs.model.SimpleProperty;
 import com.itbuzzpress.jaxrs.test.filter.ClientFilter;
 
 public class TestClient {
-String BASE_URL ="http://localhost:8080/ee-rest-filters/rest";
+String BASE_URL ="http://localhost:8080/rest";
 	@Test
 	public void test() {
 		Client client = ClientBuilder.newClient();

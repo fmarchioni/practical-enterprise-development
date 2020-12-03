@@ -39,8 +39,6 @@ public class RemoteEJBClient {
 
 	private static Account lookupAccountEJB() throws NamingException {
 		final Hashtable jndiProperties = new Hashtable();
-                // specified in wildfly-config.xml             
-                //jndiProperties.put(Context.PROVIDER_URL, "remote+http://localhost:8080");
 
                 jndiProperties.put(Context.INITIAL_CONTEXT_FACTORY, "org.wildfly.naming.client.WildFlyInitialContextFactory");
 

@@ -19,25 +19,47 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
   <dependencies>
-    <!-- Import the EJB 3.2 API, we use provided scope as the API is included 
-			in JBoss WildFly -->
     <dependency>
-      <groupId>org.jboss.spec.javax.ejb</groupId>
-      <artifactId>jboss-ejb-api_3.2_spec</artifactId>
+      <groupId>jakarta.platform</groupId>
+      <artifactId>jakarta.jakartaee-api</artifactId>
       <scope>provided</scope>
     </dependency>
   </dependencies>
   <build>
-    <plugins>
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-ejb-plugin</artifactId>
-        <configuration>
-          <ejbVersion>3.2</ejbVersion>
-          <!-- this is false by default -->
-          <generateClient>true</generateClient>
-        </configuration>
-      </plugin>
-    </plugins>
-  </build>
+  <finalName>${project.artifactId}</finalName>
+  <plugins>
+    <plugin>
+      <groupId>org.wildfly.plugins</groupId>
+      <artifactId>wildfly-jar-maven-plugin</artifactId>
+      <configuration>
+        <extra-server-content-dirs>
+          <extra-content>extra-content</extra-content>
+        </extra-server-content-dirs>
+        <feature-pack-location>wildfly@maven(org.jboss.universe:community-universe)#${version.wildfly}</feature-pack-location>
+        <layers>
+          <layer>ejb</layer>
+        </layers>
+        <plugin-options>
+          <jboss-fork-embedded>${plugin.fork.embedded}</jboss-fork-embedded>
+        </plugin-options>
+      </configuration>
+      <executions>
+        <execution>
+          <goals>
+            <goal>package</goal>
+          </goals>
+        </execution>
+      </executions>
+    </plugin>
+    <plugin>
+      <groupId>org.apache.maven.plugins</groupId>
+      <artifactId>maven-ejb-plugin</artifactId>
+      <configuration>
+        <ejbVersion>3.2</ejbVersion>
+        <!-- this is false by default -->
+        <generateClient>true</generateClient>
+      </configuration>
+    </plugin>
+  </plugins>
+</build>
 </project>

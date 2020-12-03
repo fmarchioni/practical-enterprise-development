@@ -32,14 +32,15 @@
     <maven.compiler.source>1.8</maven.compiler.source>
   </properties>
 
+
   <dependencies>
     <dependency>
-      <groupId>org.wildfly</groupId>
-      <artifactId>wildfly-jms-client-bom</artifactId>
-      <type>pom</type>
-      <version>19.0.0.Beta2</version>
+      <groupId>org.apache.qpid</groupId>
+      <artifactId>qpid-jms-client</artifactId>
+      <version>0.54.0</version>
     </dependency>
   </dependencies>
+
 
   <build>
     <finalName>${project.artifactId}</finalName>
@@ -49,7 +50,7 @@
         <artifactId>exec-maven-plugin</artifactId>
         <version>${version.exec.plugin}</version>
         <configuration>
-          <mainClass>com.itbuzzpress.jms.JMSClient</mainClass>
+          <mainClass>com.itbuzzpress.jms.AMQPClient</mainClass>
         </configuration>
       </plugin>
       <plugin>

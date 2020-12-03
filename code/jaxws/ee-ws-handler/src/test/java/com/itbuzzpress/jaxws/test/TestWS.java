@@ -48,30 +48,5 @@ public class TestWS {
 			System.out.println("Exception: "+ e);
 		}
 	}
-	@Test
-	public void testApacheCXF() {
-		String name ="Adam Smith";
-		System.out.println("TEST Using Apache CXF native API");
 
-		JaxWsProxyFactoryBean factory = new JaxWsProxyFactoryBean();
-		factory.setServiceClass(AccountWSItf.class);
-		factory.setAddress("http://localhost:8080/ee-ws-basic/AccountWS?wsdl");
-		factory.getInInterceptors().add(new LoggingInInterceptor());
-		factory.getOutInterceptors().add(new LoggingOutInterceptor());
-
-		AccountWSItf ws = (AccountWSItf) factory.create(); 
-		ws.newAccount(name);
-		System.out.println("Created account name " +name);
-		ws.deposit(name, 1000);
-		System.out.println("Deposit $ 1000 ");
-		ws.withdraw(name, 500);
-		System.out.println("Withdraw $ 500 ");
-		Account account = ws.findAccountByName(name);
-		assertNotNull(account);
-		long money = account.getAmount();
-		assertEquals(500l, money);
-		System.out.println("Account amount is " +account.getAmount());
- 
-
-	}
 }

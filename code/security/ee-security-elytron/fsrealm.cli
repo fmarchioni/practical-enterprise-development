@@ -1,5 +1,3 @@
-connect
-
 if (outcome != success) of /subsystem=elytron/simple-role-decoder=from-roles-attribute:read-resource
      /subsystem=elytron/simple-role-decoder=from-roles-attribute:add(attribute=Roles)
 end-if
