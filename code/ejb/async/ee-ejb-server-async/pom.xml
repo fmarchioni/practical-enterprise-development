@@ -19,11 +19,10 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
   <dependencies>
-    <!-- Import the EJB 3.2 API, we use provided scope as the API is included 
-			in JBoss WildFly -->
     <dependency>
-      <groupId>org.jboss.spec.javax.ejb</groupId>
-      <artifactId>jboss-ejb-api_3.2_spec</artifactId>
+      <groupId>jakarta.platform</groupId>
+      <artifactId>jakarta.jakartaee-api</artifactId>
+      <version>${jakartaee.version}</version>
       <scope>provided</scope>
     </dependency>
   </dependencies>

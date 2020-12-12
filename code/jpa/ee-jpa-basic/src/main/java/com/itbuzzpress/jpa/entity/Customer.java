@@ -1,16 +1,10 @@
 package com.itbuzzpress.jpa.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
+import javax.persistence.*;
 import java.io.Serializable;
 import java.util.List;
-
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.FetchType;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.OneToMany;
-
 @Entity
 public class Customer implements Serializable {
 
@@ -73,6 +67,7 @@ public class Customer implements Serializable {
 
 	// bi-directional many-to-one association to Request
 	@OneToMany(mappedBy = "customer", fetch = FetchType.EAGER)
+	@JsonIgnore
 	private List<Request> requests;
 
 	public List<Request> getRequests() {

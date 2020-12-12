@@ -5,10 +5,10 @@ Example taken from [Practical Enterprise Application Development](http://www.itb
 This example demonstrates the basic usage of a JMS 2.0 application
 
 ###### Pre-requisites:
-You need the following Queue Definition in a full/full-ha profile:
+Add a JMS Queue named exampleQueue with the following CLI command:
 
-```shell
- <jms-queue name="ExampleQueue" entries="queue/exampleQueue java:/jboss/exported/jms/queue/exampleQueue"/>
+```
+jms-queue add --queue-address=exampleQueue --entries=queue/exampleQueue,java:jboss/exported/jms/queue/exampleQueue
 ```
 
 ###### Build and Deploy

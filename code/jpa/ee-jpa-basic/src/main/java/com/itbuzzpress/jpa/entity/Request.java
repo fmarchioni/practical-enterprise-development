@@ -1,13 +1,7 @@
 package com.itbuzzpress.jpa.entity;
 
+import javax.persistence.*;
 import java.io.Serializable;
-
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
 
 @Entity
 public class Request implements Serializable {
@@ -31,10 +25,17 @@ public class Request implements Serializable {
 		this.id = id;
 	}
 
-	@Override
-	public String toString() {
-		return "Request [id=" + id + ", quantity=" + quantity + "]";
+	public String product;
+
+	public String getProduct() {
+		return product;
 	}
+
+	public void setProduct(String product) {
+		this.product = product;
+	}
+
+
 
 	public int getQuantity() {
 		return quantity;
@@ -50,5 +51,15 @@ public class Request implements Serializable {
 
 	public void setCustomer(Customer customer) {
 		this.customer = customer;
+	}
+
+	@Override
+	public String toString() {
+		return "Request{" +
+				"id=" + id +
+				", quantity=" + quantity +
+				", customer=" + customer +
+				", product='" + product + '\'' +
+				'}';
 	}
 }

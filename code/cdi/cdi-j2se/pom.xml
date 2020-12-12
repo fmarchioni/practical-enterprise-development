@@ -37,21 +37,23 @@
   <build>
     <plugins>
       <plugin>
-        <groupId>org.codehaus.mojo</groupId>
-        <artifactId>exec-maven-plugin</artifactId>
-        <version>1.5.0</version>
         <executions>
           <execution>
-            <phase>test</phase>
+            <id>run</id>
+            <phase>package</phase>
             <goals>
               <goal>java</goal>
             </goals>
-            <configuration>
-              <mainClass>com.itbuzzpress.cdi.CDI2Demo</mainClass>
-            </configuration>
           </execution>
         </executions>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>exec-maven-plugin</artifactId>
+        <configuration>
+          <mainClass>com.itbuzzpress.cdi.CDI2Demo</mainClass>
+        </configuration>
       </plugin>
+
+
     </plugins>
   </build>
 </project>

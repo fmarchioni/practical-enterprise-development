@@ -7,7 +7,7 @@ This example demonstrates the basic usage of Batch API with a with Decision clas
 ###### Configure in the decision.xml file the FS Path to be scanned:
 ```xml
 	<properties>
-		<property name="filesystem" value="/home/francesco" />
+		<property name="filesystem" value="/tmp" />
 	</properties>
 ```
 

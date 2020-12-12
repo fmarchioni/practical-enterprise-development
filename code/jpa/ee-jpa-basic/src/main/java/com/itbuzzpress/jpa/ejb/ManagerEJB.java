@@ -1,19 +1,13 @@
 package com.itbuzzpress.jpa.ejb;
 
-import java.util.List;
-
-import javax.ejb.Stateless;
-
-import javax.persistence.EntityManager;
-import javax.persistence.EntityManagerFactory;
-
-import javax.persistence.PersistenceContext;
-
-import javax.persistence.PersistenceUnit;
-import javax.persistence.Query;
-
 import com.itbuzzpress.jpa.entity.Customer;
 import com.itbuzzpress.jpa.entity.Request;
+
+import javax.ejb.Stateless;
+import javax.persistence.*;
+import javax.ws.rs.WebApplicationException;
+import java.util.List;
+import java.util.logging.Logger;
 
 @Stateless
 public class ManagerEJB {
@@ -23,35 +17,65 @@ public class ManagerEJB {
 	@PersistenceUnit
 	EntityManagerFactory emf;
 
-	public void createRequest(String name, int quantity) {
-		Customer customer = findCustomerByName(name);
-		Request req = new Request();
-		req.setQuantity(quantity);
-		req.setCustomer(customer);
+	private static final Logger LOGGER = Logger.getLogger(ManagerEJB.class.getName());
 
-		em.persist(req);
+	public void createCustomer(Customer customer) {
+		em.persist(customer);
+		LOGGER.info("Created Customer "+customer);
 
 	}
 
-	public void createCustomer(String name, String address, String email,
-			String phone) {
-		try {
+	public void createRequest(Long id, Request request) {
+		Customer customer = findCustomerById(id);
+		request.setCustomer(customer);
+		em.persist(request);
+		LOGGER.info("Created Request "+request);
 
-			Customer customer = new Customer();
-			customer.setName(name);
-			customer.setAddress(address);
-			customer.setEmail(email);
-			customer.setPhoneNumber(phone);
+	}
 
-			em.persist(customer);
-			System.out.println("created customer" + customer);
-		} catch (Exception e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+	public void updateCustomer( Customer customer ) {
+		Customer customerToUpdate = findCustomerById(customer.getId());
+		customerToUpdate.setName(customer.getName());
+		customerToUpdate.setEmail(customer.getEmail());
+		customerToUpdate.setAddress(customer.getAddress());
+		customerToUpdate.setPhoneNumber(customer.getPhoneNumber());
+		LOGGER.info("Updated customer" + customer);
+	}
 
+	public void updateRequest( Request request ) {
+		Request requestToUpdate = findRequestById(request.getId());
+		requestToUpdate.setProduct(request.getProduct());
+		requestToUpdate.setQuantity(request.getQuantity());
+		LOGGER.info("Updated request" + request);
+	}
+
+	public void deleteCustomer(Long customerId) {
+		Customer c = findCustomerById(customerId);
+		em.remove(c);
+		LOGGER.info("Deleted Customer with id" + customerId);
+	}
+
+	public void deleteRequest(Long requestId) {
+		Request r = findRequestById(requestId);
+		em.remove(r);
+		LOGGER.info("Deleted request with id" + requestId);
+	}
+
+	public Customer findCustomerById(Long id) {
+		Customer customer = em.find(Customer.class, id);
+		if (customer == null) {
+			throw new WebApplicationException("Customer with id of " + id + " does not exist.", 404);
 		}
+		return customer;
 	}
 
+	public Request findRequestById(Long id) {
+		Request request = em.find(Request.class, id);
+		if (request == null) {
+			throw new WebApplicationException("Request with id of " + id + " does not exist.", 404);
+		}
+		return request;
+	}
 	public List<Customer> findAllCustomers() {
 		Query query = em.createQuery("FROM Customer");
 		List<Customer> customerList = query.getResultList();

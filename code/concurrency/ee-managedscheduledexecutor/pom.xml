@@ -18,19 +18,9 @@
   </properties>
   <dependencies>
     <dependency>
-      <groupId>org.jboss.spec.javax.enterprise.concurrent</groupId>
-      <artifactId>jboss-concurrency-api_1.0_spec</artifactId>
-    </dependency>
-    <!-- Import the Common Annotations API (JSR-250) -->
-    <dependency>
-      <groupId>org.jboss.spec.javax.annotation</groupId>
-      <artifactId>jboss-annotations-api_1.3_spec</artifactId>
-      <scope>provided</scope>
-    </dependency>
-    <!-- Import the Servlet API -->
-    <dependency>
-      <groupId>org.jboss.spec.javax.servlet</groupId>
-      <artifactId>jboss-servlet-api_4.0_spec</artifactId>
+      <groupId>jakarta.platform</groupId>
+      <artifactId>jakarta.jakartaee-api</artifactId>
+      <version>${jakartaee.version}</version>
       <scope>provided</scope>
     </dependency>
   </dependencies>
