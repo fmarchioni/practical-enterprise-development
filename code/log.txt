@@ -1,24 +1,0 @@
-[INFO] Scanning for projects...
-Downloading from maven.central: https://repo1.maven.org/maven2/org/wildfly/bom/wildfly-jakartaee8-with-tools/20.0.0.Final/wildfly-jakartaee8-with-tools-20.0.0.Final.pom
-Progress (1): 2.7/4.5 kBProgress (1): 4.5 kB                        Downloaded from maven.central: https://repo1.maven.org/maven2/org/wildfly/bom/wildfly-jakartaee8-with-tools/20.0.0.Final/wildfly-jakartaee8-with-tools-20.0.0.Final.pom (4.5 kB at 6.5 kB/s)
-Downloading from maven.central: https://repo1.maven.org/maven2/org/wildfly/bom/wildfly-jakartaee8/20.0.0.Final/wildfly-jakartaee8-20.0.0.Final.pom
-Progress (1): 2.7/78 kBProgress (1): 5.5/78 kBProgress (1): 8.2/78 kBProgress (1): 11/78 kB Progress (1): 14/78 kBProgress (1): 16/78 kBProgress (1): 19/78 kBProgress (1): 22/78 kBProgress (1): 25/78 kBProgress (1): 27/78 kBProgress (1): 30/78 kBProgress (1): 33/78 kBProgress (1): 36/78 kBProgress (1): 38/78 kBProgress (1): 41/78 kBProgress (1): 44/78 kBProgress (1): 47/78 kBProgress (1): 49/78 kBProgress (1): 52/78 kBProgress (1): 55/78 kBProgress (1): 58/78 kBProgress (1): 60/78 kBProgress (1): 63/78 kBProgress (1): 66/78 kBProgress (1): 69/78 kBProgress (1): 71/78 kBProgress (1): 74/78 kBProgress (1): 77/78 kBProgress (1): 78 kB                      Downloaded from maven.central: https://repo1.maven.org/maven2/org/wildfly/bom/wildfly-jakartaee8/20.0.0.Final/wildfly-jakartaee8-20.0.0.Final.pom (78 kB at 133 kB/s)
-Downloading from maven.central: https://repo1.maven.org/maven2/org/jboss/shrinkwrap/resolver/shrinkwrap-resolver-bom/2.2.7/shrinkwrap-resolver-bom-2.2.7.pom
-Progress (1): 2.7/5.3 kBProgress (1): 5.3 kB                        Downloaded from maven.central: https://repo1.maven.org/maven2/org/jboss/shrinkwrap/resolver/shrinkwrap-resolver-bom/2.2.7/shrinkwrap-resolver-bom-2.2.7.pom (5.3 kB at 15 kB/s)
-Downloading from maven.central: https://repo1.maven.org/maven2/org/wildfly/bom/wildfly-microprofile/20.0.0.Final/wildfly-microprofile-20.0.0.Final.pom
-Progress (1): 2.7/6.5 kBProgress (1): 5.5/6.5 kBProgress (1): 6.5 kB                        Downloaded from maven.central: https://repo1.maven.org/maven2/org/wildfly/bom/wildfly-microprofile/20.0.0.Final/wildfly-microprofile-20.0.0.Final.pom (6.5 kB at 11 kB/s)
-[INFO] 
-[INFO] --------------------< com.itbuzzpress.root:ee-root >--------------------
-[INFO] Building Root Project 1.0
-[INFO] --------------------------------[ pom ]---------------------------------
-[INFO] 
-[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ ee-root ---
-[INFO] 
-[INFO] --- maven-install-plugin:2.4:install (default-install) @ ee-root ---
-[INFO] Installing /home/francesco/git/practical-enterprise-development/code/pom.xml to /home/francesco/.m2/repository/com/itbuzzpress/root/ee-root/1.0/ee-root-1.0.pom
-[INFO] ------------------------------------------------------------------------
-[INFO] BUILD SUCCESS
-[INFO] ------------------------------------------------------------------------
-[INFO] Total time:  2.972 s
-[INFO] Finished at: 2020-06-15T10:01:24+02:00
-[INFO] ------------------------------------------------------------------------
