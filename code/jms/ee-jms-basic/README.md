@@ -2,22 +2,16 @@ Basic JMS example
 =====================================
 Example taken from [Practical Enterprise Application Development](http://www.itbuzzpress.com/ebooks/java-ee-7-development-on-wildfly.html)
 
-This example demonstrates the basic usage of a JMS 2.0 application
-
-###### Pre-requisites:
-You need the following Queue Definition in a full/full-ha profile:
-
-```shell
- <jms-queue name="ExampleQueue" entries="queue/exampleQueue java:/jboss/exported/jms/queue/exampleQueue"/>
-```
+This example demonstrates the basic usage of a JMS application using WildFly Bootable jar
 
 ###### Build and Deploy
+
 ```shell
-mvn clean install wildfly:deploy  
+mvn clean install wildfly-jar:run
 ```
 
 ###### Test
 ```shell
-http://localhost:8080/ee-jms-basic
+http://localhost:8080
 ```
  

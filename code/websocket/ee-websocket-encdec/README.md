@@ -6,11 +6,11 @@ This example demonstrates the basic usage of Web sockets communication using Enc
 
 ###### Build and Deploy
 ```shell
-mvn clean install wildfly:deploy
+mvn clean install wildfly-jar:run
 ```
+
 
 ###### Test
 ```shell
-http://localhost:8080/ee-websocket-encdec
+http://localhost:8080
 ```
- 

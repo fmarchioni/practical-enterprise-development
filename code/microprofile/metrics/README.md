@@ -5,9 +5,9 @@ Example taken from [Practical Enterprise Application Development](http://www.itb
 
 This example demonstrates the basic usage of MicroProfile Metrics with WildFly
 
-###### Deploy
+###### Build and Deploy
 ```shell
-mvn clean install wildfly:deploy
+mvn clean install -DskipTests=true wildfly-jar:run
 ```
 
  

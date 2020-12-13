@@ -2,15 +2,13 @@ Web sockets client example
 =====================================
 Example taken from [Practical Enterprise Application Development](http://www.itbuzzpress.com/ebooks/java-ee-7-development-on-wildfly.html)
 
-This example demonstrates the basic usage of Web sockets communication using a Java EE endpoint and a Java client
-
+This example demonstrates the basic usage of Jakarta Web sockets communication with a Java client
 ###### Build and Deploy
 ```shell
-mvn clean install wildfly:deploy
+mvn clean install wildfly-jar:run
 ```
 
 ###### Test
 ```shell
-http://localhost:8080/ee-websocket-client
+http://localhost:8080
 ```
- 

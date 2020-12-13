@@ -22,14 +22,9 @@ Users available:
 
 NOTE: Copy the file myrealm.json in your /tmp path
 
-## Start WildFly
-```
-./standalone.sh
-```
-
-## Deploy the application
-```
-mvn clean install wildfly:deploy -DskipTests=true
+###### Build and Deploy
+```shell
+mvn clean install -DskipTests=true wildfly-jar:run
 ```
 
 ## Test the application

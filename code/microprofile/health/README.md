@@ -4,9 +4,9 @@ Example taken from [Practical Enterprise Application Development](http://www.itb
 
 This example demonstrates the usage of WildFly MicroProfile health check
 
-###### Deploy
+###### Build and Deploy
 ```shell
-mvn clean install wildfly:deploy
+mvn clean install wildfly-jar:run
 ```
 
 ###### Test Readiness

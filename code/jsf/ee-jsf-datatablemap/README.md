@@ -4,14 +4,12 @@ Example taken from [Practical Enterprise Application Development](http://www.itb
 
 This example demonstrates using a Datatable backed by a java.util.HashMap
 
-Requires JSF 2.3
-
 ###### Build and Deploy
 ```shell
-mvn clean install wildfly:deploy
+mvn clean install wildfly-jar:run
 ```
 
 ###### Test
 ```shell
-http://localhost:8080/ee-jsf-datatablemap
+http://localhost:8080
 ```

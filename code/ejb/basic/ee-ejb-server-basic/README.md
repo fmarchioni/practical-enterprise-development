@@ -2,17 +2,14 @@ Remote EJB example
 =====================================
 Example taken from [Practical Enterprise Application Development](http://www.itbuzzpress.com/ebooks/java-ee-7-development-on-wildfly.html)
 
-This example demonstrates the usage of Remote EJB 3.2 a Java EE 7 Environment.
+This example demonstrates the usage of Remote EJB with a Jakarta EE Environment.
 
-###### Create User
-
-Add user to WildFly with this command: 
+###### Build and Deploy
 
 ```shell
-bin/add-user.sh -a -u ejbuser -p password123
+mvn clean install wildfly-jar:run
 ```
 
-###### Deploy
-```shell
-mvn clean install wildfly:deploy
-```
+###### Test
+
+Use the client application to test the Remote EJB

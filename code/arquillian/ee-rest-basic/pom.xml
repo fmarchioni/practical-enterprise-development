@@ -11,7 +11,7 @@
   <artifactId>ee-rest-basic</artifactId>
   <packaging>war</packaging>
   <version>1.0.0</version>
-  <name>Demo REST Service</name>
+  <name>Demo REST Service with Arquillian</name>
   <url>http://www.itbuzzpress.com</url>
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -22,6 +22,7 @@
       <groupId>jakarta.platform</groupId>
       <artifactId>jakarta.jakartaee-api</artifactId>
       <scope>provided</scope>
+      <version>${jakartaee.version}</version>
     </dependency>
     <dependency>
       <groupId>org.wildfly.arquillian</groupId>

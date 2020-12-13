@@ -2,13 +2,10 @@ Asynchronous Servlet example
 =====================================
 Example taken from [Practical Enterprise Application Development](http://www.itbuzzpress.com/ebooks/java-ee-7-development-on-wildfly.html)
 
-This example demonstrates the usage of Asynchronous Servlet in a Java EE 7 Environment.
+This example demonstrates the basic usage of an Asynchronous Servlet with WildFly Bootable Jar.
+###### Build and Deploy
+```shell
+mvn clean install wildfly-jar:run
+```
 
-###### Deploy
-```shell
-mvn clean install wildfly:deploy
-```
-###### Test
-```shell
-http://localhost:8080/ee-async-servlet
-```
+The application is available at: http://localhost:8080

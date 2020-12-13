@@ -4,18 +4,13 @@ Example taken from [Practical Enterprise Application Development](http://www.itb
 
 This example demonstrates the basic usage of JSON-B API
 
-###### Start WildFly
-```shell
-./standalone.sh 
-```
-
 ###### Build and Deploy
 ```shell
-mvn clean install wildfly:deploy  
+mvn clean install wildfly-jar:run
 ```
 
 ###### Test
 ```shell
-http://localhost:8080/ee-jsonb/
+http://localhost:8080
 ```
  

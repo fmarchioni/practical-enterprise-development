@@ -6,11 +6,11 @@ This example demonstrates how to test Asynchronous Web sockets communication
 
 ###### Build and Deploy
 ```shell
-mvn clean install wildfly:deploy
+mvn clean install wildfly-jar:run
 ```
 
 ###### Test
 ```shell
-http://localhost:8080/ee-websocket-async/
+http://localhost:8080
 ```
  

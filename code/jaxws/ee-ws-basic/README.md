@@ -6,11 +6,12 @@ This example demonstrates the basic usage of JAX-WS Web services
 
 ###### Build and Deploy
 ```shell
-mvn clean install wildfly:deploy -DskipTests=true
+mvn clean install -DskipTests=true wildfly-jar:run
 ```
 
 ###### Test
 ```shell
 mvn test
 ```
+
  

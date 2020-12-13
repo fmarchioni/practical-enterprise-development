@@ -4,11 +4,12 @@ Example taken from [Practical Enterprise Application Development](http://www.itb
 
 This example demonstrates the usage of WildFly MicroProfile Configuration which reads configuration from src/main/resources/META-INF/microprofile-config.properties
 
-###### Deploy
+###### Build and Deploy
 ```shell
-mvn clean install wildfly:deploy
+mvn clean install wildfly-jar:run
 ```
+
 ###### Test
 ```shell
-http://localhost:8080/ee-microprofile-config/config
+http://localhost:8080/config
 ```

@@ -42,6 +42,7 @@
       <groupId>jakarta.platform</groupId>
       <artifactId>jakarta.jakartaee-api</artifactId>
       <scope>provided</scope>
+      <version>${jakartaee.version}</version>
     </dependency>
   </dependencies>
 
@@ -84,33 +85,4 @@
       </plugin>
     </plugins>
   </build>
-
-  <profiles>
-    <profile>
-      <id>openshift</id>
-      <build>
-        <finalName>${project.artifactId}</finalName>
-        <plugins>
-          <plugin>
-            <groupId>org.wildfly.plugins</groupId>
-            <artifactId>wildfly-jar-maven-plugin</artifactId>
-            <configuration>
-              <cli-sessions>
-                <cli-session>
-                  <properties-file>
-                    ../scripts/cli.properties
-                  </properties-file>
-                  <script-files>
-                    <script>../scripts/os-https.cli</script>
-                  </script-files>
-                </cli-session>
-              </cli-sessions>
-              <cloud/>
-              <extra-server-content-dirs combine.self="override"/>
-            </configuration>
-          </plugin>
-        </plugins>
-      </build>
-    </profile>
-  </profiles>
 </project>

@@ -6,7 +6,7 @@ This example demonstrates a basic JPA application
 
 ###### Build and Deploy
 ```shell
-mvn clean install wildfly:deploy
+mvn clean install wildfly-jar:run
 ```
 
 ###### Test

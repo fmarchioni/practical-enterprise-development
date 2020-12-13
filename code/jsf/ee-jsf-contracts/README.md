@@ -6,10 +6,10 @@ This example demonstrates a basic JSF application using Resource Library Contrac
 
 ###### Build and Deploy
 ```shell
-mvn clean install wildfly:deploy
+mvn clean install wildfly-jar:run
 ```
 
 ###### Test
 ```shell
-http://localhost:8080/ee-jsf-contracts
+http://localhost:8080
 ```

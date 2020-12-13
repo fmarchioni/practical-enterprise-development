@@ -1,12 +1,12 @@
-Basic REST Web services example
+Basic Jakarta REST service example
 =====================================
 Example taken from [Practical Enterprise Application Development](http://www.itbuzzpress.com/ebooks/java-ee-7-development-on-wildfly.html)
 
-This example demonstrates the basic usage of REST Web services
+This example demonstrates the basic usage of Jakarta REST service with WildFly Bootable jar
 
 ###### Build and Deploy
 ```shell
-mvn clean install wildfly:deploy  
+mvn clean install wildfly-jar:run
 ```
 
 ###### Test

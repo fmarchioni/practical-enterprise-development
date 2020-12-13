@@ -20,6 +20,7 @@
       <groupId>jakarta.platform</groupId>
       <artifactId>jakarta.jakartaee-api</artifactId>
       <scope>provided</scope>
+      <version>${jakartaee.version}</version>
     </dependency>
     <dependency>
       <groupId>org.jboss.spec.javax.annotation</groupId>

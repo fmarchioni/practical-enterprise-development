@@ -2,16 +2,14 @@ JSF WebSocket example
 =====================================
 Example taken from [Practical Enterprise Application Development](http://www.itbuzzpress.com/ebooks/java-ee-7-development-on-wildfly.html)
 
-This example demonstrates a JSF2.3 features which enables using WebSockets in a JSF application
-
-Requires JSF 2.3
+This example demonstrates a JSF  feature which enables using WebSockets in a JSF application
 
 ###### Build and Deploy
 ```shell
-mvn clean install wildfly:deploy
+mvn clean install wildfly-jar:run
 ```
 
 ###### Test
 ```shell
-http://localhost:8080/ee-jsf-websocket
+http://localhost:8080
 ```

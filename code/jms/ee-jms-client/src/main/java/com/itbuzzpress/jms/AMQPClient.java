@@ -34,11 +34,11 @@ public class AMQPClient {
             connection.start();
 
             // Step 5. create a moving receiver, this means the message will be removed from the queue
-          //  MessageConsumer consumer = session.createConsumer(queue);
+            MessageConsumer consumer = session.createConsumer(queue);
 
             // Step 7. receive the simple message
-          //  TextMessage m = (TextMessage) consumer.receive(5000);
-          //  System.out.println("message = " + m.getText());
+            TextMessage m = (TextMessage) consumer.receive(5000);
+            System.out.println("message = " + m.getText());
 
         } finally {
             if (connection != null) {

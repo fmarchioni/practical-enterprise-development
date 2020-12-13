@@ -3,14 +3,19 @@ WildFly MicroProfile FaultTolerance example
 
 This example demonstrates the basic usage of MicroProfile FaultTolerance with WildFly
 
-###### Start WildFly
+###### Build and Deploy
 ```shell
-./standalone.sh -c standalone-microprofile.xml
+mvn clean install wildfly-jar:run
 ```
 
-###### Deploy
+###### Test
+
+Available REST Endpoints:
+
 ```shell
-mvn clean install wildfly:deploy
+curl http://localhost:8080/rest/text
+curl http://localhost:8080/rest/json
+curl http://localhost:8080/rest/xml
 ```
  
 

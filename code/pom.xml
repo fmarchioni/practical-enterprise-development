@@ -7,7 +7,7 @@
   <packaging>pom</packaging>
   <name>Root Project</name>
   <properties>
-        <version.bootable.jar>2.0.0.Final</version.bootable.jar>
+        <version.bootable.jar>2.0.2.Final</version.bootable.jar>
         <version.wildfly>21.0.0.Final</version.wildfly>
         <version.jkube>1.0.1</version.jkube>
         <plugin.fork.embedded>true</plugin.fork.embedded>
@@ -22,16 +22,11 @@
         <version.org.jboss.arquillian.junit>1.6.0.Final</version.org.jboss.arquillian.junit>
         <version.junit>4.13.1</version.junit>
         <version.org.jboss.shrinkwrap.shrinkwrap>1.2.6</version.org.jboss.shrinkwrap.shrinkwrap>
+        <jakartaee.version>8.0.0</jakartaee.version>
     </properties>
 
     <dependencyManagement>
         <dependencies>
-            <dependency>
-                <groupId>jakarta.platform</groupId>
-                <artifactId>jakarta.jakartaee-api</artifactId>
-                <version>8.0.0</version>
-                <scope>provided</scope>
-            </dependency>
 
             <!-- importing the jakartaee8-with-tools BOM adds specs and other useful artifacts as managed dependencies -->
             <dependency>
@@ -85,11 +80,7 @@
             <artifactId>jboss-jaxb-api_2.3_spec</artifactId>
             <scope>provided</scope>
         </dependency>
-<!--        <dependency>
-            <groupId>jakarta.xml.bind</groupId>
-            <artifactId>jakarta.xml.bind-api</artifactId>
-            <version>2.3.3</version>
-        </dependency>-->
+
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>

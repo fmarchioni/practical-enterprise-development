@@ -9,17 +9,12 @@ This folder contains the script generatekeys.sh to generate client/server keysto
 ./generatekeys.sh  
 ```
 
-Then copy the keystores and trustores in the $JBOSS_HOME/standalone/configuration folder
+###### Compile and deploy
 
 ```shell
-cp *.keystore $JBOSS_HOME/standalone/configuration
-
-cp *.truststore $JBOSS_HOME/standalone/configuration
+mvn clean install wildfly-jar:run
 ```
 
+###### Test
 
-###### Install keys on the application server
-
-```shell
-/bin/jboss-cli.sh --file=script.cli
-```
+https://localhost:8443/https

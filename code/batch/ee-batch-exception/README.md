@@ -4,18 +4,20 @@ Example taken from [Practical Enterprise Application Development](http://www.itb
 
 This example demonstrates the basic usage of Batch API with a with a Skippable exception listener class
 
-###### Install the CSV file in the location specified by your job.xml (in this example /tmp) 
+###### Install the CSV file in the location specified by your job.xml (in this example /tmp)
+
 ```shell
 cp input.csv /tmp
 ```
 
 ###### Build and Deploy
+
 ```shell
-mvn clean install wildfly:deploy  
+mvn clean install wildfly-jar:run
 ```
 
 ###### Test
-```shell
-http://localhost:8080/ee-batch-exception/
-```
- 
+
+The application is available at http://localhost:8080
+
+
