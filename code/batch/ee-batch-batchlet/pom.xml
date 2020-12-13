@@ -11,7 +11,7 @@
   <artifactId>ee-batch-batchlet</artifactId>
   <packaging>war</packaging>
   <version>1.0.0</version>
-  <name>Demo Java EE 7 Batchlet</name>
+  <name>Demo Jakarta EE Batchlet</name>
   <url>http://www.itbuzzpress.com</url>
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -34,7 +34,10 @@
         <configuration>
           <feature-pack-location>wildfly@maven(org.jboss.universe:community-universe)#${version.wildfly}</feature-pack-location>
           <layers>
+            <layer>ejb</layer>
+            <layer>h2-datasource</layer>
             <layer>batch-jberet</layer>
+            <layer>jpa</layer>
             <layer>web-server</layer>
           </layers>
           <plugin-options>

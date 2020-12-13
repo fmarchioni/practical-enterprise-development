@@ -12,7 +12,7 @@ mvn clean install wildfly-jar:run
 
 ###### Test
 ```shell
-http://localhost:8080/openapi 
+curl http://localhost:8080/openapi
 ```
  
  

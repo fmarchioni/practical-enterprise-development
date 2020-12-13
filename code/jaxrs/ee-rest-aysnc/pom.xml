@@ -11,7 +11,7 @@
   <artifactId>ee-rest-async</artifactId>
   <packaging>war</packaging>
   <version>1.0.0</version>
-  <name>Java EE 7 REST async demo</name>
+  <name>Jakarta EE REST async demo</name>
   <url>http://www.itbuzzpress.com</url>
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -19,24 +19,10 @@
   <dependencies>
 
     <dependency>
-      <groupId>org.jboss.spec.javax.ws.rs</groupId>
-      <artifactId>jboss-jaxrs-api_2.1_spec</artifactId>
+      <groupId>jakarta.platform</groupId>
+      <artifactId>jakarta.jakartaee-api</artifactId>
       <scope>provided</scope>
-    </dependency>
-    <dependency>
-      <groupId>jakarta.enterprise</groupId>
-      <artifactId>jakarta.enterprise.cdi-api</artifactId>
-      <scope>provided</scope>
-    </dependency>
-    <dependency>
-      <groupId>org.jboss.spec.javax.annotation</groupId>
-      <artifactId>jboss-annotations-api_1.3_spec</artifactId>
-      <scope>provided</scope>
-    </dependency>
-    <dependency>
-      <groupId>org.jboss.spec.javax.ejb</groupId>
-      <artifactId>jboss-ejb-api_3.2_spec</artifactId>
-      <scope>provided</scope>
+      <version>${jakartaee.version}</version>
     </dependency>
 
     <!-- Test dependencies -->

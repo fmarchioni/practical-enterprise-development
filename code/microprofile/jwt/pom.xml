@@ -25,26 +25,22 @@
 
 
   <dependencies>
-    <!-- https://mvnrepository.com/artifact/org.eclipse.microprofile.jwt/microprofile-jwt-auth-api -->
+
     <dependency>
       <groupId>org.eclipse.microprofile.jwt</groupId>
       <artifactId>microprofile-jwt-auth-api</artifactId>
     </dependency>
 
     <dependency>
-      <groupId>jakarta.enterprise</groupId>
-      <artifactId>jakarta.enterprise.cdi-api</artifactId>
-      <scope>provided</scope>
+      <groupId>org.eclipse.microprofile.config</groupId>
+      <artifactId>microprofile-config-api</artifactId>
     </dependency>
+
     <dependency>
-      <groupId>org.jboss.spec.javax.ws.rs</groupId>
-      <artifactId>jboss-jaxrs-api_2.1_spec</artifactId>
+      <groupId>jakarta.platform</groupId>
+      <artifactId>jakarta.jakartaee-api</artifactId>
       <scope>provided</scope>
-    </dependency>
-    <dependency>
-      <groupId>jakarta.json</groupId>
-      <artifactId>jakarta.json-api</artifactId>
-      <scope>provided</scope>
+      <version>${jakartaee.version}</version>
     </dependency>
 
     <dependency>
@@ -57,12 +53,6 @@
       <artifactId>commons-logging</artifactId>
       <version>1.1.1</version>
       <scope>test</scope>
-
-    </dependency>
-    <dependency>
-      <groupId>org.jboss.spec.javax.annotation</groupId>
-      <artifactId>jboss-annotations-api_1.3_spec</artifactId>
-      <scope>provided</scope>
     </dependency>
     <dependency>
       <groupId>io.rest-assured</groupId>
@@ -70,10 +60,7 @@
       <version>4.0.0</version>
       <scope>test</scope>
     </dependency>
-    <dependency>
-      <groupId>org.eclipse.microprofile.config</groupId>
-      <artifactId>microprofile-config-api</artifactId>
-    </dependency>
+
     <dependency>
       <groupId>org.hamcrest</groupId>
       <artifactId>hamcrest-all</artifactId>

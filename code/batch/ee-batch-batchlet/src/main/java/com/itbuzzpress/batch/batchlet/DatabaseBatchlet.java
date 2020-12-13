@@ -19,6 +19,7 @@ public class DatabaseBatchlet extends AbstractBatchlet {
 
 	@PersistenceContext 
 	EntityManager em;
+
 	@Override
 	public String process() {
 		String user = stepContext.getProperties().getProperty("user");
@@ -29,7 +30,7 @@ public class DatabaseBatchlet extends AbstractBatchlet {
 		u.setPassword(password);
 
 		em.persist(u); 
-		System.out.println("User created!");
+		System.out.println("Process completed and User created!");
 		return "COMPLETED";
 	}
 
