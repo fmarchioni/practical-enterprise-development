@@ -75,7 +75,7 @@ public class SimpleRESTService {
 	private SimpleProperty buildPOJO() {
 		if (new Random().nextFloat() < 0.5f) {
 			System.out.println("Error!!!");
-			throw new RuntimeException("Resource failure.");
+			throw new RuntimeException("System unavailable. Try a bit later.");
 		}
 		SimpleProperty p = new SimpleProperty("key","value");
 		return p;

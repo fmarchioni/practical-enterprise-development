@@ -5,10 +5,24 @@ Example taken from [Practical Enterprise Application Development](http://www.itb
 
 This example demonstrates the basic usage of MicroProfile Metrics with WildFly
 
-###### Deploy
+###### Build and Deploy
 ```shell
 mvn clean install wildfly:deploy
 ```
+
+###### Test
+
+Available REST Endpoints:
+
+```shell
+curl http://localhost:8080/ee-microprofile-metrics/rest/simple/time
+curl http://localhost:8080/ee-microprofile-metrics/rest/simple/hello
+curl http://localhost:8080/ee-microprofile-metrics/rest/simple/json
+curl http://localhost:8080/ee-microprofile-metrics/rest/simple/xml
+
+curl http://localhost:9990/metrics
+```
+
 
  
  

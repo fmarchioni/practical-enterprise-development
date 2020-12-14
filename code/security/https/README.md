@@ -21,5 +21,13 @@ cp *.truststore $JBOSS_HOME/standalone/configuration
 ###### Install keys on the application server
 
 ```shell
-/bin/jboss-cli.sh --file=script.cli
+$JBOSS_HOME/bin/jboss-cli.sh --file=script.cli
 ```
+
+
+###### Deploy & Test
+
+```shell
+$ mvn clean install wildfly:deploy
+```
+Application available at: https://localhost:8443/ee-security-https/https
