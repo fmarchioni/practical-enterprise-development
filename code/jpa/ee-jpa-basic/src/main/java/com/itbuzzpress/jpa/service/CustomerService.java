@@ -1,4 +1,4 @@
-package com.itbuzzpress.jaxrs.service;
+package com.itbuzzpress.jpa.service;
 
 
 import com.itbuzzpress.jpa.ejb.ManagerEJB;
