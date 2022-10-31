@@ -1,17 +1,16 @@
 package com.itbuzzpress.cdi.bean;
 
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Random;
-
-import javax.enterprise.inject.Any;
-import javax.enterprise.inject.Disposes;
-import javax.enterprise.inject.Produces;
-
 import com.itbuzzpress.cdi.enums.Language;
 import com.itbuzzpress.cdi.model.Word;
 import com.itbuzzpress.cdi.qualifier.Anagram;
+import jakarta.enterprise.inject.Any;
+import jakarta.enterprise.inject.Disposes;
+import jakarta.enterprise.inject.Produces;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Random;
 
 public class GenerateWord {
 

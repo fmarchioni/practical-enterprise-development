@@ -4,7 +4,7 @@
 
 This is needed to configure elytron subsystem:
 ```shell
-/bin/jboss-cli.sh --file=script.cli
+/bin/jboss-cli.sh --file=configure.sh
 ```
 
 ### Compile and deploy the server application

@@ -2,46 +2,15 @@
 
 ### Configure Keystores and Elytron subsystem:
 
-1. Configure keystores
-```shell
-$ cd ssl
-$ ./generatekeys.sh
-```
-2. Copy server files into WildFly configuration folder (Replace with your JBOSS_HOME)
+/subsystem=elytron/key-store=tlsTrustStore:import-certificate(alias=client,path=/home/francesco/git/practical-enterprise-development/code/security/ee-ejb-elytron-ssl2/client/tlsClient.cer,credential-reference={clear-text=serverTrustSecret},trust-cacerts=true,validate=false)
 
-```shell
-$ export JBOSS_HOME=/path/to/wildfly-18.0.1.Final
-$ cp server.keystore $JBOSS_HOME/standalone/configuration
-$ cp server.truststore $JBOSS_HOME/standalone/configuration
-```
 
-3. Copy client files into the client folder
 
-```shell
-$ cp client.keystore ../client/
-$ cp client.truststore ../client/
-```
+keytool -importcert -keystore /home/francesco/git/practical-enterprise-development/code/security/ee-ejb-elytron-ssl2/client/tlsClient.truststore -storepass clientTrustSecret -alias localhost -trustcacerts -file /home/francesco/jboss/wildfly-preview-27.0.0.Beta1/standalone/configuration/tlsServer.cer -noprompt
 
-4. Configure Elytron and SSL (Replace with path to repository)
 
-```shell
-$JBOSS_HOME/bin/jboss-cli.sh --file=/path/to/repository/practical-enterprise-development/code/security/ee-ejb-elytron-ssl/ssl/keys.cli
-$JBOSS_HOME/bin/jboss-cli.sh --file=/path/to/repository/practical-enterprise-development/code/security/ee-ejb-elytron-ssl/ssl/script.cli
-```
 
-### Compile and deploy the server application
-```
-cd server
-mvn clean install wildfly:deploy
-```
+./elytron-tool.sh credential-store --create --location "tlsCredStore.cs" --password clientStorePassword
 
-### Move into the client folder
-```
-cd client
-```
 
-### Compile and execute the Client application
-```
-mvn clean install exec:exec
-```
-
+./elytron-tool.sh credential-store --location "tlsCredStore.cs" --password clientStorePassword --add example_user --secret examplePwd1!

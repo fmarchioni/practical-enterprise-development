@@ -1,12 +1,12 @@
-package com.itbuzzpress.jpa.service;
+package com.itbuzzpress.jaxrs.service;
 
 
 import com.itbuzzpress.jpa.ejb.ManagerEJB;
 import com.itbuzzpress.jpa.entity.Request;
+import jakarta.inject.Inject;
+import jakarta.ws.rs.*;
+import jakarta.ws.rs.core.Response;
 
-import javax.inject.Inject;
-import javax.ws.rs.*;
-import javax.ws.rs.core.Response;
 import java.util.List;
 
 @Path("/request")

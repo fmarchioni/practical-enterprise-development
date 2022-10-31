@@ -1,12 +1,11 @@
 package com.itbuzzpress.concurrency.job;
 
-import java.util.concurrent.Callable;
-
+import com.itbuzzpress.concurrency.ejb.SimpleEJB;
 import javax.naming.InitialContext;
 import javax.naming.NamingException;
-import javax.transaction.UserTransaction;
+import jakarta.transaction.UserTransaction;
 
-import com.itbuzzpress.concurrency.ejb.SimpleEJB;
+import java.util.concurrent.Callable;
 
  
 public class TxCallableTask implements Callable<Long> {

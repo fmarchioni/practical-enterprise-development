@@ -1,24 +1,13 @@
 package com.itbuzzpress.concurrency.ejb;
 
- 
-import java.util.concurrent.ArrayBlockingQueue;
-import java.util.concurrent.Callable;
- 
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Future;
- 
-import java.util.concurrent.ThreadPoolExecutor;
-import java.util.concurrent.TimeUnit;
 
- 
+import jakarta.annotation.PostConstruct;
+import jakarta.annotation.Resource;
+import jakarta.ejb.Singleton;
+import jakarta.enterprise.concurrent.ContextService;
+import jakarta.enterprise.concurrent.ManagedThreadFactory;
 
-import javax.annotation.PostConstruct;
-import javax.annotation.Resource;
- 
-import javax.ejb.Singleton;
-import javax.enterprise.concurrent.ContextService;
- 
-import javax.enterprise.concurrent.ManagedThreadFactory;
+import java.util.concurrent.*;
 
  
 
@@ -43,7 +32,7 @@ public class ContextExecutorEJB {
 				new ArrayBlockingQueue<Runnable>(10), factory);
 	}
 	
-	public Future<Long> submitJob(Callable<Long> task) {
+	public Future<Long> submitJob(Callable<Integer> task) {
 		Callable<Long> proxy = cs.createContextualProxy(task, Callable.class);
 		return getThreadPoolExecutor().submit(proxy);
 

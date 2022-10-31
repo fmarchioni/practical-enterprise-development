@@ -1,11 +1,10 @@
 package com.itbuzzpress.batch.chunk;
 
-import javax.batch.api.chunk.AbstractCheckpointAlgorithm;
-import javax.batch.runtime.context.JobContext;
-import javax.inject.Inject;
-import javax.inject.Named;
-
 import com.itbuzzpress.batch.ejb.EJBSingleton;
+import jakarta.batch.api.chunk.AbstractCheckpointAlgorithm;
+import jakarta.batch.runtime.context.JobContext;
+import jakarta.inject.Inject;
+import jakarta.inject.Named;
 
  
 @Named

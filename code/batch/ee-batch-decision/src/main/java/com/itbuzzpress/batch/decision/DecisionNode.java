@@ -1,15 +1,13 @@
 package com.itbuzzpress.batch.decision;
 
+import jakarta.batch.api.Decider;
+import jakarta.batch.runtime.StepExecution;
+import jakarta.batch.runtime.context.JobContext;
+import jakarta.inject.Inject;
+import jakarta.inject.Named;
+
 import java.io.File;
 import java.util.Properties;
-
-import javax.batch.api.Decider;
-import javax.batch.operations.JobOperator;
-import javax.batch.runtime.BatchRuntime;
-import javax.batch.runtime.StepExecution;
-import javax.batch.runtime.context.JobContext;
-import javax.inject.Inject;
-import javax.inject.Named;
 
 @Named
 public class DecisionNode implements Decider {

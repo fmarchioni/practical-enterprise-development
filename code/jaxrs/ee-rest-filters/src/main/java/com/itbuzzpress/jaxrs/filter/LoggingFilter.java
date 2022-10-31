@@ -1,10 +1,10 @@
 package com.itbuzzpress.jaxrs.filter;
 
-import java.io.IOException;
+import jakarta.ws.rs.container.ContainerRequestContext;
+import jakarta.ws.rs.container.ContainerRequestFilter;
+import jakarta.ws.rs.ext.Provider;
 
-import javax.ws.rs.container.ContainerRequestContext;
-import javax.ws.rs.container.ContainerRequestFilter;
-import javax.ws.rs.ext.Provider;
+import java.io.IOException;
 
 @Provider 
 public class LoggingFilter implements ContainerRequestFilter  {

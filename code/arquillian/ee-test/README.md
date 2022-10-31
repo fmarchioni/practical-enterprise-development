@@ -20,11 +20,11 @@ Configure src/test/resources/arquillian.xml in to point to your Wildfly installa
 	</configuration>
 ```
 ```shell
-mvn test -Parq-wildfly-managed
+mvn clean verify -Parq-wildfly-managed
 ```
 
 ###### Remote Test
 ```shell
-mvn test -Parq-wildfly-remote
+mvn clean verify -Parq-wildfly-remote
 ```
 

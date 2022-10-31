@@ -1,18 +1,17 @@
 package com.itbuzzpress.jsf.beans;
 
+import jakarta.faces.push.Push;
+import jakarta.faces.push.PushContext;
+import jakarta.faces.view.ViewScoped;
+import jakarta.inject.Inject;
+import jakarta.inject.Named;
+
 import java.io.Serializable;
-import java.util.Calendar;
 import java.util.Random;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import javax.enterprise.context.ApplicationScoped;
-import javax.faces.push.Push;
-import javax.faces.push.PushContext;
-import javax.inject.Inject;
-import javax.inject.Named;
-
 @Named
-@ApplicationScoped
+@ViewScoped
 public class HelperBean implements Serializable {
 
     private static final Logger LOG = Logger.getLogger(HelperBean.class.getName());

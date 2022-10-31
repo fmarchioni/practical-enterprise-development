@@ -10,10 +10,107 @@
     <endorsed.dir>${project.build.directory}/endorsed</endorsed.dir>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <version.server.bom>21.0.1.Final</version.server.bom>
-    <maven.compiler.source>1.8</maven.compiler.source>
-    <maven.compiler.target>1.8</maven.compiler.target>
-    <jakartaee.version>8.0.0</jakartaee.version>
+    <jakartaee.version>10.0.0</jakartaee.version>
   </properties>
+
+  <modules>
+    <module>arquillian/ee-test</module>
+
+    <module>batch/ee-batch-batchlet</module>
+    <module>batch/ee-batch-chunk</module>
+    <module>batch/ee-batch-chunk-checkpoint</module>
+    <module>batch/ee-batch-decision</module>
+    <module>batch/ee-batch-exception</module>
+    <module>batch/ee-batch-listeners</module>
+
+
+    <module>cdi/cdi-j2se</module>
+    <module>cdi/ee-cdi-alternative</module>
+    <module>cdi/ee-cdi-basic</module>
+    <module>cdi/ee-cdi-decorator</module>
+    <module>cdi/ee-cdi-event</module>
+    <module>cdi/ee-cdi-interceptor</module>
+    <module>cdi/ee-cdi-producerfactory</module>
+    <module>cdi/ee-cdi-qualifier</module>
+
+
+    <module>concurrency/ee-managedcontextual</module>
+    <module>concurrency/ee-managedexecutor</module>
+    <module>concurrency/ee-managedfactoryexecutor</module>
+    <module>concurrency/ee-managedscheduledexecutor</module>
+
+    <module>ejb/async/ee-ejb-client-async</module>
+    <module>ejb/async/ee-ejb-server-async</module>
+    <module>ejb/basic/ee-ejb-client-basic</module>
+    <module>ejb/basic/ee-ejb-server-basic</module>
+    <module>ejb/timer/ee-ejb-client-timer</module>
+    <module>ejb/timer/ee-ejb-server-timer</module>
+
+    <module>jaxrs/ee-rest-async</module>
+    <module>jaxrs/ee-rest-basic</module>
+    <module>jaxrs/ee-rest-client</module>
+    <module>jaxrs/ee-rest-filters</module>
+    <module>jaxrs/ee-rest-interceptors</module>
+
+    <module>jaxrs/ee-rest-sse</module>
+
+    <!--<module>jaxrs/bootstrap</module>-->
+
+    <module>jaxws/ee-ws-basic</module>
+    <module>jaxws/ee-ws-handler</module>
+
+    <module>jms/ee-jms-basic</module>
+    <module>jms/ee-jms-client</module>
+
+    <module>jpa/ee-jpa-basic</module>
+
+    <module>jsf/ee-jsf-basic</module>
+    <module>jsf/ee-jsf-clientwindow</module>
+    <module>jsf/ee-jsf-commandscript</module>
+    <module>jsf/ee-jsf-composite</module>
+    <module>jsf/ee-jsf-contracts</module>
+    <module>jsf/ee-jsf-datatablemap</module>
+    <module>jsf/ee-jsf-facelet</module>
+    <module>jsf/ee-jsf-flow</module>
+    <module>jsf/ee-jsf-multipleflow</module>
+    <module>jsf/ee-jsf-template</module>
+    <module>jsf/ee-jsf-upload</module>
+    <module>jsf/ee-jsf-validatewholebean</module>
+    <module>jsf/ee-jsf-websocket</module>
+
+    <module>json/ee-json</module>
+    <module>json/ee-jsonb</module>
+
+    <module>microprofile/configuration</module>
+    <module>microprofile/fault-tolerance</module>
+    <module>microprofile/health</module>
+    <module>microprofile/jwt</module>
+    <module>microprofile/metrics</module>
+    <module>microprofile/openapi</module>
+    <module>microprofile/opentracing</module>
+    <module>microprofile/rest-client/client</module>
+    <module>microprofile/rest-client/server</module>
+
+    <module>mvc/ee-mvc-demo</module>
+
+    <module>security/ee-ejb-elytron-ssl/client</module>
+    <module>security/ee-ejb-elytron-ssl/server</module>
+    <module>security/ee-ejb-elytron/client</module>
+    <module>security/ee-ejb-elytron/server</module>
+    <module>security/ee-security-elytron</module>
+    <module>security/https</module>
+
+    <module>servlet/ee-async-servlet</module>
+    <module>servlet/ee-noblock-servlet</module>
+    <module>servlet/ee-servlet-push</module>
+
+    <module>websocket/ee-websocket-async</module>
+    <module>websocket/ee-websocket-basic</module>
+    <module>websocket/ee-websocket-binary</module>
+    <module>websocket/ee-websocket-client</module>
+    <module>websocket/ee-websocket-encdec</module>
+  </modules>
+
   <repositories>
     <repository>
       <id>JBoss Repository</id>
@@ -22,22 +119,27 @@
   </repositories>
   <dependencyManagement>
     <dependencies>
+
       <dependency>
         <groupId>org.wildfly.bom</groupId>
-        <artifactId>wildfly-jakartaee8-with-tools</artifactId>
-        <version>${version.server.bom}</version>
+        <artifactId>wildfly-ee-with-tools</artifactId>
+        <version>27.0.0.Alpha4</version>
         <type>pom</type>
         <scope>import</scope>
       </dependency>
-
       <dependency>
         <groupId>org.wildfly.bom</groupId>
         <artifactId>wildfly-microprofile</artifactId>
-        <version>${version.server.bom}</version>
+        <version>27.0.0.Beta1</version>
         <scope>import</scope>
         <type>pom</type>
       </dependency>
-
+      <dependency>
+        <groupId>junit</groupId>
+        <artifactId>junit</artifactId>
+        <scope>test</scope>
+        <version>4.13.2</version>
+      </dependency>
     </dependencies>
   </dependencyManagement>
   <build>
@@ -46,10 +148,9 @@
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-compiler-plugin</artifactId>
-        <version>3.7.0</version>
+        <version>3.8.0</version>
         <configuration>
-          <source>1.8</source>
-          <target>1.8</target>
+          <release>11</release>
           <compilerArguments>
             <endorseddirs>${endorsed.dir}</endorseddirs>
           </compilerArguments>
@@ -58,7 +159,7 @@
       <plugin>
         <groupId>org.wildfly.plugins</groupId>
         <artifactId>wildfly-maven-plugin</artifactId>
-        <version>2.0.0.Final</version>
+        <version>4.0.0.Beta3</version>
       </plugin>
     </plugins>
   </build>

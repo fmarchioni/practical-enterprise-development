@@ -1,11 +1,9 @@
 package com.itbuzzpress.jaxws.ws;
 
-import javax.ejb.Stateless;
-
- 
-import javax.persistence.EntityManager;
-import javax.persistence.PersistenceContext;
-import javax.persistence.Query;
+import jakarta.ejb.Stateless;
+import jakarta.persistence.EntityManager;
+import jakarta.persistence.PersistenceContext;
+import jakarta.persistence.Query;
 
 @Stateless
 public class AccountManager {
@@ -15,7 +13,7 @@ public class AccountManager {
 
 	public Account findAccount(String name)  
 	{
-		Query query = em.createQuery("FROM Account WHERE name= :name");
+		Query query = em.createQuery("SELECT a FROM Account a WHERE a.name= :name");
 		query.setParameter("name", name);
 		Account account = (Account)query.getSingleResult();
 		System.out.println("Found Account "+account);

@@ -1,9 +1,8 @@
 package com.itbuzzpress.ejb;
 
-import javax.ejb.Remote;
-import javax.ejb.Stateful;
-
 import com.itbuzzpress.exception.InsufficientFundsException;
+import jakarta.ejb.Remote;
+import jakarta.ejb.Stateful;
  
 
 @Stateful

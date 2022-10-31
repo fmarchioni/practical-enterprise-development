@@ -1,20 +1,19 @@
 
 package com.itbuzzpress.security.client;
 
-import javax.naming.Context;
-import javax.naming.InitialContext;
-import javax.naming.NamingException;
-
 import com.itbuzzpress.security.ejb.Account;
 import com.itbuzzpress.security.ejb.Calculator;
 import com.itbuzzpress.security.exception.InsufficientFundsException;
+import javax.naming.Context;
+import javax.naming.InitialContext;
+import javax.naming.NamingException;
 
 import java.util.Hashtable;
 
 public class RemoteEJBClient {
 
 	public static void main(String[] args) throws Exception {
-		
+
 		Account account = lookupAccountEJB();
 		Calculator calculator = lookupCalculatorEJB();
 		System.out.println("Going to deposit 1000$ ");

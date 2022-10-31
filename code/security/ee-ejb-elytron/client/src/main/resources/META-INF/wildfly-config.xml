@@ -5,21 +5,21 @@
         </authentication-rules>
         <authentication-configurations>
             <configuration name="default">
-               
-	        <sasl-mechanism-selector selector="DIGEST-MD5"/>
+
+                <sasl-mechanism-selector selector="DIGEST-MD5"/>
                 <set-user-name name="ejbuser"/>
                 <credentials>
                     <clear-password password="password123"/>
                 </credentials>
             </configuration>
         </authentication-configurations>
-     
+
     </authentication-client>
     <jboss-ejb-client xmlns="urn:jboss:wildfly-client-ejb:3.0">
-        <connections>           
-                     
-		<connection uri="remote+http://127.0.0.1:8080"/>
-       
+        <connections>
+
+            <connection uri="remote+http://127.0.0.1:8080"/>
+
         </connections>
     </jboss-ejb-client>
 </configuration>

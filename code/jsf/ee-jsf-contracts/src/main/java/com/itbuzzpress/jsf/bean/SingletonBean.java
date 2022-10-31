@@ -1,12 +1,11 @@
 package com.itbuzzpress.jsf.bean;
 
+import com.itbuzzpress.jsf.model.User;
+import jakarta.annotation.PostConstruct;
+import jakarta.ejb.Singleton;
+
 import java.util.ArrayList;
 import java.util.List;
-
-import javax.annotation.PostConstruct;
-import javax.ejb.Singleton;
-
-import com.itbuzzpress.jsf.model.User;
 
 
 

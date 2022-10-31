@@ -1,15 +1,15 @@
 package com.itbuzzpress.jms.mdb;
 
-import javax.ejb.ActivationConfigProperty;
-import javax.ejb.MessageDriven;
-import javax.jms.JMSException;
-import javax.jms.Message;
-import javax.jms.MessageListener;
-import javax.jms.TextMessage;
+import jakarta.ejb.ActivationConfigProperty;
+import jakarta.ejb.MessageDriven;
+import jakarta.jms.JMSException;
+import jakarta.jms.Message;
+import jakarta.jms.MessageListener;
+import jakarta.jms.TextMessage;
 
 @MessageDriven(activationConfig = {
 		@ActivationConfigProperty(propertyName = "destinationLookup", propertyValue = "java:/queue/exampleQueue"),
-		@ActivationConfigProperty(propertyName = "destinationType", propertyValue = "javax.jms.Queue"), })
+		@ActivationConfigProperty(propertyName = "destinationType", propertyValue = "jakarta.jms.Queue"), })
 public class MDBSample implements MessageListener {
 
 	public void onMessage(Message message) {

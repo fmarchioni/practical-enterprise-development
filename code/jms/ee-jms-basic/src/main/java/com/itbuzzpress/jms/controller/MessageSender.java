@@ -1,18 +1,12 @@
 package com.itbuzzpress.jms.controller;
 
-import javax.faces.application.FacesMessage;
-import javax.faces.context.ExternalContext;
-import javax.faces.context.FacesContext;
-import javax.annotation.Resource;
-import javax.ejb.Stateless;
-import javax.enterprise.inject.Model;
-import javax.inject.Inject;
-import javax.jms.ConnectionFactory;
-import javax.jms.DeliveryMode;
-import javax.jms.JMSConnectionFactory;
-import javax.jms.JMSContext;
-import javax.jms.JMSSessionMode;
-import javax.jms.Queue;
+import jakarta.annotation.Resource;
+import jakarta.enterprise.inject.Model;
+import jakarta.faces.application.FacesMessage;
+import jakarta.faces.context.FacesContext;
+import jakarta.inject.Inject;
+import jakarta.jms.JMSContext;
+import jakarta.jms.Queue;
 
 @Model
 public class MessageSender {

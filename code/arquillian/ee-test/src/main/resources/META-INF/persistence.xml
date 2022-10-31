@@ -1,30 +1,28 @@
-<?xml version="1.0" encoding="UTF-8"?>
-
-<persistence version="2.1"
-	xmlns="http://java.sun.com/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="
-        http://java.sun.com/xml/ns/persistence
-        http://java.sun.com/xml/ns/persistence/persistence_2_1.xsd">
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<persistence xmlns="https://jakarta.ee/xml/ns/persistence"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="https://jakarta.ee/xml/ns/persistence https://jakarta.ee/xml/ns/persistence/persistence_3_1.xsd"
+             version="3.1">
 	<persistence-unit name="primary">
-		<!-- If you are running in a production environment, add a managed data 
+		<!-- If you are running in a production environment, add a managed data
 			source, this example data source is just for development and testing! -->
-		<!-- The datasource is deployed as WEB-INF/kitchensink-quickstart-ds.xml, 
+		<!-- The datasource is deployed as WEB-INF/kitchensink-quickstart-ds.xml,
 			you can find it in the source at src/main/webapp/WEB-INF/kitchensink-quickstart-ds.xml -->
 	  <!--  	<jta-data-source>java:/datasources/MySQLDS</jta-data-source>   -->
-	 
-	 
-	 <jta-data-source>java:jboss/datasources/ExampleDS</jta-data-source> 
-		<properties>
-		          
-			<!-- AUTO-GENERATED FROM ANNOTATIONS METADATA -->
-			 <property name="javax.persistence.schema-generation.database.action" 
-				value="drop-and-create"/> 
-				<property name="javax.persistence.schema-generation.create-source" 
-				value="metadata"/> 
-				<property name="javax.persistence.schema-generation.drop-source" 
-				value="metadata"/> 
 
-            
+
+	 <jta-data-source>java:jboss/datasources/ExampleDS</jta-data-source>
+		<properties>
+
+			<!-- AUTO-GENERATED FROM ANNOTATIONS METADATA -->
+			 <property name="jakarta.persistence.schema-generation.database.action"
+				value="drop-and-create"/>
+				<property name="jakarta.persistence.schema-generation.create-source"
+				value="metadata"/>
+				<property name="jakarta.persistence.schema-generation.drop-source"
+				value="metadata"/>
+
+
 		</properties>
 	</persistence-unit>
 </persistence>

@@ -1,6 +1,7 @@
 package com.itbuzzpress.ejb;
 
 import com.itbuzzpress.exception.InsufficientFundsException;
+
 import java.util.concurrent.Future;
  
 public interface Account {

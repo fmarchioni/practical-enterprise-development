@@ -11,7 +11,7 @@
   <artifactId>ee-jsf-commandscript</artifactId>
   <version>1.0</version>
   <packaging>war</packaging>
-  <name>ee-jsf-commandscript</name>
+  <name>JSF Command Script Example</name>
   <properties>
     <endorsed.dir>${project.build.directory}/endorsed</endorsed.dir>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -28,3 +28,4 @@
     <finalName>${project.artifactId}</finalName>
   </build>
 </project>
+

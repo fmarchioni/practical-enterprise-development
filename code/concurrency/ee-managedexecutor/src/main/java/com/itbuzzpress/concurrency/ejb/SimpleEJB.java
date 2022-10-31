@@ -1,6 +1,6 @@
 package com.itbuzzpress.concurrency.ejb;
 
-import javax.ejb.Stateless;
+import jakarta.ejb.Stateless;
 
 @Stateless
 public class SimpleEJB {

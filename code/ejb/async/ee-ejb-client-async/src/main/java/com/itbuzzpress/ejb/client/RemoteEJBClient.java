@@ -1,17 +1,16 @@
- 
-package com.itbuzzpress.ejb.client;
 
-import javax.naming.Context;
-import javax.naming.InitialContext;
-import javax.naming.NamingException;
+package com.itbuzzpress.ejb.client;
 
 import com.itbuzzpress.ejb.Account;
 import com.itbuzzpress.ejb.Calculator;
 import com.itbuzzpress.exception.InsufficientFundsException;
 
-import java.util.concurrent.Future;
+import javax.naming.Context;
+import javax.naming.InitialContext;
+import javax.naming.NamingException;
 import java.util.Hashtable;
- 
+import java.util.concurrent.Future;
+
 
 public class RemoteEJBClient {
 
@@ -22,14 +21,14 @@ public class RemoteEJBClient {
 
 
          Future<String> futureResult = account.createAccount(1000l);
-	
+
              // Do other tasks
 		try {
 			Thread.sleep(1000);
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-		}	 
+		}
 		if (futureResult.isDone()) {
 			System.out.println("Got result "+futureResult.get());
 		}
@@ -49,7 +48,7 @@ public class RemoteEJBClient {
 		float totalMoney = calculator.calculateInterest(money);
 		System.out.println("Money plus interests " + totalMoney);
 
- 
+
 
 	}
 

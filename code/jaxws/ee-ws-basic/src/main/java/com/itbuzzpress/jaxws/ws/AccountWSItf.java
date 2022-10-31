@@ -1,18 +1,23 @@
 package com.itbuzzpress.jaxws.ws;
 
-import javax.jws.WebMethod;
-import javax.jws.WebService;
+import jakarta.jws.WebMethod;
+import jakarta.jws.WebParam;
+import jakarta.jws.WebResult;
+import jakarta.jws.WebService;
 @WebService
 public interface AccountWSItf {
-	@WebMethod
-	public void newAccount( String name);
 
 	@WebMethod
-	public void withdraw(String name, long amount) throws RuntimeException;
+	public void newAccount(@WebParam(name = "name") String name);
 
 	@WebMethod
-	public void deposit(String name, long amount);
+	public void withdraw(@WebParam(name = "name") String name,
+						 @WebParam(name = "amount") long amount) throws RuntimeException;
 
 	@WebMethod
+	public void deposit(@WebParam(name = "name") String name,
+						@WebParam(name = "amount") long amount);
+
+	@WebResult(name = "BankAccount")
 	public Account findAccountByName(String name);
 }

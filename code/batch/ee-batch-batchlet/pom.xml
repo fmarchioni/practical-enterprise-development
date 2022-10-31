@@ -11,7 +11,7 @@
   <artifactId>ee-batch-batchlet</artifactId>
   <packaging>war</packaging>
   <version>1.0.0</version>
-  <name>Demo Jakarta EE 8 Batchlet</name>
+  <name>Demo Jakarta EE Batchlet</name>
   <url>http://www.itbuzzpress.com</url>
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>

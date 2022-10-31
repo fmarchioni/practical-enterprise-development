@@ -1,8 +1,9 @@
 package com.itbuzzpress.jsf.bean;
 
+import jakarta.enterprise.context.SessionScoped;
+import jakarta.inject.Named;
+
 import java.io.Serializable;
-import javax.enterprise.context.SessionScoped;
-import javax.inject.Named;
 
  
 @Named

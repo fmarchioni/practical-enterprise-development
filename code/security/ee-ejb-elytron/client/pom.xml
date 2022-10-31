@@ -1,21 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
-  <groupId>com.itbuzzpress.security</groupId>
-  <artifactId>ee-ejb-client-elytron</artifactId>
-  <version>1.0</version>
-  <packaging>jar</packaging>
   <parent>
     <groupId>com.itbuzzpress.root</groupId>
     <artifactId>ee-root</artifactId>
     <version>1.0</version>
     <relativePath>../../..</relativePath>
   </parent>
+  <groupId>com.itbuzzpress.security</groupId>
+  <artifactId>ee-ejb-client-elytron</artifactId>
+  <version>1.0</version>
+  <packaging>jar</packaging>
   <properties>
-    <maven.compiler.target>1.8</maven.compiler.target>
-    <maven.compiler.source>1.8</maven.compiler.source>
+
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <version.exec.plugin>1.2.1</version.exec.plugin>
+
   </properties>
   <dependencies>
     <!-- ejb client using the EAP product BOM -->
@@ -24,6 +23,7 @@
       <artifactId>wildfly-ejb-client-bom</artifactId>
       <type>pom</type>
       <scope>compile</scope>
+      <version>19.0.0.Final</version>
     </dependency>
     <dependency>
       <groupId>com.itbuzzpress.security</groupId>
@@ -37,7 +37,7 @@
       <plugin>
         <groupId>org.codehaus.mojo</groupId>
         <artifactId>exec-maven-plugin</artifactId>
-        <version>${version.exec.plugin}</version>
+        <version>3.1.0</version>
         <executions>
           <execution>
             <goals>
@@ -57,14 +57,7 @@
           </arguments>
         </configuration>
       </plugin>
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-compiler-plugin</artifactId>
-        <configuration>
-          <source>1.8</source>
-          <target>1.8</target>
-        </configuration>
-      </plugin>
+
     </plugins>
   </build>
 </project>

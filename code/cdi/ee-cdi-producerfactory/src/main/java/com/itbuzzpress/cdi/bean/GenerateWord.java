@@ -1,16 +1,15 @@
 package com.itbuzzpress.cdi.bean;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Random;
-
-import javax.enterprise.context.ApplicationScoped;
-import javax.enterprise.inject.Produces;
-import javax.enterprise.inject.spi.InterceptionFactory;
-
 import com.itbuzzpress.cdi.model.Word;
 import com.itbuzzpress.cdi.qualifier.Anagram;
 import com.itbuzzpress.cdi.qualifier.AnagramInterceptor;
+import jakarta.enterprise.context.ApplicationScoped;
+import jakarta.enterprise.inject.Produces;
+import jakarta.enterprise.inject.spi.InterceptionFactory;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Random;
 
 @ApplicationScoped
 public class GenerateWord {

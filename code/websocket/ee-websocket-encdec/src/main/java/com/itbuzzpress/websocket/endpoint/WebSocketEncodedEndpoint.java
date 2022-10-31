@@ -1,15 +1,16 @@
  
 
 package com.itbuzzpress.websocket.endpoint;
- 
 
-import javax.websocket.*;
 
-import com.itbuzzpress.websocket.encoder.*;
+import com.itbuzzpress.websocket.decoder.MessageDecoder;
+import com.itbuzzpress.websocket.encoder.MessageEncoder;
 import com.itbuzzpress.websocket.model.User;
-import com.itbuzzpress.websocket.decoder.*;
+import jakarta.websocket.OnMessage;
+import jakarta.websocket.OnOpen;
+import jakarta.websocket.Session;
 
-@javax.websocket.ClientEndpoint(
+@jakarta.websocket.ClientEndpoint(
 encoders = { MessageEncoder.class},
 decoders = { MessageDecoder.class})
 	public class WebSocketEncodedEndpoint {

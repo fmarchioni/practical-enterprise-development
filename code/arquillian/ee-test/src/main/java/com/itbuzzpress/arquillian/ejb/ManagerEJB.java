@@ -1,17 +1,11 @@
 package com.itbuzzpress.arquillian.ejb;
 
-import java.util.List;
-import javax.ejb.Stateless;
-import javax.persistence.EntityManager;
-import javax.persistence.EntityManagerFactory;
- 
-import javax.persistence.PersistenceContext;
- 
-import javax.persistence.PersistenceUnit;
-import javax.persistence.Query;
-
 import com.itbuzzpress.arquillian.entity.Customer;
 import com.itbuzzpress.arquillian.entity.Request;
+import jakarta.ejb.Stateless;
+import jakarta.persistence.*;
+
+import java.util.List;
  
 
 @Stateless
@@ -54,13 +48,13 @@ public class ManagerEJB {
 	}
 
 	public List<Customer> findAllCustomers() {
-		Query query = em.createQuery("FROM Customer");
+		Query query = em.createQuery("SELECT c FROM Customer c");
 		List<Customer> customerList = query.getResultList();
 		return customerList;
 	}
 
 	public List<Request> findAllRequests() {
-		Query query = em.createQuery("FROM Request");
+		Query query = em.createQuery("SELECT r FROM Request r");
 		List<Request> customerOrders = query.getResultList();
 		return customerOrders;
 	}

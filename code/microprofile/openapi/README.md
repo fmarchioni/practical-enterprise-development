@@ -1,22 +1,29 @@
-WildFly OpenAPI example
+WildFly OpenTracing Example
 =====================================
 
 Example taken from [Practical Enterprise Application Development](http://www.itbuzzpress.com/ebooks/java-ee-7-development-on-wildfly.html)
 
-This example demonstrates the basic usage of MicroProfile OpenAPI on WildFly
+This example demonstrates the basic usage collecting Traces by means of OpenTracing API
 
-###### Start WildFly
+###### Start Jaeger Tracing Server
 ```shell
-./standalone.sh -c standalone-microprofile.xml
+docker run --rm --name jaeger -p6831:6831/udp -p16686:16686 -p14268:14268 jaegertracing/all-in-one:1.16.0
 ```
 
-###### Deploy
+###### Deploy the application
 ```shell
 mvn clean install wildfly:deploy
 ```
-###### Test
+
+###### Invoke available REST Services, for example:
 ```shell
-http://localhost:8080/openapi 
+http://localhost:8080/ee-microprofile-opentracing/rest/simple/text
 ```
+
+###### Check Traces on Server
+http://localhost:16686
+
+
+
  
  

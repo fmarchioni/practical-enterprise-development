@@ -1,20 +1,17 @@
 package com.mastertheboss.microprofile.service;
 
-import org.eclipse.microprofile.faulttolerance.Fallback;
-import org.eclipse.microprofile.faulttolerance.Timeout;
 import com.itbuzzpress.microprofile.model.SimpleProperty;
+import jakarta.ws.rs.GET;
+import jakarta.ws.rs.Path;
+import jakarta.ws.rs.Produces;
+import jakarta.ws.rs.core.MediaType;
+import org.eclipse.microprofile.faulttolerance.CircuitBreaker;
+import org.eclipse.microprofile.faulttolerance.Fallback;
 import org.eclipse.microprofile.faulttolerance.Retry;
 import org.eclipse.microprofile.faulttolerance.Timeout;
-import org.eclipse.microprofile.faulttolerance.Fallback;
-import org.eclipse.microprofile.faulttolerance.CircuitBreaker;
 import org.eclipse.microprofile.faulttolerance.exceptions.TimeoutException;
-import javax.ws.rs.Produces;
-import javax.ws.rs.core.MediaType;
-import javax.annotation.PostConstruct;
-import javax.ws.rs.GET;
-import javax.ws.rs.Path;
+
 import java.util.Random;
-import java.util.UUID;
 
 @Path("/")
 public class SimpleRESTService {
@@ -75,7 +72,7 @@ public class SimpleRESTService {
 	private SimpleProperty buildPOJO() {
 		if (new Random().nextFloat() < 0.5f) {
 			System.out.println("Error!!!");
-			throw new RuntimeException("System unavailable. Try a bit later.");
+			throw new RuntimeException("<code>System unavailable. Try a bit later.</code>");
 		}
 		SimpleProperty p = new SimpleProperty("key","value");
 		return p;

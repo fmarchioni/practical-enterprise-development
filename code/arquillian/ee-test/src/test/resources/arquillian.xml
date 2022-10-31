@@ -14,6 +14,7 @@
 			<!-- By default it uses JBOSS_HOME
                           <property name="jbossHome">/path/wildlfy/</property>
                          -->
+			<property name="jbossHome">/home/jboss/wildfly-preview-27.0.0.Final</property>
 			<property name="managementPort">9990</property>
 			<property name="managementAddress">localhost</property>
 		</configuration>

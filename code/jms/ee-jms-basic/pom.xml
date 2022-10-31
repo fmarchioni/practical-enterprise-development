@@ -15,7 +15,6 @@
   <url>http://www.itbuzzpress.com</url>
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <version.exec.plugin>1.1.1</version.exec.plugin>
   </properties>
   <dependencies>
     <dependency>
@@ -27,5 +26,6 @@
   </dependencies>
   <build>
     <finalName>${project.artifactId}</finalName>
+
   </build>
 </project>

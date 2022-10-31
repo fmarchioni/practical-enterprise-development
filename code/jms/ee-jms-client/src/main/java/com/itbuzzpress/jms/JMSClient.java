@@ -1,29 +1,27 @@
 package com.itbuzzpress.jms;
 
-import java.util.logging.Logger;
-import java.util.Properties;
+import jakarta.jms.ConnectionFactory;
+import jakarta.jms.Destination;
+import jakarta.jms.JMSContext;
 
-import javax.jms.ConnectionFactory;
-import javax.jms.Destination;
-import javax.jms.JMSConsumer;
-import javax.jms.JMSContext;
+import jakarta.jms.JMSConsumer;
 import javax.naming.Context;
 import javax.naming.InitialContext;
-import javax.naming.NamingException;
+
+import java.util.Properties;
 
 public class JMSClient {
 
 
     private static String MESSAGE = "Hello, World!";
     private static String CONNECTION_FACTORY = "jms/RemoteConnectionFactory";
-    private static String DESTINATION = "jms/queue/exampleQueue";
+    private static String DESTINATION = "jms/queue/exampleClientQueue";
 
 
     public static void main(String[] args) throws Exception {
 
         Context namingContext = null;
-        JMSContext context = null;
-
+        JMSContext context=null;
         try {
 
             // Set up the namingContext for the JNDI lookup

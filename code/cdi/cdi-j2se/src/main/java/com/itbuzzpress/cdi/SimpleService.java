@@ -1,6 +1,6 @@
 package com.itbuzzpress.cdi;
 
-import javax.inject.*;
+import jakarta.inject.Inject;
 
 public class SimpleService {
     @Inject

@@ -1,16 +1,17 @@
 package com.itbuzzpress.websocket.endpoint;
 
-import java.awt.image.BufferedImage;
-import java.io.*;
- 
-import java.nio.ByteBuffer;
-
 import javax.imageio.ImageIO;
-import javax.websocket.OnError;
-import javax.websocket.OnMessage;
-import javax.websocket.OnOpen;
-import javax.websocket.Session;
-import javax.websocket.server.ServerEndpoint;
+import jakarta.websocket.OnError;
+import jakarta.websocket.OnMessage;
+import jakarta.websocket.OnOpen;
+import jakarta.websocket.Session;
+import jakarta.websocket.server.ServerEndpoint;
+
+import java.awt.image.BufferedImage;
+import java.io.ByteArrayOutputStream;
+import java.io.File;
+import java.io.IOException;
+import java.nio.ByteBuffer;
 
 @ServerEndpoint(value = "/hellobinary")
 public class HelloWorldBinaryEndpoint {

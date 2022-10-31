@@ -8,7 +8,7 @@ This example demonstrates the basic usage of a remote JMS 2.0 client
 Add a JMS Queue named exampleQueue with the following CLI command:
 
 ``` 
-jms-queue add --queue-address=exampleQueue --entries=queue/exampleQueue,java:jboss/exported/jms/queue/exampleQueue
+jms-queue add --queue-address=ExampleClientQueue --entries=queue/exampleClientQueue,java:jboss/exported/jms/queue/exampleClientQueue
 ```
 Add an Application user with the following command:
 

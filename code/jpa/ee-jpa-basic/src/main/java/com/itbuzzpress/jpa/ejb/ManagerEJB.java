@@ -2,10 +2,10 @@ package com.itbuzzpress.jpa.ejb;
 
 import com.itbuzzpress.jpa.entity.Customer;
 import com.itbuzzpress.jpa.entity.Request;
+import jakarta.ejb.Stateless;
+import jakarta.persistence.*;
+import jakarta.ws.rs.WebApplicationException;
 
-import javax.ejb.Stateless;
-import javax.persistence.*;
-import javax.ws.rs.WebApplicationException;
 import java.util.List;
 import java.util.logging.Logger;
 
@@ -77,13 +77,13 @@ public class ManagerEJB {
 		return request;
 	}
 	public List<Customer> findAllCustomers() {
-		Query query = em.createQuery("FROM Customer");
+		Query query = em.createQuery("SELECT c FROM Customer c");
 		List<Customer> customerList = query.getResultList();
 		return customerList;
 	}
 
 	public List<Request> findAllRequests() {
-		Query query = em.createQuery("FROM Request");
+		Query query = em.createQuery("SELECT r FROM Request r");
 		List<Request> customerOrders = query.getResultList();
 		return customerOrders;
 	}

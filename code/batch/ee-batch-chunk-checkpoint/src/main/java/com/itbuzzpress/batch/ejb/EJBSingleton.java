@@ -1,8 +1,8 @@
 package com.itbuzzpress.batch.ejb;
 
-import java.util.HashMap;
+import jakarta.ejb.Singleton;
 
-import javax.ejb.Singleton;
+import java.util.HashMap;
 
 @Singleton
 public class EJBSingleton {

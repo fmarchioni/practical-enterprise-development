@@ -1,0 +1,38 @@
+WILDFLY_HOME=/home/francesco/jboss/wildfly-preview-27.0.0.Beta1
+
+$WILDFLY_HOME/bin/jboss-cli.sh --connect <<EOF
+
+
+connect
+
+# Execute only if the Decoder has not been already created
+if (outcome != success) of /subsystem=elytron/simple-role-decoder=from-roles-attribute:read-resource
+     /subsystem=elytron/simple-role-decoder=from-roles-attribute:add(attribute=Roles)
+end-if
+
+batch
+/subsystem=elytron/filesystem-realm=demoFsRealmEJB:add(path=demofs-realm-ejb-users,relative-to=jboss.server.config.dir)
+
+/subsystem=elytron/filesystem-realm=demoFsRealmEJB:add-identity(identity=ejbuser)
+/subsystem=elytron/filesystem-realm=demoFsRealmEJB:set-password(identity=ejbuser,clear={password="password123"})
+/subsystem=elytron/filesystem-realm=demoFsRealmEJB:add-identity-attribute(identity=ejbuser,name=Roles, value=["employee"])
+
+/subsystem="elytron"/security-domain="fsSDEJB":add(default-realm="demoFsRealmEJB",permission-mapper="default-permission-mapper",realms=[{realm="demoFsRealmEJB",role-decoder="from-roles-attribute"},{realm="local"}])
+
+/subsystem="elytron"/sasl-authentication-factory="fs-application-sasl-authentication":add(mechanism-configurations=[{mechanism-name="JBOSS-LOCAL-USER",realm-mapper="local"},{mechanism-name="DIGEST-MD5",mechanism-realm-configurations=[{realm-name="demoFsRealmEJB"}]}],sasl-server-factory="configured",security-domain="fsSDEJB")
+
+#/subsystem=ejb3/application-security-domain=other:write-attribute(name=security-domain,value=fsSDEJB)
+
+/subsystem=ejb3/application-security-domain=secureApp:add(security-domain=fsSDEJB)
+
+/subsystem=remoting/http-connector=http-remoting-connector:write-attribute(name=sasl-authentication-factory,value=fs-application-sasl-authentication)
+
+# Run the batch commands
+run-batch
+
+# Reload the server configuration
+reload
+
+exit
+
+EOF

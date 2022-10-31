@@ -10,9 +10,7 @@ mvn clean install wildfly:deploy
 ```
 
 ###### Test
-A test JPA application is included in chapter 8
-
-Todo: Include Testing Servlets for several JPA use cases
+A test JPA application is included in the folder arquillian
 
 ###### Test with curl
 
@@ -35,4 +33,5 @@ curl -X POST http://localhost:8080/ee-jpa-basic/rest/request/1 -H 'Content-Type:
 curl http://localhost:8080/ee-jpa-basic/rest/request 	
 [{"id":1,"quantity":1,"customer":{"id":1,"name":"JohnSmith","email":"jsmith@gmail.com","address":"3170 Broadway","phoneNumber":"33312345678"},"product":"bycicle"}]
 ```
+
 

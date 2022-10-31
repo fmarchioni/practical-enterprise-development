@@ -1,6 +1,6 @@
 package com.itbuzzpress.cdi;
 
-import javax.enterprise.event.*;
+import jakarta.enterprise.event.Observes;
 
 
 public class App {

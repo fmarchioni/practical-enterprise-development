@@ -1,16 +1,15 @@
- 
+
 package com.itbuzzpress.ejb.client;
-
-import java.util.Hashtable;
-
-import javax.naming.Context;
-import javax.naming.InitialContext;
-import javax.naming.NamingException;
 
 import com.itbuzzpress.ejb.Account;
 import com.itbuzzpress.ejb.Calculator;
 import com.itbuzzpress.exception.InsufficientFundsException;
- 
+
+import javax.naming.Context;
+import javax.naming.InitialContext;
+import javax.naming.NamingException;
+import java.util.Hashtable;
+
 
 public class RemoteEJBClient {
 

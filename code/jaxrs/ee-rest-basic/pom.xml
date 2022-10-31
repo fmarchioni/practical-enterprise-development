@@ -24,11 +24,7 @@
       <version>${jakartaee.version}</version>
       <scope>provided</scope>
     </dependency>
-    <dependency>
-      <groupId>jakarta.xml.bind</groupId>
-      <artifactId>jakarta.xml.bind-api</artifactId>
-      <version>2.3.3</version>
-    </dependency>
+
   </dependencies>
   <build>
     <finalName>${project.artifactId}</finalName>

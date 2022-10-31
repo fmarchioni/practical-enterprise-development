@@ -1,14 +1,13 @@
 package com.itbuzzpress.websocket.decoder;
 
 
- 
-import java.io.StringReader;
-
-import javax.websocket.Decoder;
-import javax.websocket.EndpointConfig;
-import javax.xml.bind.*;
-
 import com.itbuzzpress.websocket.model.User;
+import jakarta.websocket.Decoder;
+import jakarta.websocket.EndpointConfig;
+import jakarta.xml.bind.JAXBContext;
+import jakarta.xml.bind.Unmarshaller;
+
+import java.io.StringReader;
 
 public class MessageDecoder implements Decoder.Text<User> {
  

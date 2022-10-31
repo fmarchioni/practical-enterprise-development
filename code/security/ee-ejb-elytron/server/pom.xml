@@ -21,38 +21,23 @@
       <version>${jakartaee.version}</version>
       <scope>provided</scope>
     </dependency>
+
     <dependency>
       <groupId>org.jboss.ejb3</groupId>
       <artifactId>jboss-ejb3-ext-api</artifactId>
+      <version>2.3.0.Final</version>
       <scope>provided</scope>
     </dependency>
+
   </dependencies>
   <build>
     <finalName>ee-ejb-server-elytron</finalName>
     <plugins>
-      <plugin>
-        <groupId>org.wildfly.plugins</groupId>
-        <artifactId>wildfly-maven-plugin</artifactId>
-        <version>2.0.0.Final</version>
-        <configuration>
-          <filename>${project.build.finalName}.jar</filename>
-        </configuration>
-      </plugin>
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-compiler-plugin</artifactId>
-        <version>3.1</version>
-        <configuration>
-          <source>1.8</source>
-          <target>1.8</target>
-          <compilerArguments>
-            <endorseddirs>${endorsed.dir}</endorseddirs>
-          </compilerArguments>
-        </configuration>
-      </plugin>
+
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-ejb-plugin</artifactId>
+        <version>3.1.0</version>
         <configuration>
           <ejbVersion>3.2</ejbVersion>
           <!-- this is false by default -->
