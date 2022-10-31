@@ -1,10 +1,10 @@
 package com.itbuzzpress.servlet.async;
 
-import java.io.IOException;
+import jakarta.servlet.AsyncContext;
+import jakarta.servlet.ReadListener;
+import jakarta.servlet.ServletInputStream;
 
-import javax.servlet.AsyncContext;
-import javax.servlet.ReadListener;
-import javax.servlet.ServletInputStream;
+import java.io.IOException;
 
 public class ExampleReadListener implements ReadListener {
 	private ServletInputStream is = null;

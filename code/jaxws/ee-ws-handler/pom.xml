@@ -13,60 +13,58 @@
   <version>1.0</version>
   <name>Test Webservice Handlers</name>
   <url>http://www.itbuzzpress.com</url>
-
   <dependencies>
-    <dependency>
-      <groupId>jakarta.platform</groupId>
-      <artifactId>jakarta.jakartaee-api</artifactId>
-      <scope>provided</scope>
-      <version>${jakartaee.version}</version>
-    </dependency>
 
-    <dependency>
-      <groupId>org.jboss.ws.cxf</groupId>
-      <artifactId>jbossws-cxf-client</artifactId>
-      <version>5.2.4.Final</version>
-      <scope>provided</scope>
-    </dependency>
+      <dependency>
+        <groupId>jakarta.platform</groupId>
+        <artifactId>jakarta.jakartaee-api</artifactId>
+        <version>${jakartaee.version}</version>
+        <scope>provided</scope>
+      </dependency>
 
-    <dependency>
-      <groupId>junit</groupId>
-      <artifactId>junit</artifactId>
-    </dependency>
-  </dependencies>
+      <dependency>
+          <groupId>org.wildfly</groupId>
+          <artifactId>wildfly-jaxws-client-bom</artifactId>
+          <scope>provided</scope>
+          <version>27.0.0.Alpha4</version>
+          <type>pom</type>
+      </dependency>
+
+      <dependency>
+        <groupId>junit</groupId>
+        <artifactId>junit</artifactId>
+      </dependency>
+    </dependencies>
 
   <build>
     <finalName>${project.artifactId}</finalName>
-    <plugins>
-      <plugin>
-        <groupId>org.wildfly.plugins</groupId>
-        <artifactId>wildfly-jar-maven-plugin</artifactId>
-        <configuration>
-          <feature-pack-location>wildfly@maven(org.jboss.universe:community-universe)#${version.wildfly}</feature-pack-location>
-          <context-root>false</context-root>java -jar target/
-          <layers>
-            <layer>cdi</layer>
-            <layer>jpa</layer>
-            <layer>webservices</layer>
-            <layer>ejb-lite</layer>
-            <layer>h2-datasource</layer>
-            <layer>management</layer>
-          </layers>
-          <plugin-options>
-            <jboss-fork-embedded>${plugin.fork.embedded}</jboss-fork-embedded>
-          </plugin-options>
-        </configuration>
-        <executions>
-          <execution>
-            <goals>
-              <goal>package</goal>
-            </goals>
-          </execution>
-        </executions>
-      </plugin>
-    </plugins>
+      <plugins>
+          <plugin>
+              <groupId>org.wildfly.plugins</groupId>
+              <artifactId>wildfly-jar-maven-plugin</artifactId>
+              <configuration>
+                  <feature-pack-location>wildfly@maven(org.jboss.universe:community-universe)#${version.wildfly}</feature-pack-location>
+                  <context-root>false</context-root>java -jar target/
+                  <layers>
+                      <layer>cdi</layer>
+                      <layer>jpa</layer>
+                      <layer>webservices</layer>
+                      <layer>ejb-lite</layer>
+                      <layer>h2-datasource</layer>
+                      <layer>management</layer>
+                  </layers>
+                  <plugin-options>
+                      <jboss-fork-embedded>${plugin.fork.embedded}</jboss-fork-embedded>
+                  </plugin-options>
+              </configuration>
+              <executions>
+                  <execution>
+                      <goals>
+                          <goal>package</goal>
+                      </goals>
+                  </execution>
+              </executions>
+          </plugin>
+      </plugins>
   </build>
-
 </project>
-
-

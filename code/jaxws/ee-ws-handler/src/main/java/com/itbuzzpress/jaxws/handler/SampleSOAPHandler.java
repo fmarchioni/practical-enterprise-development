@@ -1,22 +1,14 @@
 package com.itbuzzpress.jaxws.handler;
 
+import javax.xml.namespace.QName;
+import jakarta.xml.soap.SOAPMessage;
+import jakarta.xml.ws.handler.MessageContext;
+import jakarta.xml.ws.handler.soap.SOAPMessageContext;
+
 import java.io.ByteArrayOutputStream;
-import java.io.File;
-import java.io.FileOutputStream;
 import java.util.Set;
 
-import javax.xml.namespace.QName;
-import javax.xml.soap.SOAPBody;
-import javax.xml.soap.SOAPException;
-import javax.xml.soap.SOAPHeader;
-import javax.xml.soap.SOAPMessage;
-import javax.xml.ws.ProtocolException;
-import javax.xml.ws.handler.MessageContext;
-import javax.xml.ws.handler.soap.SOAPMessageContext;
-
-import org.w3c.dom.NodeList;
-
-public class SampleSOAPHandler implements javax.xml.ws.handler.soap.SOAPHandler<SOAPMessageContext> {
+public class SampleSOAPHandler implements jakarta.xml.ws.handler.soap.SOAPHandler<SOAPMessageContext> {
 
 	@Override
 	public boolean handleMessage(SOAPMessageContext mc) {

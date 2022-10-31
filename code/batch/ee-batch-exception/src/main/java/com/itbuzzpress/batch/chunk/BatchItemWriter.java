@@ -1,18 +1,16 @@
 
 package com.itbuzzpress.batch.chunk;
 
+import com.itbuzzpress.batch.exception.IllegalItemException;
+import jakarta.batch.api.chunk.AbstractItemWriter;
+import jakarta.batch.runtime.context.JobContext;
+import jakarta.inject.Inject;
+import jakarta.inject.Named;
+import jakarta.json.JsonObject;
+
 import java.io.FileWriter;
 import java.io.PrintWriter;
 import java.util.List;
-
-import javax.batch.api.chunk.AbstractItemWriter;
-import javax.batch.runtime.context.JobContext;
-import javax.ejb.Stateless;
-import javax.inject.Inject;
-import javax.inject.Named;
-import javax.json.JsonObject;
-
-import com.itbuzzpress.batch.exception.IllegalItemException;
 
 @Named
 public class BatchItemWriter extends AbstractItemWriter {

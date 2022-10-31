@@ -1,17 +1,16 @@
+/subsystem=elytron/key-store=tlsKeyStore:add(path=tlsServer.keystore,relative-to=jboss.server.config.dir,credential-reference={clear-text=serverKeySecret})
 
-batch
-# Configure Server Keystore
-/subsystem=elytron/key-store=demoKeyStore:add(path=server.keystore,relative-to=jboss.server.config.dir, credential-reference={clear-text=123456},type=JKS)
-# Server Keystore credentials
-/subsystem=elytron/key-manager=demoKeyManager:add(key-store=demoKeyStore,credential-reference={clear-text=123456})
-# Server keystore Protocols
-/subsystem=elytron/server-ssl-context=demoSSLContext:add(key-manager=demoKeyManager,protocols=["TLSv1.2"])
+/subsystem=elytron/key-store=tlsKeyStore:generate-key-pair(alias=localhost,algorithm=RSA,key-size=2048,validity=365,credential-reference={clear-text=serverKeySecret},distinguished-name="CN=localhost")
 
-/subsystem=undertow/server=default-server/https-listener=https:add(ssl-context=server-ssl-context, socket-binding=https, proxy-address-forwarding=true)
+/subsystem=elytron/key-store=tlsKeyStore:store()
 
-# This is only needed if WildFly uses by default the Legacy security realm
-/subsystem=undertow/server=default-server/https-listener=https:undefine-attribute(name=security-realm)
-# Store SSL Context information in undertow
-/subsystem=undertow/server=default-server/https-listener=https:write-attribute(name=ssl-context,value=demoSSLContext)
-run-batch 
+/subsystem=elytron/key-manager=tlsKM:add(key-store=tlsKeyStore,credential-reference={clear-text=serverKeySecret})
+
+/subsystem=elytron/server-ssl-context=tlsSSC:add(key-manager=tlsKM,protocols=["TLSv1.3","TLSv1.2"],cipher-suite-names=TLS_AES_128_GCM_SHA256)
+
+#HTTPS
+# Disable http
+/subsystem=undertow/server=default-server/http-listener=default:write-attribute(name=enabled, value=false)
+/subsystem=undertow/server=default-server/https-listener=https:add(ssl-context=tlsSSC, socket-binding=https, proxy-address-forwarding=true)
+
 reload

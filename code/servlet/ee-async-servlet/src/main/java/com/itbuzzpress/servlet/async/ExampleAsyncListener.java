@@ -1,11 +1,11 @@
 package com.itbuzzpress.servlet.async;
 
+import jakarta.servlet.AsyncEvent;
+import jakarta.servlet.AsyncListener;
+import jakarta.servlet.ServletResponse;
+
 import java.io.IOException;
 import java.io.PrintWriter;
-
-import javax.servlet.AsyncEvent;
-import javax.servlet.AsyncListener;
-import javax.servlet.ServletResponse;
 
 public class ExampleAsyncListener implements AsyncListener {
 

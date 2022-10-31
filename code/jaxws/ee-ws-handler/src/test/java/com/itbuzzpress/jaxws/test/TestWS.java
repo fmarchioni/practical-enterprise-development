@@ -1,20 +1,15 @@
 package com.itbuzzpress.jaxws.test;
 
-import static org.junit.Assert.*;
-
-import java.net.URL;
-import java.util.UUID;
-
-import javax.xml.namespace.QName;
-import javax.xml.ws.Service;
-
-import org.apache.cxf.interceptor.LoggingInInterceptor;
-import org.apache.cxf.interceptor.LoggingOutInterceptor;
-import org.apache.cxf.jaxws.JaxWsProxyFactoryBean;
-import org.junit.Test;
-
 import com.itbuzzpress.jaxws.ws.Account;
 import com.itbuzzpress.jaxws.ws.AccountWSItf;
+import javax.xml.namespace.QName;
+import jakarta.xml.ws.Service;
+import org.junit.Test;
+
+import java.net.URL;
+
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotNull;
 
 
 public class TestWS {

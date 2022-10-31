@@ -15,12 +15,15 @@ mvn clean install wildfly-jar:run
 Available REST Endpoints:
 
 ```shell
-curl http://localhost:8080/rest/time
-curl http://localhost:8080/rest/text
-curl http://localhost:8080/rest/json
-curl http://localhost:8080/rest/xml
+curl http://localhost:8080/rest/simple/time
+curl http://localhost:8080/rest/simple/hello
+curl http://localhost:8080/rest/simple/json
+curl http://localhost:8080/rest/simple/xml
 ```
 
+###### Check metrics
 
- 
+```shell
+http://localhost:9990/metrics
+``` 
  

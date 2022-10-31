@@ -16,11 +16,9 @@
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <!-- other plugin versions -->
-    <version.compiler.plugin>3.1</version.compiler.plugin>
+    <version.compiler.plugin>3.8</version.compiler.plugin>
     <version.exec.plugin>1.2.1</version.exec.plugin>
-    <!-- maven-compiler-plugin -->
-    <maven.compiler.target>1.8</maven.compiler.target>
-    <maven.compiler.source>1.8</maven.compiler.source>
+
   </properties>
   <dependencies>
     <!-- Include the ejb client jars -->
@@ -47,6 +45,7 @@
         <configuration>
           <source>${maven.compiler.source}</source>
           <target>${maven.compiler.target}</target>
+          <release>11</release>
         </configuration>
       </plugin>
       <!-- Add the maven exec plugin to allow us to run a java program via maven -->

@@ -1,0 +1,16 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="jakarta.faces.html">
+<h:body>
+	<h2>JSF File upload</h2>
+
+	<h:form id="formpanel" enctype="multipart/form-data">
+		<h:panelGrid columns="2" styleClass="default">
+			<h:inputFile  id="inputfile"   value="#{uploadBean.part}" accept="image/jpeg,image/png,image/gif" />
+			<h:commandButton value="Upload"
+							 action="#{uploadBean.uploadFile}"/>
+		</h:panelGrid>
+	</h:form>
+	<br/>
+
+</h:body>
+</html>

@@ -1,17 +1,18 @@
 package com.itbuzzpress.jms.mdb;
 
-import javax.ejb.ActivationConfigProperty;
-import javax.ejb.MessageDriven;
-import javax.jms.JMSException;
-import javax.jms.Message;
-import javax.jms.MessageListener;
-import javax.jms.TextMessage;
+import jakarta.ejb.ActivationConfigProperty;
+import jakarta.ejb.MessageDriven;
+import jakarta.jms.JMSException;
+import jakarta.jms.Message;
+import jakarta.jms.MessageListener;
+import jakarta.jms.TextMessage;
 import org.jboss.ejb3.annotation.ResourceAdapter;
 
-@MessageDriven(activationConfig = {
-		@ActivationConfigProperty(propertyName = "destination", propertyValue = "java:/queue/exampleQueue"),
-		@ActivationConfigProperty(propertyName = "destinationType", propertyValue = "javax.jms.Queue"), })
-@ResourceAdapter(value = "activemq-rar.rar")
+@MessageDriven(name = "HelloWorldQueueMDB", activationConfig = {
+		@ActivationConfigProperty(propertyName = "destinationLookup", propertyValue = "queue/exampleQueue"),
+		@ActivationConfigProperty(propertyName = "destinationType", propertyValue = "jakarta.jms.Queue"),
+		@ActivationConfigProperty(propertyName = "acknowledgeMode", propertyValue = "Auto-acknowledge")})
+
 public class MDBSample implements MessageListener {
 
 	public void onMessage(Message message) {

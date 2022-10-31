@@ -11,7 +11,7 @@
   <artifactId>ee-jsf-composite</artifactId>
   <version>1.0</version>
   <packaging>war</packaging>
-  <name>ee-jsf-composite</name>
+  <name>JSF Composite Example</name>
   <properties>
     <endorsed.dir>${project.build.directory}/endorsed</endorsed.dir>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -20,11 +20,10 @@
     <dependency>
       <groupId>jakarta.platform</groupId>
       <artifactId>jakarta.jakartaee-api</artifactId>
-      <scope>provided</scope>
       <version>${jakartaee.version}</version>
+      <scope>provided</scope>
     </dependency>
   </dependencies>
-
   <build>
     <finalName>${project.artifactId}</finalName>
     <plugins>

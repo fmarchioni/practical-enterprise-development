@@ -1,6 +1,6 @@
 package com.itbuzzpress.cdi.bean;
 
-import javax.enterprise.inject.Alternative;
+import jakarta.enterprise.inject.Alternative;
 
 @Alternative
 public class Simple implements Rules {

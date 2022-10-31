@@ -9,8 +9,8 @@ This example demonstrates the basic usage of Web sockets communication using Enc
 mvn clean install wildfly-jar:run
 ```
 
-
 ###### Test
 ```shell
 http://localhost:8080
 ```
+ 

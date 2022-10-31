@@ -1,11 +1,12 @@
 package com.itbuzzpress.jaxws.ws;
 
 
-import javax.inject.Inject;
-import javax.jws.WebParam;
-import javax.jws.WebResult;
-import javax.jws.WebService;
-import javax.jws.soap.SOAPBinding;
+import jakarta.inject.Inject;
+import jakarta.jws.WebMethod;
+import jakarta.jws.WebParam;
+import jakarta.jws.WebResult;
+import jakarta.jws.WebService;
+import jakarta.jws.soap.SOAPBinding;
 
 
 
@@ -15,8 +16,8 @@ public class AccountWS implements AccountWSItf{
 	@Inject
 	AccountManager ejb;
 
- 
 	public void newAccount(@WebParam(name = "name") String name) {
+		System.out.println("Created account "+name);
 		ejb.createAccount(name);
 
 	}
@@ -24,6 +25,7 @@ public class AccountWS implements AccountWSItf{
  
 	public void withdraw(@WebParam(name = "name") String name,
 			@WebParam(name = "amount") long amount) throws RuntimeException {
+		System.out.println("withdraw account "+name);
 		ejb.withdraw(name, amount);
 	}
 
@@ -33,7 +35,7 @@ public class AccountWS implements AccountWSItf{
 		ejb.deposit(name, amount);
 	}
 
-	@WebResult(name = "BankAccount")
+
 	public Account findAccountByName(String name) {
 		return ejb.findAccount(name);
 	}

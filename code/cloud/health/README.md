@@ -11,4 +11,13 @@ It is required to have an OpenShift active project before deploying the applicat
 mvn oc:deploy
 ```
 
+Verify that the application is available in your OpenShift namespace:
+
+```shell
+$ oc get pods
+NAME                                 READY     STATUS      RESTARTS   AGE
+ee-microprofile-health-1-deploy      0/1       Completed   0          71s
+ee-microprofile-health-1-fzcpm       1/1       Running     0          68s
+```
+
 

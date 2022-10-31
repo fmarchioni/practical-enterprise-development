@@ -1,14 +1,15 @@
 package com.itbuzzpress.microprofile.configuration;
 
+import jakarta.inject.Inject;
+import jakarta.servlet.ServletException;
+import jakarta.servlet.annotation.WebServlet;
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+import org.eclipse.microprofile.config.inject.ConfigProperty;
+
 import java.io.IOException;
 import java.util.List;
-import javax.inject.Inject;
-import javax.servlet.ServletException;
-import javax.servlet.annotation.WebServlet;
-import javax.servlet.http.HttpServlet;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-import org.eclipse.microprofile.config.inject.ConfigProperty;
 
 @WebServlet(name = "config", urlPatterns = { "/config" })
 public class ConfigServlet extends HttpServlet {
@@ -30,7 +31,8 @@ public class ConfigServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		response.setContentType("text/html");
-		response.getWriter().append("Got name: ").append(name);
+		response.getWriter().append("<h2>Microprofile Config example</h2>").append(name);
+		response.getWriter().append("<br/>Got name: ").append(name);
 		response.getWriter().append("<br/>Got year with: ").append(String.valueOf(year));
 
 		for (String user:userList)

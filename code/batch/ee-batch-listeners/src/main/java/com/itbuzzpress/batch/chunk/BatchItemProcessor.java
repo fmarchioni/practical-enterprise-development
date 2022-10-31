@@ -1,12 +1,12 @@
 
 package com.itbuzzpress.batch.chunk;
 
-import java.util.StringTokenizer;
+import jakarta.batch.api.chunk.ItemProcessor;
+import jakarta.inject.Named;
+import jakarta.json.Json;
+import jakarta.json.JsonObject;
 
-import javax.batch.api.chunk.ItemProcessor;
-import javax.inject.Named;
-import javax.json.Json;
-import javax.json.JsonObject;
+import java.util.StringTokenizer;
 
  
 @Named

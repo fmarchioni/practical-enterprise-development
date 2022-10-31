@@ -1,18 +1,11 @@
 package com.itbuzzpress.websocket.endpoint;
 
+
+import jakarta.websocket.*;
  
  
 
-import javax.websocket.CloseReason;
- 
-import javax.websocket.OnClose;
-import javax.websocket.OnMessage;
-import javax.websocket.OnOpen;
-import javax.websocket.Session;
- 
- 
-
-@javax.websocket.ClientEndpoint()
+@jakarta.websocket.ClientEndpoint()
 public class WebSocketEndpoint   {
 	 
  

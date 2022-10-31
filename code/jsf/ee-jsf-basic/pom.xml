@@ -7,24 +7,24 @@
     <version>1.0</version>
     <relativePath>../..</relativePath>
   </parent>
-  <groupId>com.itbuzzpress.jsf</groupId>
   <artifactId>ee-jsf-basic</artifactId>
-  <version>1.0</version>
   <packaging>war</packaging>
-  <name>Basic JSF example</name>
+  <name>JSF basic</name>
+  <description>JSF Basic</description>
+  <version>1.0</version>
+
+
   <properties>
-    <endorsed.dir>${project.build.directory}/endorsed</endorsed.dir>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
   <dependencies>
     <dependency>
       <groupId>jakarta.platform</groupId>
       <artifactId>jakarta.jakartaee-api</artifactId>
-      <scope>provided</scope>
       <version>${jakartaee.version}</version>
+      <scope>provided</scope>
     </dependency>
   </dependencies>
-
   <build>
     <finalName>${project.artifactId}</finalName>
     <plugins>

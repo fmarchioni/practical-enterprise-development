@@ -1,14 +1,15 @@
 package com.itbuzzpress.websocket.endpoint;
- 
+
+
+import com.itbuzzpress.websocket.decoder.MessageDecoder;
+import com.itbuzzpress.websocket.encoder.MessageEncoder;
+import com.itbuzzpress.websocket.model.User;
+import jakarta.websocket.EncodeException;
+import jakarta.websocket.OnMessage;
+import jakarta.websocket.Session;
+import jakarta.websocket.server.ServerEndpoint;
 
 import java.io.IOException;
-
-import javax.websocket.*;
-import javax.websocket.server.ServerEndpoint;
-
-import com.itbuzzpress.websocket.encoder.*;
-import com.itbuzzpress.websocket.model.User;
-import com.itbuzzpress.websocket.decoder.*;
 @ServerEndpoint(value = "/helloencoded",
 encoders = { MessageEncoder.class},
 decoders = { MessageDecoder.class})

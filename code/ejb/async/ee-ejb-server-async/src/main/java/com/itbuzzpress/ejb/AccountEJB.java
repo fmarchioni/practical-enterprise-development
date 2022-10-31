@@ -2,10 +2,10 @@ package com.itbuzzpress.ejb;
 
 import java.util.concurrent.Future;
 
-import javax.ejb.AsyncResult;
-import javax.ejb.Asynchronous;
-import javax.ejb.Remote;
-import javax.ejb.Stateful;
+import jakarta.ejb.AsyncResult;
+import jakarta.ejb.Asynchronous;
+import jakarta.ejb.Remote;
+import jakarta.ejb.Stateful;
 
 import com.itbuzzpress.exception.InsufficientFundsException;
  

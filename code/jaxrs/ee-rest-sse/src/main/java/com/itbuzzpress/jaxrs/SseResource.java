@@ -1,5 +1,14 @@
 package com.itbuzzpress.jaxrs;
 
+import jakarta.ws.rs.GET;
+import jakarta.ws.rs.Path;
+import jakarta.ws.rs.Produces;
+import jakarta.ws.rs.core.Context;
+import jakarta.ws.rs.core.MediaType;
+import jakarta.ws.rs.sse.OutboundSseEvent;
+import jakarta.ws.rs.sse.Sse;
+import jakarta.ws.rs.sse.SseEventSink;
+
 import java.util.List;
 import java.util.Random;
 import java.util.concurrent.Executor;
@@ -7,20 +16,9 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.TimeUnit;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
-import java.util.stream.Stream;
-
-import javax.annotation.Resource;
-import javax.ws.rs.GET;
-import javax.ws.rs.Path;
-import javax.ws.rs.Produces;
-import javax.ws.rs.core.Context;
-import javax.ws.rs.core.MediaType;
-import javax.ws.rs.sse.OutboundSseEvent;
-import javax.ws.rs.sse.Sse;
-import javax.ws.rs.sse.SseEventSink;
-//import javax.enterprise.concurrent.ManagedExecutorService;
-//import javax.enterprise.concurrent.ManagedScheduledExecutorService;
-//import javax.enterprise.concurrent.ManagedThreadFactory;
+//import jakarta.enterprise.concurrent.ManagedExecutorService;
+//import jakarta.enterprise.concurrent.ManagedScheduledExecutorService;
+//import jakarta.enterprise.concurrent.ManagedThreadFactory;
 
 @Path("/events")
 public class SseResource {

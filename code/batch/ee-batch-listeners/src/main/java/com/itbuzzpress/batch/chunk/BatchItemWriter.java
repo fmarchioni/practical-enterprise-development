@@ -1,14 +1,14 @@
 package com.itbuzzpress.batch.chunk;
 
+import jakarta.batch.api.chunk.AbstractItemWriter;
+import jakarta.batch.runtime.context.JobContext;
+import jakarta.inject.Inject;
+import jakarta.inject.Named;
+import jakarta.json.JsonObject;
+
 import java.io.FileWriter;
 import java.io.PrintWriter;
 import java.util.List;
-
-import javax.batch.api.chunk.AbstractItemWriter;
-import javax.batch.runtime.context.JobContext;
-import javax.inject.Inject;
-import javax.inject.Named;
-import javax.json.JsonObject;
  
 
 

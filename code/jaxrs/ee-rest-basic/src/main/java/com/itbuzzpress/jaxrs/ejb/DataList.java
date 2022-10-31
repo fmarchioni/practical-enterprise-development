@@ -1,16 +1,13 @@
 package com.itbuzzpress.jaxrs.ejb;
 
+import com.itbuzzpress.jaxrs.model.SimpleProperty;
+import jakarta.annotation.PostConstruct;
+import jakarta.ejb.Singleton;
+import jakarta.inject.Named;
+
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
-
-import javax.annotation.PostConstruct;
- 
-import javax.ejb.Singleton;
-import javax.enterprise.context.SessionScoped;
-import javax.inject.Named;
-
-import com.itbuzzpress.jaxrs.model.SimpleProperty;
 
 @Singleton
 @Named

@@ -13,8 +13,6 @@
   <packaging>ejb</packaging>
   <name>EJB 3.2 example application</name>
   <properties>
-    <version.compiler.plugin>3.1</version.compiler.plugin>
-    <version.ejb.plugin>2.3</version.ejb.plugin>
     <endorsed.dir>${project.build.directory}/endorsed</endorsed.dir>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
@@ -55,6 +53,7 @@
     <plugin>
       <groupId>org.apache.maven.plugins</groupId>
       <artifactId>maven-ejb-plugin</artifactId>
+      <version>3.1.0</version>
       <configuration>
         <ejbVersion>3.2</ejbVersion>
         <!-- this is false by default -->

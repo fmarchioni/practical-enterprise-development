@@ -1,9 +1,9 @@
 package com.itbuzzpress.batch.listener;
 
-import java.util.List;
+import jakarta.batch.api.chunk.listener.AbstractItemWriteListener;
+import jakarta.inject.Named;
 
-import javax.batch.api.chunk.listener.AbstractItemWriteListener;
-import javax.inject.Named;
+import java.util.List;
 
 @Named
 public class BatchItemWriteListener extends AbstractItemWriteListener {

@@ -1,12 +1,11 @@
 package com.itbuzzpress.cdi.bean;
 
+import com.itbuzzpress.cdi.model.Word;
+import jakarta.enterprise.context.ApplicationScoped;
+import jakarta.enterprise.event.Observes;
+
 import java.util.ArrayList;
 import java.util.List;
-
-import javax.enterprise.context.ApplicationScoped;
-import javax.enterprise.event.Observes;
-
-import com.itbuzzpress.cdi.model.Word;
 
 @ApplicationScoped
 public class WordInventory {

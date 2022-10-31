@@ -14,16 +14,16 @@
   <name>Test JSON</name>
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <failOnMissingWebXml>false</failOnMissingWebXml>
   </properties>
   <dependencies>
     <dependency>
       <groupId>jakarta.platform</groupId>
       <artifactId>jakarta.jakartaee-api</artifactId>
-      <scope>provided</scope>
       <version>${jakartaee.version}</version>
+      <scope>provided</scope>
     </dependency>
   </dependencies>
-
   <build>
     <finalName>${project.artifactId}</finalName>
     <plugins>

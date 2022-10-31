@@ -1,32 +1,18 @@
 package com.itbuzzpress.websocket.servlet;
 
 
+import com.itbuzzpress.websocket.endpoint.WebSocketEncodedEndpoint;
+import jakarta.servlet.ServletException;
+import jakarta.servlet.annotation.WebServlet;
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+import jakarta.websocket.ContainerProvider;
+import jakarta.websocket.WebSocketContainer;
+
 import java.io.IOException;
 import java.io.PrintWriter;
- 
- 
-
-
-
-
-
-
 import java.net.URI;
-
- 
-
- 
-
-import javax.servlet.ServletException;
-import javax.servlet.annotation.WebServlet;
-import javax.servlet.http.HttpServlet;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
- 
-import javax.websocket.ContainerProvider;
-import javax.websocket.WebSocketContainer;
-
-import com.itbuzzpress.websocket.endpoint.WebSocketEncodedEndpoint;
  
  
  

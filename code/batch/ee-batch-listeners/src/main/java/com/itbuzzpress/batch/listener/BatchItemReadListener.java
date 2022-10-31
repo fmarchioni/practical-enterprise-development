@@ -1,7 +1,7 @@
 package com.itbuzzpress.batch.listener;
 
-import javax.batch.api.chunk.listener.AbstractItemReadListener;
-import javax.inject.Named;
+import jakarta.batch.api.chunk.listener.AbstractItemReadListener;
+import jakarta.inject.Named;
 
 @Named
 public class BatchItemReadListener extends AbstractItemReadListener {

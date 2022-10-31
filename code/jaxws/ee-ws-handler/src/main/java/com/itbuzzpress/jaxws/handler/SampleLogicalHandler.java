@@ -1,23 +1,12 @@
 package com.itbuzzpress.jaxws.handler;
 
 
-import javax.xml.transform.OutputKeys;
-import javax.xml.transform.Result;
-import javax.xml.transform.Source;
-import javax.xml.transform.Transformer;
-
-import javax.xml.transform.TransformerFactory;
 import javax.xml.transform.dom.DOMSource;
-import javax.xml.transform.stream.StreamResult;
-import javax.xml.ws.LogicalMessage;
-import javax.xml.ws.handler.LogicalHandler;
-import javax.xml.ws.handler.LogicalMessageContext;
-import javax.xml.ws.handler.MessageContext;
-
-import org.w3c.dom.Attr;
-import org.w3c.dom.NamedNodeMap;
+import jakarta.xml.ws.LogicalMessage;
+import jakarta.xml.ws.handler.LogicalHandler;
+import jakarta.xml.ws.handler.LogicalMessageContext;
+import jakarta.xml.ws.handler.MessageContext;
 import org.w3c.dom.Node;
-import org.w3c.dom.NodeList;
 
 
 
@@ -30,7 +19,7 @@ public class  SampleLogicalHandler implements LogicalHandler {
 
 		LogicalMessage   soapmc = ((LogicalMessageContext)context).getMessage();
 
-		javax.xml.transform.dom.DOMSource source = (DOMSource) soapmc.getPayload();
+		DOMSource source = (DOMSource) soapmc.getPayload();
 		Node rootNode = source.getNode();
 		System.out.println("[Logical Handler] Root Node"+rootNode.getNodeName());
 		// Manipulate DOM here

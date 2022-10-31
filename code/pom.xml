@@ -7,123 +7,160 @@
   <packaging>pom</packaging>
   <name>Root Project</name>
   <properties>
-        <version.bootable.jar>2.0.2.Final</version.bootable.jar>
-        <version.wildfly>21.0.0.Final</version.wildfly>
-        <version.jkube>1.0.1</version.jkube>
-        <plugin.fork.embedded>true</plugin.fork.embedded>
-        <maven.compiler.source>1.8</maven.compiler.source>
-        <maven.compiler.target>1.8</maven.compiler.target>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-        <failOnMissingWebXml>false</failOnMissingWebXml>
-        <version.microprofile.bom>${version.wildfly}</version.microprofile.bom>
-        <version.server.bom>${version.wildfly}</version.server.bom>
-        <version.org.wildfly.arquillian>3.0.0.Final</version.org.wildfly.arquillian>
-        <version.org.jboss.arquillian.junit>1.6.0.Final</version.org.jboss.arquillian.junit>
-        <version.junit>4.13.1</version.junit>
-        <version.org.jboss.shrinkwrap.shrinkwrap>1.2.6</version.org.jboss.shrinkwrap.shrinkwrap>
-        <jakartaee.version>8.0.0</jakartaee.version>
-    </properties>
+    <endorsed.dir>${project.build.directory}/endorsed</endorsed.dir>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <version.server.bom>21.0.1.Final</version.server.bom>
+    <version.wildfly>27.0.0.Beta1</version.wildfly>
+    <version.bootable-jar>8.0.1.Final</version.bootable-jar>
+    <jakartaee.version>10.0.0</jakartaee.version>
+    <plugin.fork.embedded>true</plugin.fork.embedded>
+  </properties>
 
-    <dependencyManagement>
-        <dependencies>
+  <modules>
+    <module>arquillian/ee-test</module>
 
-            <!-- importing the jakartaee8-with-tools BOM adds specs and other useful artifacts as managed dependencies -->
-            <dependency>
-                <groupId>org.wildfly.bom</groupId>
-                <artifactId>wildfly-jakartaee8</artifactId>
-                <version>${version.server.bom}</version>
-                <type>pom</type>
-                <scope>import</scope>
-            </dependency>
+    <module>batch/ee-batch-batchlet</module>
+    <module>batch/ee-batch-chunk</module>
+    <module>batch/ee-batch-chunk-checkpoint</module>
+    <module>batch/ee-batch-decision</module>
+    <module>batch/ee-batch-exception</module>
+    <module>batch/ee-batch-listeners</module>
 
-            <!-- importing the microprofile BOM adds MicroProfile specs -->
-            <dependency>
-                <groupId>org.wildfly.bom</groupId>
-                <artifactId>wildfly-microprofile</artifactId>
-                <version>${version.microprofile.bom}</version>
-                <type>pom</type>
-                <scope>import</scope>
-            </dependency>
-            <dependency>
-                <groupId>org.wildfly.arquillian</groupId>
-                <artifactId>wildfly-arquillian-container-bootable</artifactId>
-                <version>${version.org.wildfly.arquillian}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.jboss.arquillian.junit</groupId>
-                <artifactId>arquillian-junit-container</artifactId>
-                <version>${version.org.jboss.arquillian.junit}</version>
-            </dependency>
-            <dependency>
-                <groupId>junit</groupId>
-                <artifactId>junit</artifactId>
-                <version>${version.junit}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.jboss.shrinkwrap</groupId>
-                <artifactId>shrinkwrap-api</artifactId>
-                <version>${version.org.jboss.shrinkwrap.shrinkwrap}</version>
-            </dependency>
-      
-            <dependency>
-                <groupId>org.jboss.shrinkwrap</groupId>
-                <artifactId>shrinkwrap-impl-base</artifactId>
-                <version>${version.org.jboss.shrinkwrap.shrinkwrap}</version>
-            </dependency>
+    <module>cdi/ee-cdi-alternative</module>
+    <module>cdi/ee-cdi-basic</module>
+    <module>cdi/ee-cdi-decorator</module>
+    <module>cdi/ee-cdi-event</module>
+    <module>cdi/ee-cdi-interceptor</module>
+    <module>cdi/ee-cdi-producerfactory</module>
+    <module>cdi/ee-cdi-qualifier</module>
 
-        </dependencies>
-    </dependencyManagement>
+    <module>concurrency/ee-managedcontextual</module>
+    <module>concurrency/ee-managedexecutor</module>
+    <module>concurrency/ee-managedfactoryexecutor</module>
+    <module>concurrency/ee-managedscheduledexecutor</module>
+
+    <module>ejb/async/ee-ejb-client-async</module>
+    <module>ejb/async/ee-ejb-server-async</module>
+    <module>ejb/basic/ee-ejb-client-basic</module>
+    <module>ejb/basic/ee-ejb-server-basic</module>
+    <module>ejb/timer/ee-ejb-client-timer</module>
+    <module>ejb/timer/ee-ejb-server-timer</module>
+
+    <module>jaxrs/ee-rest-async</module>
+    <module>jaxrs/ee-rest-basic</module>
+    <module>jaxrs/ee-rest-client</module>
+    <module>jaxrs/ee-rest-filters</module>
+    <module>jaxrs/ee-rest-interceptors</module>
+    <module>jaxrs/ee-rest-sse</module>
+
+    <module>jaxws/ee-ws-basic</module>
+    <module>jaxws/ee-ws-handler</module>
+
+    <module>jms/ee-jms-basic</module>
+
+    <module>jpa/ee-jpa-basic</module>
+
+    <module>jsf/ee-jsf-basic</module>
+    <module>jsf/ee-jsf-clientwindow</module>
+    <module>jsf/ee-jsf-commandscript</module>
+    <module>jsf/ee-jsf-composite</module>
+    <module>jsf/ee-jsf-contracts</module>
+    <module>jsf/ee-jsf-datatablemap</module>
+    <module>jsf/ee-jsf-facelet</module>
+    <module>jsf/ee-jsf-flow</module>
+    <module>jsf/ee-jsf-multipleflow</module>
+    <module>jsf/ee-jsf-template</module>
+    <module>jsf/ee-jsf-upload</module>
+    <module>jsf/ee-jsf-validatewholebean</module>
+    <module>jsf/ee-jsf-websocket</module>
+
+    <module>json/ee-json</module>
+    <module>json/ee-jsonb</module>
+
+    <module>microprofile/configuration</module>
+    <module>microprofile/fault-tolerance</module>
+    <module>microprofile/health</module>
+    <module>microprofile/jwt</module>
+    <module>microprofile/metrics</module>
+    <module>microprofile/openapi</module>
+    <module>microprofile/opentracing</module>
+    <module>microprofile/rest-client/client</module>
+    <module>microprofile/rest-client/server</module>
+
+    <module>mvc/ee-mvc-demo</module>
+
+
+    <module>security/ee-ejb-elytron/client</module>
+    <module>security/ee-ejb-elytron/server</module>
+    <module>security/ee-security-elytron</module>
+    <module>security/https</module>
+
+    <module>servlet/ee-async-servlet</module>
+    <module>servlet/ee-noblock-servlet</module>
+    <module>servlet/ee-servlet-push</module>
+
+    <module>websocket/ee-websocket-async</module>
+    <module>websocket/ee-websocket-basic</module>
+    <module>websocket/ee-websocket-binary</module>
+    <module>websocket/ee-websocket-client</module>
+    <module>websocket/ee-websocket-encdec</module>
+  </modules>
+
+  <repositories>
+    <repository>
+      <id>JBoss Repository</id>
+      <url>https://repository.jboss.org/nexus/content/groups/public/</url>
+    </repository>
+  </repositories>
+  <dependencyManagement>
     <dependencies>
-        <dependency>
-            <groupId>org.jboss.spec.javax.xml.bind</groupId>
-            <artifactId>jboss-jaxb-api_2.3_spec</artifactId>
-            <scope>provided</scope>
-        </dependency>
 
-        <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <scope>provided</scope>
-        </dependency>
+      <dependency>
+        <groupId>org.wildfly.bom</groupId>
+        <artifactId>wildfly-ee-with-tools</artifactId>
+        <version>27.0.0.Alpha4</version>
+        <type>pom</type>
+        <scope>import</scope>
+      </dependency>
+      <dependency>
+        <groupId>org.wildfly.bom</groupId>
+        <artifactId>wildfly-microprofile</artifactId>
+        <version>27.0.0.Beta1</version>
+        <scope>import</scope>
+        <type>pom</type>
+      </dependency>
+      <dependency>
+        <groupId>junit</groupId>
+        <artifactId>junit</artifactId>
+        <scope>test</scope>
+        <version>4.13.2</version>
+      </dependency>
     </dependencies>
-   <build>
-        <pluginManagement>
-            <plugins>
-                <plugin>
-                    <groupId>org.wildfly.plugins</groupId>
-                    <artifactId>wildfly-jar-maven-plugin</artifactId>
-                    <version>${version.bootable.jar}</version>
-                </plugin>
-                <plugin>
-                    <groupId>org.eclipse.jkube</groupId>
-                    <artifactId>openshift-maven-plugin</artifactId>
-                    <version>${version.jkube}</version>
-                </plugin>
-                <plugin>
-                    <groupId>org.apache.maven.plugins</groupId>
-                    <artifactId>maven-war-plugin</artifactId>
-                    <version>3.2.3</version>
-                    <configuration>
-                        <failOnMissingWebXml>false</failOnMissingWebXml>
-                    </configuration>
-                </plugin>
-                <plugin>
-                    <groupId>com.google.cloud.tools</groupId>
-                    <artifactId>jib-maven-plugin</artifactId>
-                    <version>2.0.0</version>
-                </plugin>
-            </plugins>
-        </pluginManagement>
-        <plugins>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-deploy-plugin</artifactId>
-                <version>2.4</version>
-                <configuration>
-                    <skip>true</skip>
-                </configuration>
-            </plugin>
-        </plugins>
-    </build>
+  </dependencyManagement>
+  <build>
+    <finalName>${project.artifactId}</finalName>
+    <plugins>
+      <plugin>
+      <groupId>org.wildfly.plugins</groupId>
+      <artifactId>wildfly-jar-maven-plugin</artifactId>
+      <version>${version.bootable-jar}</version>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>3.8.0</version>
+        <configuration>
+          <release>11</release>
+          <compilerArguments>
+            <endorseddirs>${endorsed.dir}</endorseddirs>
+          </compilerArguments>
+        </configuration>
+      </plugin>
+      <plugin>
+        <groupId>org.wildfly.plugins</groupId>
+        <artifactId>wildfly-maven-plugin</artifactId>
+        <version>4.0.0.Beta3</version>
+      </plugin>
+    </plugins>
+  </build>
 </project>

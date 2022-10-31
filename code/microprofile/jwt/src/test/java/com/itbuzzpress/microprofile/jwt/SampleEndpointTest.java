@@ -1,20 +1,12 @@
 package com.itbuzzpress.microprofile.jwt;
 
-import org.junit.Test;
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
+import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
-import org.eclipse.microprofile.config.inject.ConfigProperty;
-
-import javax.json.Json;
-import javax.json.JsonObject;
-import javax.json.JsonReader;
-import java.io.Reader;
-import java.io.StringReader;
+import org.junit.Test;
 
 import static io.restassured.RestAssured.given;
-import static org.hamcrest.CoreMatchers.containsString;
-import static org.hamcrest.CoreMatchers.is;
 
 public class SampleEndpointTest {
 
@@ -36,9 +28,9 @@ public class SampleEndpointTest {
                 .then().statusCode(200).extract()
                 .response();
 
-        JsonReader jsonReader = Json.createReader(new StringReader(response.getBody().asString()));
-        JsonObject object = jsonReader.readObject();
-        String userToken = object.getString("access_token");
+        JsonPath jsonPathEvaluator = response.jsonPath();
+
+        String userToken = jsonPathEvaluator.get("access_token");
 
         response = given().urlEncodingEnabled(true)
                 .auth().preemptive().basic("jwt-client", secret)
@@ -51,13 +43,10 @@ public class SampleEndpointTest {
                 .then().statusCode(200).extract()
                 .response();
 
-        jsonReader = Json.createReader(new StringReader(response.getBody().asString()));
-        object = jsonReader.readObject();
-        String adminToken = object.getString("access_token");
-        System.out.println("Got Admin Token =============");
-        System.out.println(adminToken);
-        System.out.println("Got User Token =============");
-        System.out.println(userToken);
+        jsonPathEvaluator = response.jsonPath();
+
+        String adminToken = jsonPathEvaluator.get("access_token");
+
         RestAssured.baseURI = "http://localhost:8080/rest/jwt";
 
         given().auth().preemptive()

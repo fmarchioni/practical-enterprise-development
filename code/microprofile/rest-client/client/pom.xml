@@ -5,7 +5,7 @@
     <groupId>com.itbuzzpress.root</groupId>
     <artifactId>ee-root</artifactId>
     <version>1.0</version>
-    <relativePath>../../../pom.xml</relativePath>
+    <relativePath>../../..</relativePath>
   </parent>
   <groupId>com.itbuzzpress.jaxrs</groupId>
   <artifactId>ee-microprofile-rest-client</artifactId>
@@ -15,6 +15,7 @@
   <url>http://www.itbuzzpress.com</url>
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <failOnMissingWebXml>false</failOnMissingWebXml>
   </properties>
   <dependencies>
 
@@ -29,17 +30,14 @@
       <artifactId>microprofile-config-api</artifactId>
       <scope>provided</scope>
     </dependency>
+
     <dependency>
       <groupId>jakarta.platform</groupId>
       <artifactId>jakarta.jakartaee-api</artifactId>
-      <scope>provided</scope>
       <version>${jakartaee.version}</version>
-    </dependency>
-    <dependency>
-      <groupId>org.jboss.spec.javax.xml.bind</groupId>
-      <artifactId>jboss-jaxb-api_2.3_spec</artifactId>
       <scope>provided</scope>
     </dependency>
+
   </dependencies>
   <build>
     <finalName>${project.artifactId}</finalName>

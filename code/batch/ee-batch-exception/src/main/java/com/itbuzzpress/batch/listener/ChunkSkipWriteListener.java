@@ -2,14 +2,13 @@
 
 package com.itbuzzpress.batch.listener;
 
-import java.util.List;
-
-import javax.batch.api.chunk.listener.SkipWriteListener;
-import javax.batch.runtime.context.JobContext;
-import javax.inject.Inject;
-import javax.inject.Named;
-
 import com.itbuzzpress.batch.exception.IllegalItemException;
+import jakarta.batch.api.chunk.listener.SkipWriteListener;
+import jakarta.batch.runtime.context.JobContext;
+import jakarta.inject.Inject;
+import jakarta.inject.Named;
+
+import java.util.List;
 
 @Named
 public class ChunkSkipWriteListener implements SkipWriteListener {

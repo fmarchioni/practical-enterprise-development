@@ -1,16 +1,9 @@
 package com.itbuzzpress.jsf.bean;
 
-import java.io.Serializable;
-import java.util.Date;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.logging.Level;
-import java.util.logging.Logger;
+import jakarta.enterprise.context.RequestScoped;
+import jakarta.inject.Named;
 
-import javax.annotation.PostConstruct;
-import javax.enterprise.context.RequestScoped;
-import javax.faces.context.FacesContext;
-import javax.inject.Named;
+import java.io.Serializable;
 
  
 @Named

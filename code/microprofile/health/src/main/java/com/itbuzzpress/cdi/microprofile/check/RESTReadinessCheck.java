@@ -1,15 +1,14 @@
 package com.itbuzzpress.cdi.microprofile.check;
 
-import javax.enterprise.context.ApplicationScoped;
-import javax.inject.Inject;
-import javax.ws.rs.client.Client;
-import javax.ws.rs.client.ClientBuilder;
-import javax.ws.rs.core.MediaType;
-import javax.ws.rs.core.Response;
-import org.eclipse.microprofile.health.Readiness;
+import com.itbuzzpress.cdi.microprofile.service.SimpleRESTService;
+import jakarta.enterprise.context.ApplicationScoped;
+import jakarta.inject.Inject;
+import jakarta.ws.rs.client.Client;
+import jakarta.ws.rs.client.ClientBuilder;
+import jakarta.ws.rs.core.Response;
 import org.eclipse.microprofile.health.HealthCheck;
 import org.eclipse.microprofile.health.HealthCheckResponse;
-import com.itbuzzpress.cdi.microprofile.service.SimpleRESTService;
+import org.eclipse.microprofile.health.Readiness;
 
 @Readiness
 @ApplicationScoped

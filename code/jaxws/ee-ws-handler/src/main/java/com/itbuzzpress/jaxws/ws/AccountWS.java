@@ -1,13 +1,12 @@
 package com.itbuzzpress.jaxws.ws;
 
 
-import javax.inject.Inject;
-import javax.jws.HandlerChain;
-
-import javax.jws.WebParam;
-import javax.jws.WebResult;
-import javax.jws.WebService;
-import javax.jws.soap.SOAPBinding;
+import jakarta.inject.Inject;
+import jakarta.jws.HandlerChain;
+import jakarta.jws.WebParam;
+import jakarta.jws.WebResult;
+import jakarta.jws.WebService;
+import jakarta.jws.soap.SOAPBinding;
 
 
 

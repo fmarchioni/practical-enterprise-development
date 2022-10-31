@@ -1,10 +1,10 @@
 package com.itbuzzpress.cdi.decorator;
 
-import java.io.Serializable;
+import jakarta.decorator.Decorator;
+import jakarta.decorator.Delegate;
+import jakarta.inject.Inject;
 
-import javax.decorator.Decorator;
-import javax.decorator.Delegate;
-import javax.inject.Inject;
+import java.io.Serializable;
 
 
 @Decorator

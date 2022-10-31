@@ -1,5 +1,6 @@
 package com.itbuzzpress.websocket.model;
-import javax.xml.bind.annotation.*;
+
+import jakarta.xml.bind.annotation.XmlRootElement;
 
 @XmlRootElement
 public class User {

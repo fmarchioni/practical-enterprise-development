@@ -12,6 +12,6 @@ mvn clean install wildfly-jar:run
 
 ###### Test
 ```shell
-http://localhost:8080
+http://localhost:8080/jmsclient
 ```
  

@@ -2,21 +2,11 @@
 package com.itbuzzpress.batch.batchlet;
 
 
-
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.StringTokenizer;
-
-import javax.batch.api.AbstractBatchlet;
-import javax.batch.api.chunk.ItemProcessor;
-import javax.batch.runtime.context.StepContext;
-import javax.ejb.Stateless;
-import javax.inject.Inject;
-import javax.inject.Named;
-import javax.json.Json;
-import javax.json.JsonObject;
-import javax.persistence.EntityManager;
-import javax.persistence.PersistenceContext;
+import jakarta.batch.api.AbstractBatchlet;
+import jakarta.batch.runtime.context.StepContext;
+import jakarta.ejb.Stateless;
+import jakarta.inject.Inject;
+import jakarta.inject.Named;
 
 
 

@@ -1,16 +1,14 @@
 package com.itbuzzpress.websocket.encoder;
 
 
- 
-import java.io.StringWriter;
-
-import javax.websocket.EncodeException;
-import javax.websocket.Encoder;
-import javax.websocket.EndpointConfig;
-import javax.xml.bind.JAXBContext;
-import javax.xml.bind.Marshaller;
-
 import com.itbuzzpress.websocket.model.User;
+import jakarta.websocket.EncodeException;
+import jakarta.websocket.Encoder;
+import jakarta.websocket.EndpointConfig;
+import jakarta.xml.bind.JAXBContext;
+import jakarta.xml.bind.Marshaller;
+
+import java.io.StringWriter;
  
 public class MessageEncoder implements Encoder.Text<User> {
     public String encode(User object) throws EncodeException {

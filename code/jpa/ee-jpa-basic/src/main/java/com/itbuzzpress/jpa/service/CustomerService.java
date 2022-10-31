@@ -1,17 +1,13 @@
 package com.itbuzzpress.jaxrs.service;
 
 
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-
-
-import javax.inject.Inject;
-import javax.ws.rs.*;
-
+import com.itbuzzpress.jpa.ejb.ManagerEJB;
 import com.itbuzzpress.jpa.entity.Customer;
+import jakarta.inject.Inject;
+import jakarta.ws.rs.*;
+import jakarta.ws.rs.core.Response;
 
-import javax.ws.rs.core.Response;
+import java.util.List;
 
 @Path("/customer")
 @Produces("application/json")
@@ -19,8 +15,7 @@ import javax.ws.rs.core.Response;
 public class CustomerService {
 
     
-	@Inject
-	com.itbuzzpress.jpa.ejb.ManagerBean ejb;
+	@Inject ManagerEJB ejb;
 
 	@POST
 	public Response create(Customer customer) {

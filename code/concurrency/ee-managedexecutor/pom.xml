@@ -20,11 +20,10 @@
     <dependency>
       <groupId>jakarta.platform</groupId>
       <artifactId>jakarta.jakartaee-api</artifactId>
-      <scope>provided</scope>
       <version>${jakartaee.version}</version>
+      <scope>provided</scope>
     </dependency>
   </dependencies>
-
   <build>
     <finalName>${project.artifactId}</finalName>
     <plugins>
@@ -51,5 +50,4 @@
       </plugin>
     </plugins>
   </build>
-
 </project>

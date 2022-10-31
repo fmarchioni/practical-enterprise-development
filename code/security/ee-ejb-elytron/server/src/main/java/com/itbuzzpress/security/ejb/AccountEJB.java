@@ -2,10 +2,10 @@ package com.itbuzzpress.security.ejb;
 
 import java.util.concurrent.Future;
 
-import javax.annotation.PostConstruct;
-import javax.annotation.Resource;
-import javax.annotation.security.RolesAllowed;
-import javax.ejb.*;
+import jakarta.annotation.PostConstruct;
+import jakarta.annotation.Resource;
+import jakarta.annotation.security.RolesAllowed;
+import jakarta.ejb.*;
 
 import com.itbuzzpress.security.exception.InsufficientFundsException;
  
@@ -13,7 +13,7 @@ import com.itbuzzpress.security.exception.InsufficientFundsException;
 @Stateful
 @Remote(Account.class)
 @RolesAllowed("employee")
-@org.jboss.ejb3.annotation.SecurityDomain("other")
+@org.jboss.ejb3.annotation.SecurityDomain("secureApp")
 public class AccountEJB implements Account {
 
     long money;

@@ -1,8 +1,8 @@
 package com.itbuzzpress.jsf.validator;
 
 
-import javax.validation.ConstraintValidator;
-import javax.validation.ConstraintValidatorContext;
+import jakarta.validation.ConstraintValidator;
+import jakarta.validation.ConstraintValidatorContext;
 
 public class CustomerValidator implements ConstraintValidator<ValidCustomer, Customer> {
     

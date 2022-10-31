@@ -17,14 +17,15 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
   <dependencies>
+
     <dependency>
       <groupId>jakarta.platform</groupId>
       <artifactId>jakarta.jakartaee-api</artifactId>
-      <scope>provided</scope>
       <version>${jakartaee.version}</version>
+      <scope>provided</scope>
     </dependency>
-  </dependencies>
 
+  </dependencies>
   <build>
     <finalName>${project.artifactId}</finalName>
     <plugins>
@@ -35,6 +36,7 @@
           <feature-pack-location>wildfly@maven(org.jboss.universe:community-universe)#${version.wildfly}</feature-pack-location>
           <layers>
             <layer>jaxrs</layer>
+            <layer>jsf</layer>
             <layer>ejb-lite</layer>
             <layer>bean-validation</layer>
             <layer>management</layer>

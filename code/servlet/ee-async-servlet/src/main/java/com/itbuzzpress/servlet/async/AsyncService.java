@@ -1,8 +1,9 @@
 package com.itbuzzpress.servlet.async;
+
+import jakarta.servlet.AsyncContext;
+
 import java.io.IOException;
 import java.io.PrintWriter;
-
-import javax.servlet.AsyncContext;
 
 public class AsyncService implements Runnable {
 	AsyncContext ac;

@@ -1,14 +1,11 @@
 package com.itbuzzpress.jaxrs.model;
 
-import javax.xml.bind.annotation.XmlRootElement;
-
-@XmlRootElement
 public class SimpleProperty {
 	public SimpleProperty() {
 
 	}
- 
-	 
+
+
 	private String key;
 	private String value;
 	public String getKey() {
@@ -19,7 +16,7 @@ public class SimpleProperty {
 	}
 	public SimpleProperty( String key, String value) {
 		super();
-	 
+
 		this.key = key;
 		this.value = value;
 	}

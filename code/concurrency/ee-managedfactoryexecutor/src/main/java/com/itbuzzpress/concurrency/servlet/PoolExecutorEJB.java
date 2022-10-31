@@ -1,27 +1,16 @@
 package com.itbuzzpress.concurrency.servlet;
 
- 
+
+import jakarta.annotation.PostConstruct;
+import jakarta.annotation.PreDestroy;
+import jakarta.annotation.Resource;
+import jakarta.ejb.Singleton;
+import jakarta.enterprise.concurrent.ManagedThreadFactory;
+
 import java.util.concurrent.ArrayBlockingQueue;
-import java.util.concurrent.Callable;
- 
 import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Future;
- 
 import java.util.concurrent.ThreadPoolExecutor;
 import java.util.concurrent.TimeUnit;
-
- 
-
-
-
-import javax.annotation.PostConstruct;
-import javax.annotation.PreDestroy;
-import javax.annotation.Resource;
-import javax.annotation.security.RunAs;
-import javax.ejb.Singleton;
-import javax.enterprise.concurrent.ContextService;
- 
-import javax.enterprise.concurrent.ManagedThreadFactory;
 
  
 

@@ -8,7 +8,7 @@ This example demonstrates the basic usage of REST Web services
 ```shell
 $ cd server
 $ mvn package
-$ cd client
+$ cd ../client
 $ mvn package
 ```
 

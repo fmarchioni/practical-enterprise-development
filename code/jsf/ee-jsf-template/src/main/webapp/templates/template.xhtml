@@ -1,0 +1,23 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="jakarta.faces.facelets"
+      xmlns:h="jakarta.faces.html">
+<h:head>
+    <h:outputStylesheet library="css" name="style.css" />
+</h:head>
+<h:body>
+    <div class="page">
+        <div class="header">
+            <ui:include src="header.xhtml" />
+        </div>
+        <div class="content">
+            <ui:insert name="content">
+                Default Content
+            </ui:insert>
+        </div>
+        <div class="footer">
+            <ui:include src="footer.xhtml" />
+        </div>
+    </div>
+</h:body>
+</html>
+

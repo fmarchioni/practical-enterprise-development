@@ -1,14 +1,13 @@
 package com.itbuzzpress.jaxrs.test.filter;
 
+import jakarta.ws.rs.client.ClientRequestContext;
+import jakarta.ws.rs.client.ClientRequestFilter;
+import jakarta.ws.rs.client.ClientResponseContext;
+import jakarta.ws.rs.client.ClientResponseFilter;
+import org.apache.commons.codec.binary.Base64;
+
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
-
-import javax.ws.rs.client.ClientRequestContext;
-import javax.ws.rs.client.ClientRequestFilter;
-import javax.ws.rs.client.ClientResponseContext;
-import javax.ws.rs.client.ClientResponseFilter;
-
-import org.apache.commons.codec.binary.Base64;
  
 public class ClientFilter implements ClientRequestFilter,ClientResponseFilter {
 	private final String username;

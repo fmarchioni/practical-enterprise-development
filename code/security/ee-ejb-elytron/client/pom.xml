@@ -12,8 +12,6 @@
     <relativePath>../../..</relativePath>
   </parent>
   <properties>
-    <maven.compiler.target>1.8</maven.compiler.target>
-    <maven.compiler.source>1.8</maven.compiler.source>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <version.exec.plugin>1.2.1</version.exec.plugin>
   </properties>
@@ -55,14 +53,6 @@
             <classpath/>
             <argument>com.itbuzzpress.security.client.RemoteEJBClient</argument>
           </arguments>
-        </configuration>
-      </plugin>
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-compiler-plugin</artifactId>
-        <configuration>
-          <source>1.8</source>
-          <target>1.8</target>
         </configuration>
       </plugin>
     </plugins>

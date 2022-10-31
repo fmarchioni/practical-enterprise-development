@@ -1,15 +1,15 @@
 package com.itbuzzpress.servlet.async;
 
+import jakarta.servlet.AsyncContext;
+import jakarta.servlet.ServletException;
+import jakarta.servlet.ServletInputStream;
+import jakarta.servlet.annotation.WebServlet;
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+
 import java.io.IOException;
 import java.io.PrintWriter;
-
-import javax.servlet.AsyncContext;
-import javax.servlet.ServletException;
-import javax.servlet.ServletInputStream;
-import javax.servlet.annotation.WebServlet;
-import javax.servlet.http.HttpServlet;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
 
 @WebServlet(name = "/noblock", urlPatterns = { "/noblock" }, asyncSupported = true)
 public class NonBlockingServlet  extends HttpServlet {
@@ -25,7 +25,7 @@ public class NonBlockingServlet  extends HttpServlet {
 			HttpServletResponse response) throws ServletException, IOException {
 
 		PrintWriter writer = response.getWriter();
-		writer.println("Only POST method available sorry.");
+		writer.println("Please use POST method from the index page");
 		writer.flush();
 	}
 

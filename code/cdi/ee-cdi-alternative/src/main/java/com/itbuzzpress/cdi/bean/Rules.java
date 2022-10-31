@@ -1,8 +1,8 @@
 package com.itbuzzpress.cdi.bean;
 
-import java.io.Serializable;
+import jakarta.inject.Named;
 
-import javax.inject.Named;
+import java.io.Serializable;
 
  
 @Named
