@@ -21,15 +21,7 @@
         <!-- Eclipse Krazo -->
         <krazo.version>2.0.1</krazo.version>
     </properties>
-    <dependencyManagement>
-        <dependencies>
-            <dependency>
-                <groupId>org.eclipse.krazo</groupId>
-                <artifactId>krazo-core</artifactId>
-                <version>${krazo.version}</version>
-            </dependency>
-        </dependencies>
-    </dependencyManagement>
+
     <dependencies>
         <dependency>
             <groupId>jakarta.platform</groupId>
@@ -53,8 +45,4 @@
             <version>${krazo.version}</version>
         </dependency>
     </dependencies>
-    <build>
-        <finalName>${project.artifactId}</finalName>
-    </build>
 </project>
-

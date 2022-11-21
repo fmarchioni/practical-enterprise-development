@@ -31,9 +31,4 @@
     </dependency>
   </dependencies>
 
-  <build>
-    <finalName>${project.artifactId}</finalName>
-    <plugins>
-    </plugins>
-  </build>
 </project>

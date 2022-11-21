@@ -19,7 +19,7 @@
     <dependency>
       <groupId>org.wildfly</groupId>
       <artifactId>wildfly-ejb-client-bom</artifactId>
-      <version>19.0.0.Final</version>
+      <version>${wildfly.version}</version>
       <type>pom</type>
       <scope>import</scope>
     </dependency>

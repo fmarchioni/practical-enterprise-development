@@ -31,7 +31,6 @@
 
   </dependencies>
   <build>
-    <finalName>ee-ejb-server-elytron</finalName>
     <plugins>
 
       <plugin>

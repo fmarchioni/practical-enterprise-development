@@ -24,7 +24,7 @@
       <artifactId>wildfly-ejb-client-bom</artifactId>
       <type>pom</type>
       <scope>compile</scope>
-      <version>19.0.0.Final</version>
+      <version>${wildfly.version}</version>
     </dependency>
     <!-- We depend on the EJB remote business interfaces of this application -->
     <dependency>
@@ -35,7 +35,6 @@
     </dependency>
   </dependencies>
   <build>
-    <finalName>${project.artifactId}</finalName>
     <plugins>
     <!-- Add the maven exec plugin to allow us to run a java program via maven -->
       <plugin>

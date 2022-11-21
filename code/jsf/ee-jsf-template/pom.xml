@@ -12,10 +12,7 @@
   <name>JSF Template</name>
   <description>JSF Template</description>
   <version>1.0.0</version>
-
-
   <properties>
-
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
   <dependencies>
@@ -26,7 +23,4 @@
       <scope>provided</scope>
     </dependency>
   </dependencies>
-  <build>
-    <finalName>${project.artifactId}</finalName>
-  </build>
 </project>

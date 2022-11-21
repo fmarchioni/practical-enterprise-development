@@ -23,7 +23,7 @@
       <artifactId>wildfly-ejb-client-bom</artifactId>
       <type>pom</type>
       <scope>compile</scope>
-      <version>19.0.0.Final</version>
+      <version>${wildfly.version}</version>
     </dependency>
     <dependency>
       <groupId>com.itbuzzpress.security</groupId>
@@ -49,7 +49,7 @@
           <executable>java</executable>
           <workingDirectory>${project.build.directory}/exec-working-directory</workingDirectory>
           <arguments>
-            <!-- automatically creates the classpath using all project dependencies, 
+            <!-- automatically creates the classpath using all project dependencies,
 							also adding the project build directory -->
             <argument>-classpath</argument>
             <classpath/>

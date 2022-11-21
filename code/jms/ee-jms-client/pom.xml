@@ -30,7 +30,7 @@
       <groupId>org.wildfly</groupId>
       <artifactId>wildfly-jms-client-bom</artifactId>
       <type>pom</type>
-      <version>27.0.0.Alpha4</version>
+      <version>${wildfly.version}</version>
     </dependency>
     <dependency>
       <groupId>jakarta.platform</groupId>
@@ -41,7 +41,6 @@
   </dependencies>
 
   <build>
-    <finalName>${project.artifactId}</finalName>
       <plugins>
      <plugin>
         <groupId>org.codehaus.mojo</groupId>

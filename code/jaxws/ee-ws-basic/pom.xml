@@ -15,8 +15,6 @@
   </parent>
   <dependencies>
 
-
-
     <dependency>
       <groupId>jakarta.platform</groupId>
       <artifactId>jakarta.jakartaee-api</artifactId>
@@ -28,31 +26,14 @@
       <groupId>org.wildfly</groupId>
       <artifactId>wildfly-jaxws-client-bom</artifactId>
       <scope>provided</scope>
-      <version>27.0.0.Alpha4</version>
+      <version>${wildfly.version}</version>
       <type>pom</type>
     </dependency>
-<!--
-    <dependency>
-      <groupId>jakarta.xml.bind</groupId>
-      <artifactId>jakarta.xml.bind-api</artifactId>
-      <version>3.0.0</version>
-      <scope>runtime</scope>
-    </dependency>
-
-    <dependency>
-      <groupId>com.sun.xml.bind</groupId>
-      <artifactId>jaxb-impl</artifactId>
-      <version>3.0.0</version>
-      <scope>runtime</scope>
-    </dependency>
--->
+ 
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
       <scope>test</scope>
     </dependency>
   </dependencies>
-  <build>
-    <finalName>${project.artifactId}</finalName>
-  </build>
 </project>
