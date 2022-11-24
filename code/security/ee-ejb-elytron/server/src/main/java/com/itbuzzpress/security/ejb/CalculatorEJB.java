@@ -16,7 +16,7 @@ import jakarta.ejb.TimerService;
 @Stateless
 @Remote(Calculator.class)
 @RolesAllowed("employee")
-@org.jboss.ejb3.annotation.SecurityDomain("secureApp")
+@org.jboss.ejb3.annotation.SecurityDomain("EJBDomain")
 public class CalculatorEJB implements Calculator {
    
 	float interest=5;
