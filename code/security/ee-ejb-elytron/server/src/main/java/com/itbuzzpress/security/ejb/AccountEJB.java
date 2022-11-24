@@ -9,7 +9,7 @@ import jakarta.ejb.Stateful;
 @Stateful
 @Remote(Account.class)
 @RolesAllowed("employee")
-@org.jboss.ejb3.annotation.SecurityDomain("secureApp")
+@org.jboss.ejb3.annotation.SecurityDomain("EJBDomain")
 public class AccountEJB implements Account {
 
     long money;
