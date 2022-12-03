@@ -1,4 +1,4 @@
-package com.mastertheboss.microprofile.activator;
+package com.itbuzzpress.microprofile.activator;
 
  
 

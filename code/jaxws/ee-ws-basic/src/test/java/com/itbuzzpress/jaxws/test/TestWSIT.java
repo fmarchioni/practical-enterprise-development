@@ -2,21 +2,21 @@ package com.itbuzzpress.jaxws.test;
 
 import com.itbuzzpress.jaxws.ws.Account;
 import com.itbuzzpress.jaxws.ws.AccountWSItf;
-import javax.xml.namespace.QName;
 import jakarta.xml.ws.Service;
 import org.junit.Test;
 
+import javax.xml.namespace.QName;
 import java.net.URL;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
 
 
-public class TestWS {
+public class TestWSIT {
 
 	@Test
 	public void test() {
-		 
+
 		String name ="John Smith";
 		try {
 			URL url = new URL("http://localhost:8080/ee-ws-basic/AccountWS?wsdl");

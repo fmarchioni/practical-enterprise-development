@@ -1,0 +1,35 @@
+WildFly Telemetry Example
+=====================================
+
+Example taken from [Practical Enterprise Application Development](http://www.itbuzzpress.com/ebooks/java-ee-7-development-on-wildfly.html)
+
+This example demonstrates the basic usage collecting Traces by means of Telemetry API
+
+###### Start Jaeger Tracing Server
+```shell
+docker run --rm -d --name jaeger   -p 6831:6831/udp   -p 5778:5778   -p 14250:14250   -p 14268:14268   -p 16686:16686   jaegertracing/all-in-one:1.16
+```
+
+###### Start WildFly
+```shell
+./standalone.sh -c standalone-microprofile.xml
+```
+
+
+###### Deploy the application
+```shell
+mvn clean install wildfly:deploy
+```
+
+###### Invoke available REST Services, for example:
+```shell
+http://localhost:8080/ee-microprofile-opentelemetry/rest/simple/text
+```
+
+###### Check Traces on Server
+http://localhost:16686
+
+
+
+
+

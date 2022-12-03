@@ -16,8 +16,6 @@ public class ManagerEJB {
 	@PersistenceUnit
 	EntityManagerFactory emf;
 
-	// @PersistenceContext(synchronization=SynchronizationType.UNSYNCHRONIZED)
-	// EntityManager em;
 	public void createRequest(String name, int quantity) {
 		Customer customer = findCustomerByName(name);
 		Request req = new Request();

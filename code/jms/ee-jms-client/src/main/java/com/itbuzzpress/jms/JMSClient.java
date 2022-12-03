@@ -2,12 +2,11 @@ package com.itbuzzpress.jms;
 
 import jakarta.jms.ConnectionFactory;
 import jakarta.jms.Destination;
+import jakarta.jms.JMSConsumer;
 import jakarta.jms.JMSContext;
 
-import jakarta.jms.JMSConsumer;
 import javax.naming.Context;
 import javax.naming.InitialContext;
-
 import java.util.Properties;
 
 public class JMSClient {

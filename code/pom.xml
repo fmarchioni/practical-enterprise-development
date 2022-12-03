@@ -9,7 +9,6 @@
   <properties>
     <endorsed.dir>${project.build.directory}/endorsed</endorsed.dir>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <maven.test.skip>true</maven.test.skip>
     <wildfly.version>27.0.0.Final</wildfly.version>
     <jakartaee.version>10.0.0</jakartaee.version>
     <maven-compiler-plugin.version>3.8.0</maven-compiler-plugin.version>
@@ -27,7 +26,7 @@
     <module>batch/ee-batch-listeners</module>
 
 
-    <module>cdi/cdi-j2se</module>
+  <!--  <module>cdi/cdi-j2se</module> -->
     <module>cdi/ee-cdi-alternative</module>
     <module>cdi/ee-cdi-basic</module>
     <module>cdi/ee-cdi-decorator</module>

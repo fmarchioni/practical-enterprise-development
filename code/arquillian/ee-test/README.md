@@ -14,7 +14,7 @@ mvn clean install
 Configure src/test/resources/arquillian.xml in to point to your Wildfly installation. Ex:
 ```xml
 	<configuration>
-		<property name="jbossHome">/home/francesco/jboss/wildfly-21.0.0.Final</property>
+		<property name="jbossHome">/home/francesco/jboss/wildfly-27.0.0.Final</property>
 		<property name="managementPort">9990</property>
 		<property name="managementAddress">localhost</property>
 	</configuration>

@@ -11,6 +11,8 @@ import org.eclipse.microprofile.metrics.annotation.Gauge;
 import org.eclipse.microprofile.metrics.annotation.Metered;
 import org.eclipse.microprofile.metrics.annotation.Timed;
 
+import java.util.UUID;
+
 @Path("/simple")
 public class SimpleRESTService {
 
@@ -33,24 +35,26 @@ public class SimpleRESTService {
 	@Path("/json")
 	@Produces(MediaType.APPLICATION_JSON)
 	@Metered(name = "getJSON", unit = MetricUnits.MINUTES, description = "Metrics to monitor frequency of getPropertyJSON.", absolute = true)
-	public SimpleProperty getPropertyJSON () 
+	public SimpleProperty getPropertyJSON ()
 	{
-        SimpleProperty p = new SimpleProperty("key","value");
+		SimpleProperty p = new SimpleProperty(UUID.randomUUID().toString(),
+				UUID.randomUUID().toString());
 		return p;
 	}
 	@GET
 	@Path("/xml")
 	@Produces(MediaType.APPLICATION_XML)
 	@Timed(name = "getXML", absolute = true)
-	public SimpleProperty getPropertyXML () 
+	public SimpleProperty getPropertyXML ()
 	{
-        SimpleProperty p = new SimpleProperty("key","value");
-        try {  
+		   SimpleProperty p = new SimpleProperty(UUID.randomUUID().toString(),
+		      UUID.randomUUID().toString());
+        try {
           Thread.sleep((long)(Math.random() * 1000));
         }
         catch (Exception exc) {
           exc.printStackTrace();
-        }	
+        }
 		return p;
 	}
 }

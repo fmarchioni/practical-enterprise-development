@@ -6,6 +6,8 @@ import jakarta.ws.rs.Path;
 import jakarta.ws.rs.Produces;
 import jakarta.ws.rs.core.MediaType;
 
+import java.util.UUID;
+
 //Example URL: http://localhost:8080/ee-rest-basic/rest/simple/text
 
 @Path("/simple")
@@ -21,7 +23,8 @@ public class SimpleRESTService {
 	@Produces(MediaType.APPLICATION_JSON)
 	public SimpleProperty getPropertyJSON ()
 	{
-        SimpleProperty p = new SimpleProperty("key","value");
+		SimpleProperty p = new SimpleProperty(UUID.randomUUID().toString(),
+				UUID.randomUUID().toString());
 		return p;
 	}
 	@GET
@@ -29,7 +32,8 @@ public class SimpleRESTService {
 	@Produces(MediaType.APPLICATION_XML)
 	public SimpleProperty getPropertyXML ()
 	{
-        SimpleProperty p = new SimpleProperty("key","value");
+		SimpleProperty p = new SimpleProperty(UUID.randomUUID().toString(),
+						UUID.randomUUID().toString());
 		return p;
 	}
 }

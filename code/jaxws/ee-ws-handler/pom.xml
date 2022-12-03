@@ -24,20 +24,6 @@
       </dependency>
 
       <dependency>
-        <groupId>jakarta.xml.bind</groupId>
-        <artifactId>jakarta.xml.bind-api</artifactId>
-        <version>4.0.0</version>
-        <scope>runtime</scope>
-      </dependency>
-
-      <dependency>
-        <groupId>com.sun.xml.bind</groupId>
-        <artifactId>jaxb-impl</artifactId>
-        <version>3.0.0</version>
-        <scope>runtime</scope>
-      </dependency>
-
-      <dependency>
           <groupId>org.wildfly</groupId>
           <artifactId>wildfly-jaxws-client-bom</artifactId>
           <scope>provided</scope>

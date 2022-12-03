@@ -1,10 +1,10 @@
 package com.itbuzzpress.concurrency.job;
 
 import com.itbuzzpress.concurrency.ejb.SimpleEJB;
-import javax.naming.InitialContext;
-import javax.naming.NamingException;
 import jakarta.transaction.UserTransaction;
 
+import javax.naming.InitialContext;
+import javax.naming.NamingException;
 import java.util.concurrent.Callable;
 
  

@@ -1,10 +1,5 @@
 package com.itbuzzpress.jsf.bean;
 
-import static jakarta.faces.application.StateManager.IS_BUILDING_INITIAL_STATE;
-
-import java.io.IOException;
-import java.util.List;
-
 import jakarta.enterprise.context.ApplicationScoped;
 import jakarta.faces.annotation.View;
 import jakarta.faces.component.UIComponent;
@@ -12,6 +7,11 @@ import jakarta.faces.component.UIOutput;
 import jakarta.faces.component.html.*;
 import jakarta.faces.context.FacesContext;
 import jakarta.faces.view.facelets.Facelet;
+
+import java.io.IOException;
+import java.util.List;
+
+import static jakarta.faces.application.StateManager.IS_BUILDING_INITIAL_STATE;
 
 
 

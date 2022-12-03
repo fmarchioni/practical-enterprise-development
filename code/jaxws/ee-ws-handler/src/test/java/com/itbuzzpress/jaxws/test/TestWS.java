@@ -2,10 +2,10 @@ package com.itbuzzpress.jaxws.test;
 
 import com.itbuzzpress.jaxws.ws.Account;
 import com.itbuzzpress.jaxws.ws.AccountWSItf;
-import javax.xml.namespace.QName;
 import jakarta.xml.ws.Service;
 import org.junit.Test;
 
+import javax.xml.namespace.QName;
 import java.net.URL;
 
 import static org.junit.Assert.assertEquals;

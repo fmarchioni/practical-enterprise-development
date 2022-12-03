@@ -1,4 +1,4 @@
-package com.mastertheboss.microprofile.service;
+package com.itbuzzpress.microprofile.service;
 
 import com.itbuzzpress.microprofile.model.SimpleProperty;
 import jakarta.ws.rs.GET;
@@ -12,6 +12,7 @@ import org.eclipse.microprofile.faulttolerance.Timeout;
 import org.eclipse.microprofile.faulttolerance.exceptions.TimeoutException;
 
 import java.util.Random;
+import java.util.UUID;
 
 @Path("/")
 public class SimpleRESTService {
@@ -33,7 +34,8 @@ public class SimpleRESTService {
 	@Fallback(fallbackMethod = "fallbackJSON")
 	public SimpleProperty getPropertyJSON ()
 	{
-		SimpleProperty p = new SimpleProperty("key","value");
+		SimpleProperty p = new SimpleProperty(UUID.randomUUID().toString(),
+				UUID.randomUUID().toString());
 		randomSleep();
 		return p;
 	}
@@ -74,7 +76,8 @@ public class SimpleRESTService {
 			System.out.println("Error!!!");
 			throw new RuntimeException("<code>System unavailable. Try a bit later.</code>");
 		}
-		SimpleProperty p = new SimpleProperty("key","value");
+		SimpleProperty p = new SimpleProperty(UUID.randomUUID().toString(),
+				UUID.randomUUID().toString());
 		return p;
 	}
 
