@@ -6,6 +6,7 @@ import java.io.InputStream;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.UUID;
 import java.util.concurrent.TimeUnit;
 import java.util.logging.Logger;
 
@@ -45,7 +46,8 @@ public class SimpleRESTService {
 	@Produces(MediaType.APPLICATION_JSON)
 	public SimpleProperty getPropertyJSON ()
 	{
-        SimpleProperty p = new SimpleProperty("A","B");
+		SimpleProperty p = new SimpleProperty(UUID.randomUUID().toString(),
+				UUID.randomUUID().toString());
 		return p;
 	}
 	@GET
@@ -53,7 +55,8 @@ public class SimpleRESTService {
 	@Produces(MediaType.APPLICATION_XML)
 	public SimpleProperty getPropertyXML ()
 	{
-        SimpleProperty p = new SimpleProperty("A","B");
+		SimpleProperty p = new SimpleProperty(UUID.randomUUID().toString(),
+				UUID.randomUUID().toString());
 		return p;
 	}
 }

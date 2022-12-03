@@ -9,6 +9,8 @@ import org.eclipse.microprofile.openapi.annotations.Operation;
 import org.eclipse.microprofile.openapi.annotations.responses.APIResponse;
 import org.eclipse.microprofile.openapi.annotations.tags.Tag;
 
+import java.util.UUID;
+
 @Tag(name = "OpenAPI Example", description = "Get a text in various formats")
 
 @Path("/simple")
@@ -29,7 +31,8 @@ public class SimpleRESTService {
 	@Produces(MediaType.APPLICATION_JSON)
 	public SimpleProperty getPropertyJSON () 
 	{
-        SimpleProperty p = new SimpleProperty("key","value");
+		SimpleProperty p = new SimpleProperty(UUID.randomUUID().toString(),
+				UUID.randomUUID().toString());
 		return p;
 	}
 	@GET
@@ -39,7 +42,8 @@ public class SimpleRESTService {
 	@Produces(MediaType.APPLICATION_XML)
 	public SimpleProperty getPropertyXML () 
 	{
-        SimpleProperty p = new SimpleProperty("key","value");
+		SimpleProperty p = new SimpleProperty(UUID.randomUUID().toString(),
+				UUID.randomUUID().toString());
 		return p;
 	}
 }

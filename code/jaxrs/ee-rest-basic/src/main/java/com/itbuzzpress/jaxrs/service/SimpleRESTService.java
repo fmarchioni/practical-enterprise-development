@@ -6,6 +6,8 @@ import jakarta.ws.rs.Path;
 import jakarta.ws.rs.Produces;
 import jakarta.ws.rs.core.MediaType;
 
+import java.util.UUID;
+
 
 @Path("/simple")
 public class SimpleRESTService {
@@ -20,7 +22,8 @@ public class SimpleRESTService {
 	@Produces(MediaType.APPLICATION_JSON)
 	public SimpleProperty getPropertyJSON ()
 	{
-        SimpleProperty p = new SimpleProperty("key","value");
+		SimpleProperty p = new SimpleProperty(UUID.randomUUID().toString(),
+				UUID.randomUUID().toString());
 		return p;
 	}
 	@GET
@@ -28,7 +31,8 @@ public class SimpleRESTService {
 	@Produces(MediaType.APPLICATION_XML)
 	public SimpleProperty getPropertyXML ()
 	{
-        SimpleProperty p = new SimpleProperty("key","value");
+		SimpleProperty p = new SimpleProperty(UUID.randomUUID().toString(),
+				UUID.randomUUID().toString());
 		return p;
 	}
 }

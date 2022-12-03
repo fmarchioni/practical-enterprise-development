@@ -12,6 +12,8 @@ import jakarta.ws.rs.core.MediaType;
 
 import com.itbuzzpress.microprofile.model.SimpleProperty;
 
+import java.util.UUID;
+
 @Path("/simple")
 @ApplicationScoped
 public class SimpleRESTService {
@@ -30,7 +32,8 @@ public class SimpleRESTService {
     @Produces(MediaType.APPLICATION_JSON)
     public SimpleProperty getPropertyJSON ()
     {
-        SimpleProperty p = new SimpleProperty("key","value");
+        SimpleProperty p = new SimpleProperty(UUID.randomUUID().toString(),
+                UUID.randomUUID().toString());
         return p;
     }
     @GET
@@ -39,7 +42,8 @@ public class SimpleRESTService {
     @Produces(MediaType.APPLICATION_XML)
     public SimpleProperty getPropertyXML ()
     {
-        SimpleProperty p = new SimpleProperty("key","value");
+        SimpleProperty p = new SimpleProperty(UUID.randomUUID().toString(),
+                UUID.randomUUID().toString());
         return p;
     }
 
