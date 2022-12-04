@@ -8,18 +8,28 @@
 		xmlns:components="http://java.sun.com/jsf/composite/components"
 >
 <h:head>
-	<h:outputStylesheet name="style.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/style.css" />
 </h:head>
 <body>
-<h1>Insert a Property:</h1>
-<form name="form1" action="rest/param" method="POST">
-	Key &nbsp;
-	<input type="text" name="key"/> Value &nbsp;
 
-	<input type="text" name="value"/>
-	<input type="submit" value="Insert" class="buttons"/>
-</form>
-<table BORDER="1" WIDTH="50%" class="table-header">
+<center><h2>Jakarta RESTful Web Services Demo</h2></center>
+<form class="form-style-9" action="rest/param" method="POST">
+	<fieldset><legend>Enter a key/value pair</legend>
+	<ul>
+		<li>
+			<input type="text" name="key" class="field-style field-split align-left" placeholder="Key" />
+			<input type="text" name="value" class="field-style field-split align-left" placeholder="Value" />
+
+		</li>
+
+		<li>
+			<input type="submit" value="Submit" />
+		</li>
+	</ul>
+
+
+
+<table BORDER="1" WIDTH="50%"  >
 	<tr>
 		<th COLSPAN="2">
 			<H3>Keys List</H3>
@@ -34,6 +44,9 @@
 		</tr>
 	</c:forEach>
 </table>
-<a href="rest/param/list">Get Key List in XML</a>
+		<a href="rest/param/list">Get Key List in XML</a>
+	</fieldset>
+</form>
+
 </body>
 </html>
