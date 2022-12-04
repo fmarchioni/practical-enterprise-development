@@ -1,148 +1,64 @@
-<?xml version="1.0"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project
+        xmlns="http://maven.apache.org/POM/4.0.0"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
-  <groupId>com.itbuzzpress.root</groupId>
-  <artifactId>ee-root</artifactId>
-  <version>1.0</version>
-  <packaging>pom</packaging>
-  <name>Root Project</name>
+  <groupId>com.itbuzzpress.microprofile</groupId>
+  <artifactId>ee-microprofile-telemetry</artifactId>
+  <name>WildFly MicroProfile Telemetry Example</name>
+  <version>1.0.0-SNAPSHOT</version>
+  <packaging>war</packaging>
   <properties>
-    <endorsed.dir>${project.build.directory}/endorsed</endorsed.dir>
-    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <version.wildfly>27.0.0.Final</version.wildfly>
     <version.bootable-jar>8.0.1.Final</version.bootable-jar>
     <jakartaee.version>10.0.0</jakartaee.version>
+    <failOnMissingWebXml>false</failOnMissingWebXml>
+    <opentelemetry.version>1.20.1</opentelemetry.version>
+    <endorsed.dir>${project.build.directory}/endorsed</endorsed.dir>
     <plugin.fork.embedded>true</plugin.fork.embedded>
+    <version.bootable-jar>8.0.1.Final</version.bootable-jar>
   </properties>
-
-  <modules>
-
-    <module>arquillian/ee-test</module>
-
-    <module>batch/ee-batch-batchlet</module>
-    <module>batch/ee-batch-chunk</module>
-    <module>batch/ee-batch-chunk-checkpoint</module>
-    <module>batch/ee-batch-decision</module>
-    <module>batch/ee-batch-exception</module>
-    <module>batch/ee-batch-listeners</module>
-
-    <module>cdi/ee-cdi-alternative</module>
-    <module>cdi/ee-cdi-basic</module>
-    <module>cdi/ee-cdi-decorator</module>
-    <module>cdi/ee-cdi-event</module>
-    <module>cdi/ee-cdi-interceptor</module>
-    <module>cdi/ee-cdi-producerfactory</module>
-    <module>cdi/ee-cdi-qualifier</module>
-
-    <module>concurrency/ee-managedcontextual</module>
-    <module>concurrency/ee-managedexecutor</module>
-    <module>concurrency/ee-managedfactoryexecutor</module>
-    <module>concurrency/ee-managedscheduledexecutor</module>
-
-    <module>ejb/async/ee-ejb-client-async</module>
-    <module>ejb/async/ee-ejb-server-async</module>
-    <module>ejb/basic/ee-ejb-client-basic</module>
-    <module>ejb/basic/ee-ejb-server-basic</module>
-    <module>ejb/timer/ee-ejb-client-timer</module>
-    <module>ejb/timer/ee-ejb-server-timer</module>
-
-    <module>jaxrs/ee-rest-async</module>
-    <module>jaxrs/ee-rest-basic</module>
-    <module>jaxrs/ee-rest-client</module>
-    <module>jaxrs/ee-rest-filters</module>
-    <module>jaxrs/ee-rest-interceptors</module>
-    <module>jaxrs/ee-rest-sse</module>
-
-    <module>jaxws/ee-ws-basic</module>
-    <module>jaxws/ee-ws-handler</module>
-
-    <module>jms/ee-jms-basic</module>
-
-    <module>jpa/ee-jpa-basic</module>
-
-    <module>jsf/ee-jsf-basic</module>
-    <module>jsf/ee-jsf-clientwindow</module>
-    <module>jsf/ee-jsf-commandscript</module>
-    <module>jsf/ee-jsf-composite</module>
-    <module>jsf/ee-jsf-contracts</module>
-    <module>jsf/ee-jsf-datatablemap</module>
-    <module>jsf/ee-jsf-facelet</module>
-    <module>jsf/ee-jsf-flow</module>
-    <module>jsf/ee-jsf-multipleflow</module>
-    <module>jsf/ee-jsf-template</module>
-    <module>jsf/ee-jsf-upload</module>
-    <module>jsf/ee-jsf-validatewholebean</module>
-    <module>jsf/ee-jsf-websocket</module>
-
-    <module>json/ee-json</module>
-    <module>json/ee-jsonb</module>
-
-    <module>microprofile/configuration</module>
-    <module>microprofile/fault-tolerance</module>
-    <module>microprofile/health</module>
-    <module>microprofile/jwt</module>
-    <module>microprofile/metrics</module>
-    <module>microprofile/openapi</module>
-    <module>microprofile/opentracing</module>
-    <module>microprofile/rest-client/client</module>
-    <module>microprofile/rest-client/server</module>
-
-    <module>mvc/ee-mvc-demo</module>
-
-    <module>security/ee-ejb-elytron/client</module>
-    <module>security/ee-ejb-elytron/server</module>
-    <module>security/ee-security-elytron</module>
-    <module>security/https</module>
-
-    <module>servlet/ee-async-servlet</module>
-    <module>servlet/ee-noblock-servlet</module>
-    <module>servlet/ee-servlet-push</module>
-
-    <module>websocket/ee-websocket-async</module>
-    <module>websocket/ee-websocket-basic</module>
-    <module>websocket/ee-websocket-binary</module>
-    <module>websocket/ee-websocket-client</module>
-    <module>websocket/ee-websocket-encdec</module>
-  </modules>
-
-  <repositories>
-    <repository>
-      <id>JBoss Repository</id>
-      <url>https://repository.jboss.org/nexus/content/groups/public/</url>
-    </repository>
-  </repositories>
-  <dependencyManagement>
-    <dependencies>
-
-      <dependency>
-        <groupId>org.wildfly.bom</groupId>
-        <artifactId>wildfly-ee-with-tools</artifactId>
-        <version>${version.wildfly}</version>
-        <type>pom</type>
-        <scope>import</scope>
-      </dependency>
-      <dependency>
-        <groupId>org.wildfly.bom</groupId>
-        <artifactId>wildfly-microprofile</artifactId>
-        <version>${version.wildfly}</version>
-        <scope>import</scope>
-        <type>pom</type>
-      </dependency>
-      <dependency>
-        <groupId>junit</groupId>
-        <artifactId>junit</artifactId>
-        <scope>test</scope>
-        <version>4.13.2</version>
-      </dependency>
-    </dependencies>
-  </dependencyManagement>
+  <dependencies>
+    <dependency>
+      <groupId>io.opentelemetry</groupId>
+      <artifactId>opentelemetry-api</artifactId>
+      <version>${opentelemetry.version}</version>
+      <!--<scope>provided</scope>-->
+    </dependency>
+    <dependency>
+      <groupId>jakarta.platform</groupId>
+      <artifactId>jakarta.jakartaee-api</artifactId>
+      <version>${jakartaee.version}</version>
+      <scope>provided</scope>
+    </dependency>
+  </dependencies>
   <build>
     <finalName>${project.artifactId}</finalName>
     <plugins>
       <plugin>
-      <groupId>org.wildfly.plugins</groupId>
-      <artifactId>wildfly-jar-maven-plugin</artifactId>
-      <version>${version.bootable-jar}</version>
+        <groupId>org.wildfly.plugins</groupId>
+        <artifactId>wildfly-jar-maven-plugin</artifactId>
+        <version>${version.bootable-jar}</version>
+        <configuration>
+          <feature-pack-location>wildfly-preview@maven(org.jboss.universe:community-universe)#${version.wildfly}</feature-pack-location>
+          <layers>
+            <layer>jaxrs-server</layer>
+            <layer>microprofile-platform</layer>
+          </layers>
+          <excluded-layers>
+            <layer>deployment-scanner</layer>
+          </excluded-layers>
+          <plugin-options>
+            <jboss-fork-embedded>${plugin.fork.embedded}</jboss-fork-embedded>
+          </plugin-options>
+        </configuration>
+        <executions>
+          <execution>
+            <goals>
+              <goal>package</goal>
+            </goals>
+          </execution>
+        </executions>
       </plugin>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
@@ -154,11 +70,6 @@
             <endorseddirs>${endorsed.dir}</endorseddirs>
           </compilerArguments>
         </configuration>
-      </plugin>
-      <plugin>
-        <groupId>org.wildfly.plugins</groupId>
-        <artifactId>wildfly-maven-plugin</artifactId>
-        <version>4.0.0.Final</version>
       </plugin>
     </plugins>
   </build>
