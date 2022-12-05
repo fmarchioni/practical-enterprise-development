@@ -19,5 +19,3 @@ NAME                                 READY     STATUS      RESTARTS   AGE
 ee-microprofile-health-1-deploy      0/1       Completed   0          71s
 ee-microprofile-health-1-fzcpm       1/1       Running     0          68s
 ```
-
-

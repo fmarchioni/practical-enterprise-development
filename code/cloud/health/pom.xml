@@ -17,6 +17,7 @@
     <version.war.plugin>3.0.0</version.war.plugin>
     <jkube.generator.from>registry.redhat.io/ubi8/openjdk-11:latest</jkube.generator.from>
     <failOnMissingWebXml>false</failOnMissingWebXml>
+    <version.jkube>1.0.1</version.jkube>
   </properties>
   <dependencies>
     <dependency>
