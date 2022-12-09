@@ -8,16 +8,19 @@ import jakarta.ws.rs.client.WebTarget;
 import jakarta.ws.rs.core.MediaType;
 import jakarta.ws.rs.core.Response;
 import org.junit.Test;
-
+import java.io.ByteArrayInputStream;
+import java.io.IOException;
+import java.util.zip.GZIPInputStream;
+import java.nio.charset.StandardCharsets;
 import static org.junit.Assert.assertNotNull;
 
 public class TestClient {
 	String BASE_URL ="http://localhost:8080/rest";
 
 	@Test
-	public void testParam() {
-		Client client = ClientBuilder.newClient();
+	public void testParam()  throws IOException {
 
+ Client client = ClientBuilder.newClient();
 		WebTarget myResource = client.target(BASE_URL).path("/simple");
 
 		Response rs = myResource.request(MediaType.TEXT_PLAIN)
@@ -26,7 +29,9 @@ public class TestClient {
 		String response = client.target(BASE_URL).path("/simple")
 				.request(MediaType.TEXT_PLAIN)
 				.get(String.class);
-		assertNotNull(response);
+
+    assertNotNull(response);
+		System.out.println(response);
 
 	}
 
